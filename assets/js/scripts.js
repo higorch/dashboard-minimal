@@ -57,4 +57,36 @@
 
     });
 
+    // submenu
+    $('.sidebar .menu-wrap ul li').on('mouseenter', function (e) {
+
+        var el = $(this);
+
+        if (el.find('ul').length) {
+
+            var submenu = el.find('ul');
+
+            if (submenu.hasClass('active')) {
+                return;
+            }
+
+            var submenuHeight = submenu.height();
+            var centerY = el.offset().top - submenuHeight / 2;
+
+            submenu.css({
+                'top': centerY,
+            }).addClass('active');
+
+            var windowBottomSpacing = submenu.position().top + submenu.outerHeight(true) >= $(window).height();
+
+            if (windowBottomSpacing) {
+                submenu.css({
+                    'top': centerY - 30,
+                });
+            }
+
+        }
+
+    })
+
 })(jQuery)

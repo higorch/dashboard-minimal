@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard minimal</title>
+    <link rel="stylesheet" href="../assets/bundle/app.css">
+</head>
+
+<body>
+
+    <div class="wrap-master">
+
+        <div class="header">
+
+            <div class="logo">
+                <a href="#" title="Cosmefar Terceirização de Cosméticos">
+                    <img src="../assets/images/logo-fold.png" alt="C.MANAGER">
+                </a>
+            </div>
+
+            <div class="topbar">
+
+                <div class="toggle-menu">
+                    <a href="#" class="btn btn-default"><i class="fas fa-outdent"></i></a>
+                </div>
+
+                <div class="right-box">
+
+                    <div class="notification">
+
+                        <div class="dropdown">
+                            <a href="#" class="btn btn-default"><i class="far fa-bell"></i></a>
+                            <div class="dropdown-menu right">
+                                <div class="heading">
+                                    Notificações
+                                </div>
+                                <div class="body scrollbar-macosx">
+                                    <div class="box">
+
+                                        <a class="dropdown-item" href="#">
+                                            <div class="col">
+                                                <div class="icon blue">
+                                                    <i class="fas fa-shopping-cart"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <span class="info">Something else here</span>
+                                                <small class="time">Há 25 minutos</small>
+                                            </div>
+                                        </a>
+
+                                        <a class="dropdown-item" href="#">
+                                            <div class="col">
+                                                <div class="icon yellow">
+                                                    <i class="fas fa-box-open"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <span class="info">Something else here</span>
+                                                <small class="time">Há 25 minutos</small>
+                                            </div>
+                                        </a>
+
+                                        <a class="dropdown-item" href="#">
+                                            <div class="col">
+                                                <div class="icon red">
+                                                    <i class="fas fa-headset"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <span class="info">Something else here</span>
+                                                <small class="time">Há 25 minutos</small>
+                                            </div>
+                                        </a>
+
+                                        <a class="dropdown-item" href="#">
+                                            <div class="col">
+                                                <div class="icon dark-gray">
+                                                    <i class="fas fa-graduation-cap"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <span class="info">Something else here</span>
+                                                <small class="time">Há 25 minutos</small>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <div class="footer">
+                                    <a href="#" class="btn btn-default btn-block">Ver todas</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="profile">
+
+                        <div class="dropdown">
+                            <a href="#">
+                                <img
+                                    src="https://www.gravatar.com/avatar/259905cb56f41eff8dcf9d9c0a4cf682?s=200&d=mp&r=x">
+                            </a>
+                            <div class="dropdown-menu right">
+                                <a class="dropdown-item" href="#">Minha conta</a>
+                                <a class="dropdown-item" href="#">Alterar senha</a>
+                                <a class="dropdown-item" href="#">Sair</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="sidebar">
+
+            <div class="menu-wrap scrollbar-macosx">
+
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span class="label">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="label">Pedidos</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <i class="fas fa-air-freshener"></i>
+                            <span class="label">Produtos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-box-open"></i>
+                            <span class="label">Estoques</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-headset"></i>
+                            <span class="label">Tickets</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span class="label">Materiais/cursos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-users"></i>
+                            <span class="label">Usuários</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span class="label">Sair</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <div class="container">
+
+            <!-- page-header -->
+            <div class="page-header">
+
+                <div class="col">
+                    <h3 class="title">Listagem de dados</h3>
+                </div>
+
+                <div class="col">
+                    <a href="#" class="btn btn-default" title="Filtrar" data-trigger="modal"
+                        data-modal="#modal-sidebar"><i class="fas fa-search"></i></a>
+                    <a href="#" class="btn btn-default ml-10" title="Adicionar"><i class="fas fa-plus"></i></a>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-full mt-30 mb-30">
+
+                    <a href="#" class="btn btn-blue btn-block mt-15" data-trigger="modal" data-modal="#modal-default">
+                        <i class="fas fa-external-link-alt"></i>
+                        Modal default
+                    </a>
+
+                    <a href="#" class="btn btn-blue btn-block mt-15" data-trigger="modal" data-modal="#modal-scrollbar">
+                        <i class="fas fa-external-link-alt"></i>
+                        Modal scrollbar
+                    </a>
+
+                    <a href="#" class="btn btn-blue btn-block mt-15" data-trigger="modal" data-modal="#modal-sidebar">
+                        <i class="fas fa-external-link-alt"></i>
+                        Modal sidebar
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- modal default -->
+            <div class="modal-main" id="modal-default">
+
+                <div class="body">
+
+                    <a href="#" class="close">x</a>
+
+                    <div class="header">
+                        <p>Modal default</p>
+                    </div>
+
+                    <div class="content">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum.</p>
+                    </div>
+
+                    <div class="footer">...</div>
+                </div>
+
+            </div>
+
+            <!-- modal scrollbar -->
+            <div class="modal-main scrollbar" id="modal-scrollbar">
+
+                <div class="body">
+
+                    <a href="#" class="close">x</a>
+
+                    <div class="header">
+                        <p>Modal scrollbar</p>
+                    </div>
+
+                    <div class="content scrollbar-macosx">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum.</p>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum.</p>
+                    </div>
+
+                    <div class="footer">...</div>
+                </div>
+
+            </div>
+
+            <!-- modal sidebar -->
+            <div class="modal-main sidebar" id="modal-sidebar">
+
+                <div class="body">
+
+                    <a href="#" class="close">x</a>
+
+                    <div class="header">
+                        <p>Modal sidebar</p>
+                    </div>
+
+                    <div class="content scrollbar-macosx">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                            passages, and more recently with desktop publishing software like Aldus PageMaker including
+                            versions of Lorem Ipsum.</p>
+                    </div>
+
+                    <div class="footer">...</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- wrap-master -->
+
+    <script src="../assets/bundle/app.js"></script>
+</body>
+
+</html>
