@@ -1,0 +1,31 @@
+{
+  "name": "dashboard-minimal",
+  "version": "1.0.0",
+  "description": "The dashbord template open source for your project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/higorch/dashboard-minimal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/higorch/dashboard-minimal/issues"
+  },
+  "homepage": "https://github.com/higorch/dashboard-minimal#readme",
+  "devDependencies": {
+    "css-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.3.0",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.52.1",
+    "webpack-cli": "^4.8.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "jquery": "^3.6.0"
+  }
+}
