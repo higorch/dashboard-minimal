@@ -1276,12 +1276,75 @@ html, body {
     font-size: 1.5em;
 }
 
+/* pagination */
+.pagination {
+    display: block;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    font-size: 0;
+}
+.pagination .col {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 15px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.pagination .col > * {
+    font-size: initial;
+}
+.pagination .col:nth-child(1) {
+    width: 35%;
+}
+.pagination .col:nth-child(2) {
+    width: 65%;
+    text-align: right;
+}
+.pagination .col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+}
+.pagination .col ul li {
+    display: inline-block;
+    font-size: initial;
+}
+.pagination .col ul li a {
+    text-decoration: none;
+}
+.pagination .col ul li a,
+.pagination .col ul li span {
+    font-size: 1em;
+    display: block;
+    color: var(--dark-gray);
+    text-align: center;
+    padding: 5px 13px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.pagination .col ul li.active a,
+.pagination .col ul li.active span {
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 5px;
+}
+.pagination .col p {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    color: var(--dark-gray);
+}
+.pagination .col ul li a:hover {
+    color: var(--black);
+}
+
 /* table */
 table {
     font-family: 'Source Sans Pro', sans-serif;
     border-collapse: separate;
     border-spacing: 0 15px;
-    margin-top: -15px;
+    margin: -15px 0;
     width: 100%;
     color: var(--black);
 }
