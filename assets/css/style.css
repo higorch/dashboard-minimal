@@ -85,16 +85,6 @@ html, body {
 .wrap-master > .header > * {
     font-size: initial !important;
 }
-.wrap-master > .header .logo {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: var(--w-sidebar);
-    height: var(--h-header);
-    line-height: var(--h-header);
-    background-color: var(--blue);
-    border-bottom: solid 1px var(--bor-blue);
-}
 .wrap-master > .header .topbar {
     position: relative;
     width: calc(100% - var(--w-sidebar));
@@ -109,9 +99,14 @@ html, body {
 
 /* logo */
 .wrap-master > .header .logo {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: var(--w-sidebar);
-    height: var(--h-header);;
+    height: calc(var(--h-header) - 1px);
+    line-height: var(--h-header);
     background-color: var(--blue);
+    border-bottom: solid 1px var(--bor-blue);
 }
 .wrap-master > .header .logo a {
    display: block;
@@ -458,14 +453,17 @@ html, body {
     display: inline-block;
     vertical-align: middle;
     font-size: initial;
-    width: 60%;
+    width: 100%;
     padding: 15px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
-.page-header .col:last-child {
+.page-header.with-col-2 .col:nth-child(1) {
+    width: 65%;
+}
+.page-header.with-col-2 .col:nth-child(2) {
     text-align: right;
-    width: 40%;
+    width: 35%;
 }
 .page-header h3.title {
     color: var(--black);
@@ -637,7 +635,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     z-index: 3;
 }
 .modal-main.scrollbar .body .content {
-    max-height: calc(100vh - 150px);
+    max-height: calc(100vh - 160px);
 }
 .modal-main.sidebar .body {
     position: fixed;

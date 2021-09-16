@@ -57,42 +57,28 @@
 
     });
 
-    // open submenu
-    $('.sidebar .menu-wrap ul li').on('mouseenter', function (e) {
+    // submenu
+    $('.sidebar .menu-wrap ul li').on('mouseover', function () {
+        var el = $(this),
+            submenu = $('> ul', el);
 
-        var el = $(this);
+        // grab the menu item's position relative to its positioned parent
+        var menuItemPos = el.position();
 
-        if (el.find('ul').length) {
+        // place the submenu in the correct position relevant to the menu item
+        submenu.css({
+            top: menuItemPos.top
+        });
 
-            var submenu = el.find('ul');
+        var bottomSpacing = submenu.position().top + submenu.outerHeight(true) >= $(window).height();
+        var bottomPosition = submenu.position().top + submenu.outerHeight(true) - $(window).height();
 
-            if (submenu.hasClass('active')) {
-                return;
-            }
-
-            var submenuHeight = submenu.height();
-            var centerY = el.offset().top - submenuHeight / 2;
-
+        if (bottomSpacing) {
             submenu.css({
-                'top': centerY,
-            }).addClass('active');
-
-            var bottomSpacing = submenu.position().top + submenu.outerHeight(true) >= $(window).height();
-            var bottomPosition = submenu.offset().top + submenu.outerHeight(true) - $(window).height();
-
-            if (bottomSpacing) {
-                submenu.css({
-                    'top': (centerY - 30) - bottomPosition,
-                });
-            }
-
+                'top': (menuItemPos.top - 30) - bottomPosition,
+            });
         }
 
     });
-
-    // close submenu
-    $('.sidebar .menu-wrap ul li ul').on('mouseleave', function (e) {
-        $(this).removeClass('active');
-    })
 
 })(jQuery)
