@@ -57,7 +57,7 @@
 
     });
 
-    // submenu
+    // open submenu
     $('.sidebar .menu-wrap ul li').on('mouseenter', function (e) {
 
         var el = $(this);
@@ -78,15 +78,22 @@
             }).addClass('active');
 
             var windowBottomSpacing = submenu.position().top + submenu.outerHeight(true) >= $(window).height();
+            var windowBottomPosition = submenu.offset().top + submenu.outerHeight(true) - $(window).height();
 
             if (windowBottomSpacing) {
+                alert('')
                 submenu.css({
-                    'top': centerY - 30,
+                    'top': (centerY - 30) - windowBottomPosition,
                 });
             }
 
         }
 
+    });
+
+    // close submenu
+    $('.sidebar .menu-wrap ul li ul').on('mouseleave', function (e) {
+        $(this).removeClass('active');
     })
 
 })(jQuery)
