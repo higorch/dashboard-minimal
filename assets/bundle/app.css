@@ -817,6 +817,7 @@
     --black: #3c4043;
     --bor-blue: #4c90ea;
     --bor-gray: #f0f0f0;
+    --bor-form: #e6e4e4;
     --w-sidebar: 175px;
     --h-header: 70px;
     --w-col-side: 320px;
@@ -1554,6 +1555,46 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .card .heading span.title {
     font-size: 1.25rem;
     color: var(--dark-gray);
+}
+
+/* form-wrap */
+.form-wrap {
+    display: block;
+    width: 100%;
+    font-size: 0;
+}
+.form-wrap .group {
+    display: inline-block;
+    font-size: initial;
+    width: 100%;
+}
+.form-wrap .group label {
+    display: block;
+    color: var(--dark-gray);
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.form-wrap .group input[type="text"],
+.form-wrap .group input[type="email"],
+.form-wrap .group select,
+.form-wrap .group textarea {
+    font-family: 'Source Sans Pro', sans-serif;
+    display: block;
+    width: 100%;
+    height: 45px;
+    border: solid 1px var(--bor-form);
+    color: var(--black);
+    border-radius: 5px;
+    font-size: 1.1em;
+    padding: 8px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.form-wrap .group textarea {
+    min-height: 120px;
+    max-width: 100%;
 }
 
 /* text align */
