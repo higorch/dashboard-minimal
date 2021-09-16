@@ -58,9 +58,13 @@
     });
 
     // submenu
-    $('.sidebar .menu-wrap ul li').on('mouseover', function () {
+    $('.sidebar .menu-wrap ul li').on('mouseover', function (e) {
         var el = $(this),
             submenu = $('> ul', el);
+
+        if (!submenu.length) {
+            return;
+        }
 
         // grab the menu item's position relative to its positioned parent
         var menuItemPos = el.position();
