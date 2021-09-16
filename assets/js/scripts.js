@@ -77,13 +77,12 @@
                 'top': centerY,
             }).addClass('active');
 
-            var windowBottomSpacing = submenu.position().top + submenu.outerHeight(true) >= $(window).height();
-            var windowBottomPosition = submenu.offset().top + submenu.outerHeight(true) - $(window).height();
+            var bottomSpacing = submenu.position().top + submenu.outerHeight(true) >= $(window).height();
+            var bottomPosition = submenu.offset().top + submenu.outerHeight(true) - $(window).height();
 
-            if (windowBottomSpacing) {
-                alert('')
+            if (bottomSpacing) {
                 submenu.css({
-                    'top': (centerY - 30) - windowBottomPosition,
+                    'top': (centerY - 30) - bottomPosition,
                 });
             }
 

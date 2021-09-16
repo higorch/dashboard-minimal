@@ -842,13 +842,12 @@ html, body {
     top: var(--h-header);
     bottom: 0;
     background-color: var(--blue);
+    z-index: 1;
 }
 .wrap-master > .container {
-    position: relative;
     width: calc(100% - var(--w-sidebar));
     margin-left: var(--w-sidebar);
-    top: var(--h-header);
-    z-index: -1;
+    margin-top: var(--h-header);
     padding: 0 30px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -895,6 +894,7 @@ html, body {
     height: var(--h-header);
     margin-left: var(--w-sidebar);
     border-bottom: solid 1px var(--light-gray);
+    background-color: var(--white);
     padding: 0 30px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -1146,17 +1146,16 @@ html, body {
 .sidebar .menu-wrap ul li > ul {
     position: fixed;
     width: 250px;
-    top: 200px;
     left: calc(var(--w-sidebar) - 30px);
     background-color: var(--gray);
     border-radius: 7px;
     box-shadow: 1px 1px 5px rgba(117, 117, 117, .4);
-    z-index: 9999;
+    z-index: 99999999;
 
     visibility: hidden;
     opacity: 0;
 }
-.sidebar .menu-wrap ul li > ul.active {
+.sidebar .menu-wrap ul li:hover > ul {
     visibility: visible;
     opacity: 1;
 }
