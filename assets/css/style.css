@@ -189,6 +189,7 @@ html, body {
     height: 45px;
     line-height: 45px;
     border-radius: 50%;
+    opacity: .85;
 }
 .wrap-master > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a .col .icon.blue {
     border: solid 1px var(--blue);
@@ -205,6 +206,10 @@ html, body {
 .wrap-master > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a .col .icon.dark-gray {
     border: solid 1px var(--dark-gray);
     color: var(--dark-gray);
+}
+.wrap-master > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a .col .icon i,
+.wrap-master > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a .col .icon svg {
+    font-size: 1.15em;
 }
 .wrap-master > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a span.info,
 .wrap-master > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a small.time {
@@ -365,7 +370,7 @@ html, body {
 }
 .sidebar .menu-wrap ul li > ul li {
     display: block;
-    padding: 0 15px;
+    padding: 0 30px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
@@ -373,7 +378,7 @@ html, body {
     color: var(--dark-gray);
     text-align: left;
     border-bottom: solid 1px var(--bor-gray);
-    padding: 15px;
+    padding: 15px 0;
 }
 .sidebar .menu-wrap ul li > ul li:last-child a {
     border-bottom: none;
@@ -735,9 +740,14 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 }
 .card .heading,
 .card .body {
-    padding: 15px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
+}
+.card .heading {
+    padding: 15px 30px;
+}
+.card .body {
+    padding: 30px;
 }
 .card {
     border-radius: 7px;
