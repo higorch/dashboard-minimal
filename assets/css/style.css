@@ -602,6 +602,10 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     color: var(--black);
     background-color: var(--bor-gray);
 }
+.btn.btn-dark-gray {
+    color: var(--white);
+    background-color: var(--dark-gray);
+}
 .btn.btn-green {
     color: var(--white);
     background-color: var(--green);
@@ -620,6 +624,32 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 }
 .btn:hover,
 .btn:focus {box-shadow: 1px 1px 5px rgba(117, 117, 117, .4);}
+
+/*  text color */
+.text-black {
+    color: var(--black);
+}
+.text-white {
+    color: var(--white);
+}
+.text-blue {
+    color: var(--blue);
+}
+.text-green {
+    color: var(--green);
+}
+.text-red {
+    color: var(--red);
+}
+.text-yellow {
+    color: var(--yellow);
+}
+.text-gray {
+    color: var(--gray);
+}
+.text-dark-gray {
+    color: var(--dark-gray);
+}
 
 /* modal-main */
 .modal-main {
@@ -817,18 +847,34 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     width: 450px;
     left: 50%;
     top: 50%;
-    background-color: var(--white);
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, .4);
     border-radius: 7px;
-    overflow: hidden;
-    padding: 30px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .4);
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
+}
+.box-form-auth .logo,
+.box-form-auth .form-wrap {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.box-form-auth .logo {
+    padding: 15px;
+    background-color: var(--blue);
+    text-align: center;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px
+} 
+.box-form-auth .form-wrap {
+    padding: 30px 15px;
+    margin: 0;
+    background-color: var(--white);
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
 }
 
 /* text align */
@@ -922,6 +968,10 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .row .col-30 { width: 30%;}
 .row .col-20 { width: 20%;}
 .row .col-10 { width: 10%;}
+
+.row .v-align-middle { vertical-align: middle;}
+.row .v-align-top { vertical-align: top;}
+.row .v-align-bottom { vertical-align: bottom;}
 
 /* select2 */
 .select2-container .select2-selection--single{
