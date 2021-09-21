@@ -870,11 +870,19 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     border-top-right-radius: 7px
 } 
 .box-form-auth .form-wrap {
-    padding: 30px 15px;
+    padding: 15px 15px 30px 15px;
     margin: 0;
     background-color: var(--white);
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
+}
+.box-form-auth .title {
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--dark-gray);
+    margin-bottom: 30px;
 }
 
 /* text align */
