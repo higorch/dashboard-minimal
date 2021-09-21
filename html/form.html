@@ -252,7 +252,7 @@
                                 <div class="group mb-15 col-70">
                                     <label for="select2">Select2</label>
                                     <select name="select2" id="select2" class="select-two">
-                                        <option>---</option>
+                                        <option></option>
                                         <option value="1">opt 1</option>
                                         <option value="2">opt 2</option>
                                         <option value="3">opt 3</option>
@@ -294,6 +294,16 @@
     <!-- wrap-master -->
 
     <script src="../assets/bundle/app.js"></script>
+    <script>
+        (function ($) {
+
+            $('.select-two').select2({
+                placeholder: "---",
+                allowClear: true
+            });
+
+        })(jQuery);
+    </script>
 </body>
 
 </html>
