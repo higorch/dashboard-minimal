@@ -846,7 +846,18 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 }
 .row .col-side,
 .row .col-full,
-.row .col-body {
+.row .col-body,
+
+.row .col-100,
+.row .col-90,
+.row .col-80,
+.row .col-70,
+.row .col-60,
+.row .col-50,
+.row .col-40,
+.row .col-30, 
+.row .col-20,
+.row .col-10 {
     display: inline-block;
     vertical-align: top;
     font-size: initial;
@@ -854,6 +865,16 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
-.row .col-side {width: var(--w-col-side);}
-.row .col-full {width: 100%;}
-.row .col-body {width: calc(100% - var(--w-col-side));}
+.row .col-side { width: var(--w-col-side);}
+.row .col-full { width: 100%;}
+.row .col-body { width: calc(100% - var(--w-col-side));}
+.row .col-100 { width: 100%;}
+.row .col-90 { width: 90%;}
+.row .col-80 { width: 80%;}
+.row .col-70 { width: 70%;}
+.row .col-60 { width: 60%;}
+.row .col-50 { width: 50%;}
+.row .col-40 { width: 40%;}
+.row .col-30 { width: 30%;}
+.row .col-20 { width: 20%;}
+.row .col-10 { width: 10%;}
