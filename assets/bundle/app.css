@@ -5444,6 +5444,14 @@ html, body {
     display: block;
     width: 100%;
 }
+.wrap-master.page-auth {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: var(--dark-gray);
+}
 .wrap-master > .header {
     position: fixed;
     width: 100%;
@@ -6192,6 +6200,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 }
 .form-wrap .group input[type="text"],
 .form-wrap .group input[type="email"],
+.form-wrap .group input[type="password"],
 .form-wrap .group select,
 .form-wrap .group textarea {
     font-family: 'Source Sans Pro', sans-serif;
@@ -6210,6 +6219,26 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .form-wrap .group textarea {
     min-height: 120px;
     max-width: 100%;
+}
+
+/* form auth */
+.box-form-auth {
+    position: absolute;
+    width: 450px;
+    left: 50%;
+    top: 50%;
+    background-color: var(--white);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .4);
+    border-radius: 7px;
+    overflow: hidden;
+    padding: 30px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
 }
 
 /* text align */
