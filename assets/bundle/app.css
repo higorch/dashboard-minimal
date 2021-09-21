@@ -5862,30 +5862,22 @@ html, body {
     margin-left: -30px;
     font-size: 0;
     border-bottom: solid 1px var(--light-gray);
-    padding: 0 15px;
+    padding: 30px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
-}
-.page-header .col {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: initial;
-    width: 100%;
-    padding: 15px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-}
-.page-header.with-col-2 .col:nth-child(1) {
-    width: 65%;
-}
-.page-header.with-col-2 .col:nth-child(2) {
-    text-align: right;
-    width: 35%;
 }
 .page-header h3.title {
     color: var(--black);
     font-weight: 500;
     font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+.page-header .col {
+    font-size: initial;
+}
+.page-header.with-col-2 {
+    padding: 5px 15px;
 }
 
 /* pagination */
@@ -6246,6 +6238,24 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .mr-20 {margin-right: 20px;}
 .mr-25 {margin-right: 25px;}
 .mr-30 {margin-right: 30px;}
+
+/* col */
+.with-col-2 .col {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: initial;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.with-col-2 .col:nth-child(1) {
+    width: 65%;
+}
+.with-col-2 .col:nth-child(2) {
+    text-align: right;
+    width: 35%;
+}
 
 /* grid */
 .row {
