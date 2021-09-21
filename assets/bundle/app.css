@@ -6304,22 +6304,65 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .row .col-10 { width: 10%;}
 
 /* select2 */
-.select2-container .select2-selection--single {
+.select2-container .select2-selection--single{
     height: 45px;
+}
+.select2-container--default .select2-selection--multiple,
+.select2-container .select2-search--inline .select2-search__field  {
+    min-height: 45px;
+}
+.select2-container--default .select2-selection--multiple {
+    padding-bottom: 10px;
 }
 .select2-container--default .select2-selection--single,
 .select2-dropdown,
-.select2-container--default .select2-search--dropdown .select2-search__field {
+.select2-container--default .select2-search--dropdown .select2-search__field,
+.select2-container--default .select2-selection--multiple {
     border: solid 1px var(--bor-form);
+}
+.select2-container .select2-search--inline .select2-search__field {
+    display: block;
+    max-width: initial;
+    width: 100%;
+    line-height: 45px;
+    margin: 0 0 0 10px;
+}
+.select2-search--inline {
+    position: absolute;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+    border: solid 1px var(--bor-form);
+    position: relative;
 }
 .select2-container--default .select2-selection--single .select2-selection__rendered {
     line-height: 45px;
 }
 .select2-container--default .select2-selection--single .select2-selection__arrow,
+.select2-container--default .select2-selection--single .select2-selection__clear,
+.select2-container--default .select2-selection--multiple .select2-selection__clear {
+    color: var(--dark-gray);
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow,
 .select2-container--default .select2-selection--single .select2-selection__clear {
     top: 10px;
-    color: var(--dark-gray);
+}
+.select2-container--default .select2-selection--multiple .select2-selection__clear {
+    top: 5px;
 }
 .select2-container--default .select2-selection--single .select2-selection__clear {
     position: relative;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: var(--gray);
+    border: solid 1px var(--bor-gray);
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    border-right: 1px solid var(--bor-gray);
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__display {
+    color: var(--dark-gray);
 }
