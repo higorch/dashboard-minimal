@@ -6080,7 +6080,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     position: relative;
     display: block;
     width: 100%;
-    padding: 15px;
+    padding: 30px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
@@ -6115,7 +6115,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     z-index: 3;
 }
 .modal-main.scrollbar .body .content {
-    max-height: calc(100vh - 160px);
+    max-height: calc(100vh - 240px);
 }
 .modal-main.sidebar .body {
     position: fixed;
@@ -6138,7 +6138,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     display: none;
 }
 .modal-main.sidebar .body .content {
-    height: calc(100vh - 110px);
+    height: calc(100vh - 170px);
 }
 
 /* card */
