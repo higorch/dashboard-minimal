@@ -239,6 +239,11 @@
                         Modal sidebar
                     </a>
 
+                    <a href="#" class="btn btn-blue btn-block mt-15" data-trigger="modal" data-modal="#modal-form">
+                        <i class="fas fa-external-link-alt"></i>
+                        Modal form
+                    </a>
+
                 </div>
             </div>
 
@@ -407,12 +412,135 @@
 
             </div>
 
+            <!-- modal form -->
+            <div class="modal-main scrollbar" id="modal-form">
+
+                <div class="body">
+
+                    <a href="#" class="close">x</a>
+
+                    <div class="header">
+                        <p>Modal form</p>
+                    </div>
+
+                    <div class="content scrollbar-macosx">
+
+                        <div class="form-wrap row pt-30 pb-30">
+
+                            <div class="group mb-15 col-50">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name">
+                            </div>
+
+                            <div class="group mb-15 col-50">
+                                <label for="email">E-mail</label>
+                                <input type="email" name="email" id="email">
+                            </div>
+
+                            <div class="group mb-15 col-30">
+                                <label for="phone">Telefone</label>
+                                <input type="text" telefone="phone" id="phone" class="mask-phone">
+                            </div>
+
+                            <div class="group mb-15 col-70">
+                                <label for="select-default">Select default</label>
+                                <select name="select-default" id="select-default">
+                                    <option>---</option>
+                                    <option value="1">opt 1</option>
+                                    <option value="2">opt 2</option>
+                                    <option value="3">opt 3</option>
+                                </select>
+                            </div>
+
+                            <div class="group mb-15 col-50">
+                                <label for="select2">Select2</label>
+                                <select name="select2" id="select2" class="select-two">
+                                    <option></option>
+                                    <option value="1">opt 1</option>
+                                    <option value="2">opt 2</option>
+                                    <option value="3">opt 3</option>
+                                </select>
+                            </div>
+
+                            <div class="group mb-15 col-50">
+                                <label for="select2-multiple">Select2 multiple</label>
+                                <select name="select2-multiple" id="select2-multiple" class="select-two" multiple>
+                                    <option value="1">opt 1</option>
+                                    <option value="2">opt 2</option>
+                                    <option value="3">opt 3</option>
+                                    <option value="4">opt 4</option>
+                                    <option value="5">opt 5</option>
+                                    <option value="6">opt 6</option>
+                                    <option value="7">opt 7</option>
+                                    <option value="8">opt 8</option>
+                                    <option value="9">opt 9</option>
+                                    <option value="10">opt 10</option>
+                                </select>
+                            </div>
+
+                            <div class="group mb-15 col-20">
+                                <label for="cep">CEP</label>
+                                <input type="text" telefone="cep" id="cep" class="mask-zipcode">
+                            </div>
+
+                            <div class="group mb-15 col-40">
+                                <label for="cnpj">CNPJ</label>
+                                <input type="text" telefone="cnpj" id="cnpj" class="mask-cnpj">
+                            </div>
+
+                            <div class="group mb-15 col-40">
+                                <label for="cpf">CPF</label>
+                                <input type="text" telefone="cpf" id="cpf" class="mask-cpf">
+                            </div>
+
+                            <div class="group col-100">
+                                <label for="cpf">Menssagem</label>
+                                <textarea name="menssagem" id="menssagem"></textarea>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="footer">
+
+                        <div class="row">
+                            <div class="col-50">
+                                <a href="#" class="btn btn-blue btn-block">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Voltar
+                                </a>
+                            </div>
+                            <div class="col-50">
+                                <a href="#" class="btn btn-green btn-block">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Salvar
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
         </div>
 
     </div>
     <!-- wrap-master -->
 
     <script src="../assets/bundle/app.js"></script>
+    <script>
+        (function ($) {
+
+            $('.select-two').select2({
+                placeholder: "---",
+                allowClear: true,
+                dropdownParent: $("#modal-form")
+            });
+
+        })(jQuery);
+    </script>
 </body>
 
 </html>
