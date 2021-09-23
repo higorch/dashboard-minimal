@@ -11,6 +11,8 @@ require('../plugins/jquery-mask-money/jquery.maskMoney.min.js')
 require('../plugins/select2/select2.min.css')
 require('../plugins/select2/select2.min.js')
 
+require('../plugins/chart-js/chart.js')
+
 require('../plugins/jquery-match-height/jquery.matchHeight-min.js')
 
 require('../css/style.css')
