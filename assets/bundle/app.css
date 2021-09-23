@@ -6351,7 +6351,8 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .box-catalog.course .info .actions a {
     position: absolute;
     top: 50%;
-    font-size: .75em;
+    font-size: .7em;
+    font-weight: 600;
     text-transform: uppercase;
     color: var(--dark-gray);
     transform: translateY(-50%);
@@ -6365,6 +6366,59 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 }
 .box-catalog.course .info .actions a.lessons {
     right: 0;
+}
+.box-catalog.course .info .progressbar,
+.box-catalog.course .info .progressbar span {
+    height: 5px;
+}
+.box-catalog.course .info .progressbar {
+    position: absolute;
+    content: '';
+    bottom: 50px;
+    left: 15px;
+    right: 15px;
+}
+.box-catalog.course .info .progressbar span {
+    position: absolute;
+    content: '';
+    left: 0;
+}
+
+/* progressbar */
+.progressbar {
+    position: relative;
+    display: block;
+    background-color: var(--bor-gray);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.progressbar,
+.progressbar span {
+    height: 5px;
+}
+.progressbar span {
+    position: absolute;
+    content: '';
+    left: 0;
+    background-color: var(--dark-gray);
+}
+.progressbar span.green {
+    background-color: var(--green);
+}
+.progressbar span.blue {
+    background-color: var(--blue);
+}
+.progressbar span.red {
+    background-color: var(--red);
+}
+.progressbar span.yelow {
+    background-color: var(--yellow);
+}
+.progressbar span.black {
+    background-color: var(--black);
+}
+.progressbar span.white {
+    background-color: var(--white);
 }
 
 /* text align */
