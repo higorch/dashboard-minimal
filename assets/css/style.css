@@ -40,7 +40,7 @@ html, body {
     right: 0;
     bottom: 0;
     top: 0;
-    background-color: var(--dark-gray);
+    background-color: var(--black);
 }
 .wrap-master > .header {
     position: fixed;
