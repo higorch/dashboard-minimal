@@ -6353,6 +6353,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     top: 50%;
     font-size: .75em;
     text-transform: uppercase;
+    color: var(--dark-gray);
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
@@ -6361,11 +6362,9 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 }
 .box-catalog.course .info .actions a.play  {
     left: 0;
-    color: var(--green);
 }
 .box-catalog.course .info .actions a.lessons {
     right: 0;
-    color: var(--blue);
 }
 
 /* text align */
