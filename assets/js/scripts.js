@@ -2,6 +2,8 @@
 
     $('.scrollbar-macosx').scrollbar();
 
+    $('.box-catalog.inline >').matchHeight();
+
     // prevent click link #
     $(document).on('click', '[href="#"]', function (e) {
         e.preventDefault();
