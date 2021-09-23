@@ -6411,7 +6411,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .progressbar span.red {
     background-color: var(--red);
 }
-.progressbar span.yelow {
+.progressbar span.yellow {
     background-color: var(--yellow);
 }
 .progressbar span.black {
