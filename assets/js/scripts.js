@@ -17,10 +17,10 @@
 
         el.toggleClass('closed')
 
-        $('.wrap-master > .header .logo').toggleClass('closed');
-        $('.wrap-master > .sidebar').toggleClass('closed');
-        $('.wrap-master > .header .topbar').toggleClass('closed');
-        $('.wrap-master > .container').toggleClass('closed');
+        $('.box-general > .header .logo').toggleClass('closed');
+        $('.box-general > .sidebar').toggleClass('closed');
+        $('.box-general > .header .topbar').toggleClass('closed');
+        $('.box-general > .container').toggleClass('closed');
 
         if (el.hasClass('closed')) {
             icon.removeClass('fa-outdent').addClass('fa-indent');
