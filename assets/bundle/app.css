@@ -5872,6 +5872,7 @@ html, body {
 }
 .sidebar .menu-accordion ul li > ul > li > a {
     border-bottom: dotted 1px var(--bor-blue);
+    font-size: .85em;
 }
 .sidebar .menu-accordion ul li > ul > li > a.active {
     color: var(--yellow);
@@ -6131,6 +6132,38 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .btn:hover,
 .btn:focus {box-shadow: 1px 1px 5px rgba(117, 117, 117, .4);}
 
+/* btn-group */
+.btn-group {
+    font-size: 0;
+    display: inline-block;
+}
+.btn-group .btn {
+    font-size: initial !important;
+    border-radius: 0;
+    box-shadow: none;
+}
+.btn-group .btn:last-child {
+    border-right: none !important;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.btn-group .btn:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+/* group default */
+.btn-group.btn-default .btn {
+    border-right: solid 1px var(--black);
+    color: var(--black);
+    background-color: var(--gray);
+}
+.btn-group.btn-default .btn:hover, 
+.btn-group.btn-default .btn:focus {
+    background-color: var(--dark-gray);
+    color: var(--white);
+    border-right-color: var(--white);
+}
+
 /*  text color */
 .text-black {
     color: var(--black);
@@ -6156,6 +6189,16 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .text-dark-gray {
     color: var(--dark-gray);
 }
+
+/* font weight w*/
+.font-w-300 {font-weight: 300;}
+.font-w-400 {font-weight: 400;}
+.font-w-500 {font-weight: 500;}
+.font-w-600 {font-weight: 600;}
+.font-w-700 {font-weight: 700;}
+.font-w-800 {font-weight: 800;}
+.font-w-900 {font-weight: 900;}
+.font-w-bold {font-weight: bold;}
 
 /* modal-main */
 .modal-main {
@@ -6492,6 +6535,9 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .page-course .menu-accordion ul li a span.details {
     display: block;
 }
+.page-course .menu-accordion ul li a span.title {
+    margin-right: 15px;
+}
 .page-course .menu-accordion ul li a span.details {
     margin-top: 10px;
     font-size: 0;
@@ -6508,7 +6554,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     position: absolute;
     top: 15px;
     right: 0;
-    font-size: .85em;
+    font-size: .75rem;
 }
 
 /* progressbar */
