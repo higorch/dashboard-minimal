@@ -87,4 +87,11 @@
 
     });
 
+    // menu accordion
+    $(document).on('click', '.sidebar .menu-accordion > ul > li > a', function (e) {
+        e.preventDefault();
+        var el = $(this);
+        el.next('ul').slideToggle();
+    });
+
 })(jQuery)

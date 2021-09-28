@@ -285,11 +285,14 @@ html, body {
     display: block;
     width: 100%;
 }
-.sidebar .menu-wrap {
+.sidebar .menu-wrap,
+.box-general.large .sidebar .menu-accordion {
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
+}
+.sidebar .menu-wrap {
     width: var(--w-sidebar);
 }
 .box-general.large .sidebar .menu-wrap {
@@ -416,6 +419,49 @@ html, body {
     padding: 15px 0;
 }
 .sidebar .menu-wrap ul li > ul li:last-child a {
+    border-bottom: none;
+}
+
+/* menu-accordion */
+.sidebar .menu-accordion {
+    display: block;
+    width: 100%;
+}
+.sidebar .menu-accordion ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar .menu-accordion ul li,
+.sidebar .menu-accordion ul li > a {
+    display: block;
+    width: 100%;
+}
+.sidebar .menu-accordion ul li > a,
+.sidebar .menu-accordion ul li > ul {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.sidebar .menu-accordion ul li > a {
+    color: var(--white);
+    padding: 15px;
+}
+.sidebar .menu-accordion ul li > ul {
+    display: none;
+    padding: 0 15px;
+}
+.sidebar .menu-accordion ul li.active > ul {
+    display: block;
+}
+.sidebar .menu-accordion > ul > li > a {
+    font-weight: bold;
+    background-color: var(--bor-blue);
+    border-bottom: solid 1px var(--blue);
+}
+.sidebar .menu-accordion ul li > ul > li > a {
+    border-bottom: dotted 1px var(--bor-blue);
+}
+.sidebar .menu-accordion ul li > ul > li:last-child > a {
     border-bottom: none;
 }
 
