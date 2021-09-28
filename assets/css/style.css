@@ -292,6 +292,13 @@ html, body {
     left: 0;
     bottom: 0;
 }
+.sidebar .header {
+    display: block;
+    background-color: var(--black);
+    padding: 15px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
 .sidebar .menu-wrap {
     width: var(--w-sidebar);
 }
@@ -1062,7 +1069,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     width: 100%;
     height: auto;
 }
-.box-catalog .info a h1.title {
+.box-catalog .info a p.title {
     margin: 0;
     padding: 0;
     color: var(--dark-gray);
@@ -1118,6 +1125,14 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     display: block;
     width: 100%;
 }
+.page-course > .header .logo {
+    border-bottom: solid 1px var(--black);
+}
+.page-course .sidebar .box-menu {
+    position: relative;
+    display: block;
+    height: 100%;
+}
 .page-course .menu-accordion ul li a {
     position: relative;
 }
@@ -1145,6 +1160,14 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     top: 15px;
     right: 0;
     font-size: .75rem;
+}
+.page-course .sidebar .details-course span.title {
+    display: block;
+    width: 100%;
+    color: var(--white);
+    margin-bottom: 15px;
+    line-height: 18px;
+    font-weight: 600;
 }
 
 /* progressbar */

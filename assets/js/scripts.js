@@ -1,7 +1,16 @@
 (function ($) {
 
-    $('.scrollbar-macosx').scrollbar();
+    // box menu height
+    $.heightMenuBox = function () {
+        var hSidebarHeader = $('.sidebar .header').outerHeight();
+        var hHeaderLogo = $('.box-general.large > .header .logo').outerHeight();
+        var menuBoxHeight = hSidebarHeader + hHeaderLogo;
+        $('.page-course .sidebar .box-menu').css({
+            'height': 'calc(100vh - ' + menuBoxHeight + 'px)',
+        });
+    }
 
+    $('.scrollbar-macosx').scrollbar();
     $('.box-catalog.inline >').matchHeight();
 
     // prevent click link #
@@ -94,5 +103,10 @@
         el.next('ul').slideToggle();
         el.parent('li').toggleClass('open');
     });
+
+    // box menu resize
+    $(window).on('resize', function () {
+        $.heightMenuBox();
+    }).trigger('resize');
 
 })(jQuery)
