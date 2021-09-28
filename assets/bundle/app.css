@@ -5854,11 +5854,11 @@ html, body {
 }
 .sidebar .menu-accordion ul li > a {
     color: var(--white);
-    padding: 15px;
+    padding: 15px 0;
 }
 .sidebar .menu-accordion ul li > ul {
     display: none;
-    padding: 0 15px;
+    padding: 0 30px;
 }
 .sidebar .menu-accordion ul li.active > ul {
     display: block;
@@ -5868,9 +5868,14 @@ html, body {
     font-weight: bold;
     background-color: var(--bor-blue);
     border-bottom: solid 1px var(--blue);
+    padding: 15px;
 }
 .sidebar .menu-accordion ul li > ul > li > a {
     border-bottom: dotted 1px var(--bor-blue);
+}
+.sidebar .menu-accordion ul li > ul > li > a.active {
+    color: var(--yellow);
+    font-weight: bold;
 }
 .sidebar .menu-accordion ul li > ul > li:last-child > a {
     border-bottom: none;
@@ -6473,6 +6478,37 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     position: absolute;
     content: '';
     left: 0;
+}
+
+/* page-course */
+.page-course {
+    display: block;
+    width: 100%;
+}
+.page-course .menu-accordion ul li a {
+    position: relative;
+}
+.page-course .menu-accordion ul li a span.title,
+.page-course .menu-accordion ul li a span.details {
+    display: block;
+}
+.page-course .menu-accordion ul li a span.details {
+    margin-top: 10px;
+    font-size: 0;
+}
+.page-course .menu-accordion ul li a span.details small {
+    display: inline-block;
+    width: 50%;
+    font-size: .75rem;
+}
+.page-course .menu-accordion ul li a span.details small:last-child {
+    text-align: right;
+}
+.page-course .menu-accordion ul li a span.status {
+    position: absolute;
+    top: 15px;
+    right: 0;
+    font-size: .85em;
 }
 
 /* progressbar */
