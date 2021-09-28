@@ -454,6 +454,7 @@ html, body {
     display: block;
 }
 .sidebar .menu-accordion > ul > li > a {
+    position: relative;
     font-weight: bold;
     background-color: var(--bor-blue);
     border-bottom: solid 1px var(--blue);
@@ -463,6 +464,23 @@ html, body {
 }
 .sidebar .menu-accordion ul li > ul > li:last-child > a {
     border-bottom: none;
+}
+.sidebar .menu-accordion > ul > li > a::before {
+    position: absolute;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f107";
+    right: 15px;
+    top: 50%;
+
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+.sidebar .menu-accordion > ul > li.open > a::before {
+    content: "\f106";
 }
 
 /* dropdown */

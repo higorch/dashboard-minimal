@@ -92,6 +92,7 @@
         e.preventDefault();
         var el = $(this);
         el.next('ul').slideToggle();
+        el.parent('li').toggleClass('open');
     });
 
 })(jQuery)
