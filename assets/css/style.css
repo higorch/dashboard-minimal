@@ -292,7 +292,7 @@ html, body {
     left: 0;
     bottom: 0;
 }
-.sidebar .header {
+.sidebar > .header {
     display: block;
     background-color: var(--black);
     padding: 15px;
