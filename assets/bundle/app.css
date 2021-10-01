@@ -5846,6 +5846,9 @@ html, body {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
+.sidebar .menu-wrap > ul > li.active:first-child {
+    padding-top: 20px;
+}
 .sidebar .menu-wrap ul li a {
     color: var(--white);
     text-decoration: none;
