@@ -7,7 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../assets/images/logo-blue.png" />
     <title>Dashboard minimal</title>
+
+    <!-- plugins -->
+    <link rel="stylesheet" href="../assets/plugins/select2/css/select2.min.css">
+
+    <!-- bundle -->
     <link rel="stylesheet" href="../assets/bundle/app.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="../assets/css/custom.css">
 </head>
 
 <body>
@@ -486,17 +494,22 @@
 
                             <div class="group mb-15 col-20">
                                 <label for="cep">CEP</label>
-                                <input type="text" telefone="cep" id="cep" class="mask-zipcode">
+                                <input type="text" name="cep" id="cep" class="mask-zipcode">
                             </div>
 
-                            <div class="group mb-15 col-40">
+                            <div class="group mb-15 col-30">
                                 <label for="cnpj">CNPJ</label>
-                                <input type="text" telefone="cnpj" id="cnpj" class="mask-cnpj">
+                                <input type="text" name="cnpj" id="cnpj" class="mask-cnpj">
                             </div>
 
-                            <div class="group mb-15 col-40">
+                            <div class="group mb-15 col-30">
                                 <label for="cpf">CPF</label>
-                                <input type="text" telefone="cpf" id="cpf" class="mask-cpf">
+                                <input type="text" name="cpf" id="cpf" class="mask-cpf">
+                            </div>
+
+                            <div class="group mb-15 col-20">
+                                <label for="cpf">Money</label>
+                                <input type="text" name="money" id="money" class="mask-money">
                             </div>
 
                             <div class="group col-100">
@@ -535,7 +548,17 @@
     </div>
     <!-- box-general -->
 
+    <!-- bundle -->
     <script src="../assets/bundle/app.js"></script>
+
+    <!-- plugins -->
+    <script src="../assets/plugins/select2/js/select2.min.js"></script>
+    <script src="../assets/plugins/jquery-mask/jquery.mask.min.js"></script>
+    <script src="../assets/plugins/jquery-mask-money/jquery.maskMoney.min.js"></script>
+
+    <!-- custom js -->
+    <script src="../assets/js/custom.js"></script>
+
     <script>
         (function ($) {
 
@@ -544,6 +567,22 @@
                 allowClear: true,
                 dropdownParent: $("#modal-form")
             });
+
+            var SPMaskBehavior = function (val) {
+                return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+            },
+                spOptions = {
+                    onKeyPress: function (val, e, field, options) {
+                        field.mask(SPMaskBehavior.apply({}, arguments), options);
+                    }
+                };
+
+            $('.mask-phone').mask(SPMaskBehavior, spOptions);
+            $('.mask-zipcode').mask('00000-000');
+            $('.mask-cpf').mask('000.000.000-00', { reverse: true });
+            $('.mask-cnpj').mask('00.000.000/0000-00', { reverse: true });
+
+            $('.mask-money').maskMoney();
 
         })(jQuery);
     </script>
