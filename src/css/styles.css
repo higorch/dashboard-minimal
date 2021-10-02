@@ -824,7 +824,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     visibility: visible;
     overflow-y: auto;
 }
-.modal-main .body {
+.modal-main .content {
     position: absolute;
     top: 60px;
     left: 50%;
@@ -845,12 +845,12 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     -ms-transition: all ease .5s;
     -o-transition: all ease .5s;
 }
-.modal-main.active .body {
+.modal-main.active .content {
     top: 30px;
 }
-.modal-main .body .header,
-.modal-main .body .content,
-.modal-main .body .footer {
+.modal-main .content .header,
+.modal-main .content .body,
+.modal-main .content .footer {
     position: relative;
     display: block;
     width: 100%;
@@ -858,23 +858,23 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
-.modal-main .body .header {
+.modal-main .content .header {
     border-bottom: solid 1px var(--bor-gray);
 }
-.modal-main .body .content {
+.modal-main .content .body {
     padding-top: 0;
     padding-bottom: 0;
 }
-.modal-main .body .footer {
+.modal-main .content .footer {
     border-top: solid 1px var(--bor-gray);
 }
-.modal-main .body .header p {
+.modal-main .content .header p {
     margin: 0;
     padding: 0;
     color: var(--dark-gray);
     font-size: 1.25em;
 }
-.modal-main .body a.close {
+.modal-main .content a.close {
     position: absolute;
     right: -10px;
     top: -10px;
@@ -889,10 +889,10 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     color: var(--white);
     z-index: 3;
 }
-.modal-main.scrollbar .body .content {
+.modal-main.scrollbar .content .body {
     max-height: calc(100vh - 240px);
 }
-.modal-main.sidebar .body {
+.modal-main.sidebar .content {
     position: fixed;
     right: calc(var(--w-col-side) - var(--w-col-side) * 2);
     left: initial;
@@ -906,14 +906,14 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     -o-transform: initial;
     -ms-transform: initial;
 }
-.modal-main.active.sidebar .body {
+.modal-main.active.sidebar .content {
     right: 0;
 }
-.modal-main.sidebar .body a.close {
+.modal-main.sidebar .content a.close {
     display: none;
 }
-.modal-main.sidebar .body .content {
-    height: calc(100vh - 170px);
+.modal-main.sidebar .content .body {
+    height: calc(100vh - 190px);
 }
 
 /* card */

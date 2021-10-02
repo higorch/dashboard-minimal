@@ -265,7 +265,7 @@
             <!-- modal default -->
             <div class="modal-main" id="modal-default">
 
-                <div class="body">
+                <div class="content">
 
                     <a href="#" class="close">x</a>
 
@@ -273,7 +273,7 @@
                         <p>Modal default</p>
                     </div>
 
-                    <div class="content">
+                    <div class="body">
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                             been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
                             galley of type and scrambled it to make a type specimen book. It has survived not only five
@@ -326,7 +326,7 @@
             <!-- modal scrollbar -->
             <div class="modal-main scrollbar" id="modal-scrollbar">
 
-                <div class="body">
+                <div class="content">
 
                     <a href="#" class="close">x</a>
 
@@ -334,7 +334,7 @@
                         <p>Modal scrollbar</p>
                     </div>
 
-                    <div class="content scrollbar-macosx">
+                    <div class="body scrollbar-macosx">
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                             been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
                             galley of type and scrambled it to make a type specimen book. It has survived not only five
@@ -404,7 +404,7 @@
             <!-- modal sidebar -->
             <div class="modal-main sidebar" id="modal-sidebar">
 
-                <div class="body">
+                <div class="content">
 
                     <a href="#" class="close">x</a>
 
@@ -412,7 +412,7 @@
                         <p>Modal sidebar</p>
                     </div>
 
-                    <div class="content scrollbar-macosx">
+                    <div class="body scrollbar-macosx">
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                             been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
                             galley of type and scrambled it to make a type specimen book. It has survived not only five
@@ -430,7 +430,7 @@
             <!-- modal form -->
             <div class="modal-main scrollbar" id="modal-form">
 
-                <div class="body">
+                <div class="content">
 
                     <a href="#" class="close">x</a>
 
@@ -438,7 +438,7 @@
                         <p>Modal form</p>
                     </div>
 
-                    <div class="content scrollbar-macosx">
+                    <div class="body scrollbar-macosx">
 
                         <div class="form-wrap row pt-30 pb-30">
 
@@ -572,6 +572,14 @@
 
     <script>
         (function ($) {
+
+            // open modal by function
+            $('#modal-default').modal('open');
+
+            setTimeout(function () {
+                // close modal by function
+                $('#modal-default').modal('close')
+            }, 2500);
 
             $('.select-two').select2({
                 placeholder: "---",

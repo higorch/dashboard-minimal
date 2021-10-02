@@ -10,6 +10,26 @@
         });
     }
 
+    /**
+     * Actions modal
+     * 
+     * @param string action "open" or "close"
+     */
+    $.fn.modal = function (action) {
+
+        var el = $(this);
+
+        if (action == 'open') {
+            el.addClass('active');
+            $("body").css("overflow", "hidden");
+        }
+
+        if (action == 'close') {
+            el.removeClass('active');
+            $("body").css("overflow", "initial");
+        }
+    }
+
     $('.scrollbar-macosx').scrollbar();
     $('.box-catalog.inline >').matchHeight();
 
