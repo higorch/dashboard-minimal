@@ -1441,6 +1441,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .row .col-50,
 .row .col-40,
 .row .col-30,
+.row .col-33,
 .row .col-25,
 .row .col-20,
 .row .col-10 {
@@ -1461,6 +1462,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .row .col-60 { width: 60%;}
 .row .col-50 { width: 50%;}
 .row .col-40 { width: 40%;}
+.row .col-33 { width: 33.33333333%;}
 .row .col-30 { width: 30%;}
 .row .col-25 { width: 25%;}
 .row .col-20 { width: 20%;}
