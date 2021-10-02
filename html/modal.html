@@ -456,7 +456,7 @@
                                 <input type="text" telefone="phone" id="phone" class="mask-phone">
                             </div>
 
-                            <div class="group mb-15 col-70">
+                            <div class="group mb-15 col-30">
                                 <label for="select-default">Select default</label>
                                 <select name="select-default" id="select-default">
                                     <option>---</option>
@@ -464,6 +464,16 @@
                                     <option value="2">opt 2</option>
                                     <option value="3">opt 3</option>
                                 </select>
+                            </div>
+
+                            <div class="group mb-15 col-20">
+                                <label for="date">Date</label>
+                                <input type="text" name="date" id="date" class="mask-date" placeholder="__/__/____">
+                            </div>
+
+                            <div class="group mb-15 col-20">
+                                <label for="time">Time</label>
+                                <input type="text" name="time" id="time" class="mask-time" placeholder="__:__:__">
                             </div>
 
                             <div class="group mb-15 col-50">
@@ -581,6 +591,8 @@
             $('.mask-zipcode').mask('00000-000');
             $('.mask-cpf').mask('000.000.000-00', { reverse: true });
             $('.mask-cnpj').mask('00.000.000/0000-00', { reverse: true });
+            $('.mask-time').mask('00:00:00');
+            $('.mask-date').mask('00/00/0000');
 
             $('.mask-money').maskMoney();
 
