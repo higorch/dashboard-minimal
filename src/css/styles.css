@@ -1210,6 +1210,87 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     background-color: var(--white);
 }
 
+/* dash-info-icon */
+.dash-info-icon,
+.dash-info-icon .col {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.dash-info-icon {
+    display: block;
+    width: 100%;
+    font-size: 0;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(123, 121, 121, 0.4);
+}
+.dash-info-icon .col {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: initial;
+    padding: 5px;
+}
+.dash-info-icon .col:first-child {
+    width: 70%;
+}
+.dash-info-icon .col:last-child {
+    width: 30%;
+    text-align: center;
+}
+.dash-info-icon .col span.big-text,
+.dash-info-icon .col span.small-text {
+    display: block;
+}
+.dash-info-icon .col span.big-text {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.dash-info-icon .col span.small-text {
+    font-size: .85em;
+}
+.dash-info-icon .col .icon {
+    font-size: 2em;
+}
+.dash-info-icon.big .col span.big-text {
+    font-size: 1.8em;
+}
+.dash-info-icon.big .col span.small-text {
+    font-size: 1.1em;
+}
+.dash-info-icon.big .col .icon {
+    font-size: 3em;
+}
+.dash-info-icon.default {
+    color: #ffffff;
+    background: rgb(111,125,151);
+    background: linear-gradient(10deg, rgba(111,125,151,1) 0%, rgba(147,165,196,1) 50%, rgba(132,148,179,1) 100%);    
+}
+.dash-info-icon.blue {
+    color: #ffffff;
+    background: rgb(26,115,232);
+    background: linear-gradient(10deg, rgba(26,115,232,1) 0%, rgba(111,168,244,1) 50%, rgba(26,115,232,1) 100%); 
+}
+.dash-info-icon.yellow {
+    color: #3c4043;
+    background: rgb(230,222,123);
+    background: linear-gradient(10deg, rgba(230,222,123,1) 0%, rgba(255,249,176,1) 50%, rgba(230,222,123,1) 100%);  
+}
+.dash-info-icon.green {
+    color: #ffffff;
+    background: rgb(83,190,138);
+    background: linear-gradient(10deg, rgba(83,190,138,1) 0%, rgba(134,237,187,1) 50%, rgba(83,190,138,1) 100%);   
+}
+.dash-info-icon.red {
+    color: #ffffff;
+    background: rgb(203,100,104);
+    background: linear-gradient(10deg, rgba(203,100,104,1) 0%, rgba(245,123,128,1) 50%, rgba(203,100,104,1) 100%);  
+}
+.dash-info-icon.black {
+    color: #ffffff;
+    background: rgb(60,64,67);
+    background: linear-gradient(10deg, rgba(60,64,67,1) 0%, rgba(96,99,102,1) 50%, rgba(60,64,67,1) 100%);   
+}
+
 /* box-heading */
 .box-heading {
     display: block;
@@ -1358,7 +1439,8 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .row .col-60,
 .row .col-50,
 .row .col-40,
-.row .col-30, 
+.row .col-30,
+.row .col-25,
 .row .col-20,
 .row .col-10 {
     display: inline-block;
@@ -1379,6 +1461,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .row .col-50 { width: 50%;}
 .row .col-40 { width: 40%;}
 .row .col-30 { width: 30%;}
+.row .col-25 { width: 25%;}
 .row .col-20 { width: 20%;}
 .row .col-10 { width: 10%;}
 
