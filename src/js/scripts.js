@@ -68,14 +68,14 @@
     });
 
     // close modal
-    $('.modal-main, .modal-main .body a.close').on('click', function (e) {
+    $('.modal-main, .modal-main .content a.close').on('click', function (e) {
 
         e.preventDefault();
 
         var el = $(this);
 
-        // click outline modal body
-        if (!$(e.target).closest('.modal-main .body').length && el.hasClass('modal-main')) {
+        // click outline modal content
+        if (!$(e.target).closest('.modal-main .content').length && el.hasClass('modal-main')) {
             el.removeClass('active');
             $("body").css("overflow", "initial");
         }
