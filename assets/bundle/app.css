@@ -5422,6 +5422,9 @@ readers do not read off random characters that represent icons */
     --bor-gray: #f0f0f0;
     --bor-form: #e6e4e4;
     --bor-card: #f0eded;
+    --blue-pastel: #72a4e6;
+    --green-pastel: #7edbae;
+    --red-pastel: #d87376;
     --w-sidebar: 175px;
     --w-sidebar-large: 285px;
     --h-header: 70px;
@@ -6172,6 +6175,46 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     background-color: var(--dark-gray);
     color: var(--white);
     border-right-color: var(--white);
+}
+
+/* alert */
+.alert {
+    position: relative;
+    display: block;
+    width: 100%;
+    border-radius: 7px;
+    padding: 15px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.alert.alert-default {
+    background-color: var(--gray);
+    color: var(--dark-gray);
+}
+.alert.alert-blue {
+    background-color: var(--blue-pastel);
+    color: var(--white);
+}
+.alert.alert-green {
+    background-color: var(--green-pastel);
+    color: var(--white);
+}
+.alert.alert-red {
+    background-color: var(--red-pastel);
+    color: var(--white);
+}
+.alert.alert-yellow {
+    background-color: var(--yellow);
+    color: var(--dark-gray);
+}
+.alert.alert-dark-gray {
+    background-color: var(--dark-gray);
+    color: var(--white);
+}
+.alert p {
+    padding: 0;
+    margin: 0;
+    font-weight: 600;
 }
 
 /*  text color */
