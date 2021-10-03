@@ -313,7 +313,7 @@ html, body {
 }
 .sidebar .menu-wrap ul li {
     position: relative;
-    padding-left: 15px;
+    padding-left: 20px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
