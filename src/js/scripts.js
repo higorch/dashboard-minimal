@@ -129,4 +129,11 @@
         $.heightMenuBox();
     }).trigger('resize');
 
+    // close error validation
+    $(document).on('mouseover', '.form-wrap .group span.error', function (e) {
+        $(this).fadeOut(150, function () {
+            $(this).remove();
+        });
+    });
+
 })(jQuery)

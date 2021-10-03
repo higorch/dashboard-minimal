@@ -957,9 +957,25 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     font-size: 0;
 }
 .form-wrap .group {
+    position: relative;
     display: inline-block;
     font-size: initial;
     width: 100%;
+}
+.form-wrap .group span.error {
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 0;
+    height: 45px;
+    line-height: 25px;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: .85em;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 .form-wrap .group label {
     display: block;
