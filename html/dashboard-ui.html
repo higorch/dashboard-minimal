@@ -332,6 +332,56 @@
 
             </div>
 
+            <div class="row mb-30">
+
+                <div class="col-40 mt-30">
+
+                    <div class="card">
+
+                        <div class="heading split-col">
+                            <div class="col">
+                                <span class="title">Pie</span>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="btn btn-gray" title="Filtrar">
+                                    <i class="fas fa-filter"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="body">
+                            <canvas id="pie" height="320"></canvas>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-60 mt-30">
+
+                    <div class="card">
+
+                        <div class="heading split-col">
+                            <div class="col">
+                                <span class="title">Line</span>
+                            </div>
+                            <div class="col">
+                                <a href="#" class="btn btn-gray" title="Filtrar">
+                                    <i class="fas fa-filter"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="body">
+                            <canvas id="line" height="320"></canvas>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
             <!-- modal sidebar -->
             <div class="modal-main sidebar" id="modal-sidebar">
 
@@ -370,8 +420,85 @@
     <!-- bundle -->
     <script src="../assets/bundle/app.js"></script>
 
+    <!-- plugins -->
+    <script src="../assets/plugins/chartjs/chart.js"></script>
+
     <!-- custom js -->
     <script src="../assets/js/custom.js"></script>
+
+    <script>
+        (function ($) {
+
+            // chart pie style
+            var pie = document.getElementById('pie').getContext('2d');
+            var chart_pie = new Chart(pie, {
+                type: 'pie',
+                data: {
+                    labels: ['NF-e', 'NFC-e', 'CF-e-SAT'],
+                    datasets: [{
+                        data: [12, 19, 5],
+                        backgroundColor: [
+                            'rgba(26, 115, 232, 0.3)',
+                            'rgba(111, 125, 151, 0.3)',
+                            'rgba(135, 183, 184, 0.3)',
+                        ],
+                        borderColor: [
+                            'rgba(26, 115, 232, 0.5)',
+                            'rgba(111, 125, 151, 0.5)',
+                            'rgba(135, 183, 184, 0.5)',
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                }
+            });
+
+            // chart line style
+            var line = document.getElementById('line').getContext('2d');
+            var chart_line = new Chart(line, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+                    datasets: [{
+                        label: 'NF-e',
+                        data: [12, 19, 3, 5, 2, 3],
+                        borderColor: "rgba(26, 115, 232, 0.5)",
+                        backgroundColor: "rgba(26, 115, 232, 0.3)",
+                    },
+                    {
+                        label: 'NFC-e',
+                        data: [19, 12, 5, 8, 3, 10],
+                        borderColor: "rgba(111, 125, 151, 0.5)",
+                        backgroundColor: "rgba(111, 125, 151, 0.3)",
+                    },
+                    {
+                        label: 'CF-e-SAT',
+                        data: [2, 7, 6, 4, 1, 2],
+                        borderColor: "rgba(135, 183, 184, 0.5)",
+                        backgroundColor: "rgba(135, 183, 184, 0.3)",
+                    }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    },
+                    interaction: {
+                        mode: 'index',
+                        intersect: false,
+                    },
+                }
+            });
+
+        })(jQuery);
+    </script>
 </body>
 
 </html>
