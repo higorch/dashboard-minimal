@@ -938,7 +938,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     z-index: 3;
 }
 .modal-main.scrollbar .content .body {
-    max-height: calc(100vh - 250px);
+    max-height: calc(100vh - 245px);
 }
 .modal-main.sidebar .content {
     position: fixed;
@@ -1595,12 +1595,4 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 }
 .select2-container--default .select2-selection--multiple .select2-selection__choice__display {
     color: var(--dark-gray);
-}
-
-/* simplebar */
-.simplebar-track {
-    z-index: -1;
-}
-.simplebar-scrollbar::before {
-    background-color: rgba(193, 199, 207, 0.65);
 }

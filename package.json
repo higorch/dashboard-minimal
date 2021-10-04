@@ -26,7 +26,6 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
-    "jquery": "^3.6.0",
-    "simplebar": "^5.3.6"
+    "jquery": "^3.6.0"
   }
 }
