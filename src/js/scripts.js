@@ -30,7 +30,10 @@
         }
     }
 
-    $('.scrollbar-macosx').scrollbar();
+    // $('.scrollbar-macosx').scrollbar();
+
+    $('.simple-scrollbar').each((index, element) => new SimpleBar(element));
+
     $('.box-catalog.inline >').matchHeight();
 
     // prevent click link #
@@ -117,7 +120,7 @@
     });
 
     // menu accordion
-    $(document).on('click', '.sidebar .menu-accordion > ul > li > a', function (e) {
+    $(document).on('click', '.sidebar .menu-accordion ul li a', function (e) {
         e.preventDefault();
         var el = $(this);
         el.next('ul').slideToggle();
