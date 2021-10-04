@@ -132,7 +132,7 @@
 
             $(document).add('body').off(this.namespace);
 
-            if ($.isFunction(this.options.onDestroy)){
+            if ($.isFunction(this.options.onDestroy)) {
                 this.options.onDestroy.apply(this, [this.container]);
             }
         },
@@ -144,7 +144,7 @@
                 cw = this.containerWrapper || c,
                 namespace = this.namespace,
                 o = $.extend(this.options, options || {}),
-                s = {x: this.scrollx, y: this.scrolly},
+                s = { x: this.scrollx, y: this.scrolly },
                 w = this.wrapper;
 
             var initScroll = {
@@ -156,7 +156,7 @@
             if ((browser.mobile && o.ignoreMobile)
                 || (browser.overlay && o.ignoreOverlay)
                 || (browser.macosx && !browser.webkit) // still required to ignore nonWebKit browsers on Mac
-                ) {
+            ) {
                 return false;
             }
 
@@ -233,7 +233,7 @@
                         });
                     }
                 }
-                if ($.isFunction(o.onInit)){
+                if ($.isFunction(o.onInit)) {
                     o.onInit.apply(this, [c]);
                 }
             } else {
@@ -269,7 +269,7 @@
 
                     scrollx.scroll = S._getScroll(o['scroll' + d]).addClass('scroll-' + d);
 
-                    if(o.showArrows){
+                    if (o.showArrows) {
                         scrollx.scroll.addClass('scroll-element_arrows_visible');
                     }
 
@@ -424,7 +424,7 @@
             this._updateScroll('x', this.scrollx);
             this._updateScroll('y', this.scrolly);
 
-            if ($.isFunction(o.onUpdate)){
+            if ($.isFunction(o.onUpdate)) {
                 o.onUpdate.apply(this, [c]);
             }
 
@@ -513,7 +513,7 @@
             return scroll;
         },
 
-        _handleMouseDown: function(callback, event) {
+        _handleMouseDown: function (callback, event) {
 
             var namespace = this.namespace;
 
@@ -562,7 +562,7 @@
             }
 
             if (d === 'y') {
-                if(container.is('textarea') || AreaSize < AreaVisible){
+                if (container.is('textarea') || AreaSize < AreaVisible) {
                     containerWrapper.css({
                         "height": (AreaVisible + browser.scroll.height) + 'px',
                         "max-height": "none"
@@ -581,7 +581,7 @@
                 || scrolly.visible != wrapper.height()
                 || scrollx.offset != (parseInt(container.css('left'), 10) || 0)
                 || scrolly.offset != (parseInt(container.css('top'), 10) || 0)
-                ) {
+            ) {
                 $.extend(this.scrollx, {
                     "offset": parseInt(container.css('left'), 10) || 0,
                     "size": container.prop('scrollWidth'),
@@ -672,7 +672,7 @@
             }
             if (debug && timerCounter > 10) {
                 window.console && console.log('Scroll updates exceed 10');
-                updateScrollbars = function () {};
+                updateScrollbars = function () { };
             } else {
                 clearTimeout(timer);
                 timer = setTimeout(updateScrollbars, 300);
