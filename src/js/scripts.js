@@ -39,7 +39,7 @@
     });
 
     // toggle sidebar and topbar logo
-    $('.toggle-menu a').on('click', function (e) {
+    $(document).on('click', '.toggle-menu a', function (e) {
 
         var el = $(this);
         var icon = el.find('i')
@@ -59,7 +59,7 @@
     })
 
     // open modal
-    $('[data-trigger="modal"]').on('click', function (e) {
+    $(document).on('click', '[data-trigger="modal"]', function (e) {
         e.preventDefault();
         var el = $(this);
         var id = el.data('modal');
@@ -68,7 +68,7 @@
     });
 
     // close modal
-    $('.modal-main, .modal-main .content a.close').on('click', function (e) {
+    $(document).on('click', '.modal-main, .modal-main .content a.close', function (e) {
 
         e.preventDefault();
 
@@ -89,7 +89,7 @@
     });
 
     // submenu
-    $('.sidebar .menu-wrap ul li').on('mouseover', function (e) {
+    $(document).on('mouseover', '.sidebar .menu-wrap ul li', function (e) {
         var el = $(this),
             submenu = $('> ul', el);
 
