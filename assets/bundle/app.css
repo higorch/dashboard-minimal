@@ -6220,6 +6220,92 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     font-weight: 600;
 }
 
+/* badge */
+.badge {
+    display: inline-block;
+    border-radius: 5px;
+    text-align: center;
+    font-size: .85em;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.badge.badge-block {
+    display: block;
+}
+.badge.badge-default {
+    background-color: var(--gray);
+    color: var(--dark-gray)
+}
+.badge.badge-blue {
+    background-color: var(--blue-pastel);
+    color: var(--white);
+}
+.badge.badge-green {
+    background-color: var(--green-pastel);
+    color: var(--white);
+}
+.badge.badge-red {
+    background-color: var(--red-pastel);
+    color: var(--white);
+}
+.badge.badge-yellow {
+    background-color: var(--yellow);
+    color: var(--dark-gray);
+}
+/* badge-round  */
+.badge.badge-round {
+    display: inline list-item;
+    position: relative;
+    padding: 0;
+    background-color: transparent;
+}
+.badge.badge-round::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.badge.badge-round.badge-default {
+    color: var(--dark-gray);
+}
+.badge.badge-round.badge-default::before {
+    background-color: var(--dark-gray);
+}
+.badge.badge-round.badge-blue {
+    color: var(--blue-pastel);
+}
+.badge.badge-round.badge-blue::before {
+    background-color: var(--blue-pastel);
+}
+.badge.badge-round.badge-green {
+    color: var(--green-pastel);
+}
+.badge.badge-round.badge-green::before {
+    background-color: var(--green-pastel);
+}
+.badge.badge-round.badge-red {
+    color: var(--red-pastel);
+}
+.badge.badge-round.badge-red::before {
+    background-color: var(--red-pastel);
+}
+.badge.badge-round.badge-yellow {
+    color: var(--yellow);
+}
+.badge.badge-round.badge-yellow::before {
+    background-color: var(--yellow);
+}
+
 /*  text color */
 .text-black {
     color: var(--black);
