@@ -6547,6 +6547,9 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     min-height: 120px;
     max-width: 100%;
 }
+.form-wrap .box-heading h3 {
+    font-size: .9rem;
+}
 
 /* form auth */
 .box-form-auth {
@@ -6859,7 +6862,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     padding: 0;
     color: var(--dark-gray);
     font-weight: 500;
-    font-size: 1em;
+    font-size: 1rem;
     overflow: hidden;
     white-space: nowrap;
     text-transform: uppercase;
