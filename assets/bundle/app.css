@@ -5428,7 +5428,7 @@ readers do not read off random characters that represent icons */
     --w-sidebar: 175px;
     --w-sidebar-large: 285px;
     --h-header: 70px;
-    --w-col-side: 320px;
+    --w-col-side: 380px;
 }
 
 html, body {
