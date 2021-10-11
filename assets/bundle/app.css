@@ -7074,7 +7074,18 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     height: 45px;
 }
 .select2-container--default .select2-selection--multiple .select2-selection__clear {
-    margin-top: 5px;
+    position: absolute;
+    top: -4px;
+    right: -5px;
+    margin: 0;
+    width: 10px;
+    height: 10px;
+    background: var(--dark-gray);
+    color: var(--white);
+    border-radius: 50%;
+    line-height: 8px;
+    text-align: center;
+    font-size: .75em;
 }
 .select2-container--default .select2-selection--single .select2-selection__clear {
     position: relative;
@@ -7092,4 +7103,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 }
 .select2-container--default .select2-selection--multiple .select2-selection__choice__display {
     color: var(--dark-gray);
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered li {
+    font-size: .8rem;
 }
