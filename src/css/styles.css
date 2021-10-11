@@ -1113,7 +1113,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     display: block;
     color: var(--dark-gray);
     text-transform: uppercase;
-    font-size: 0.8em;
+    font-size: 0.75em;
     font-weight: 600;
     margin-bottom: 5px;
 }
