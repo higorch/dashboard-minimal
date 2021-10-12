@@ -847,25 +847,20 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 }
 /* badge-round  */
 .badge.badge-round {
-    display: inline list-item;
+    display: inline-block;
     position: relative;
     padding: 0;
     background-color: transparent;
 }
 .badge.badge-round::before {
-    position: absolute;
+    position: relative;
+    display: inline-block;
     content: '';
     left: 0;
-    top: 50%;
     width: 8px;
     height: 8px;
+    margin-right: 5px;
     border-radius: 50%;
-
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
 }
 .badge.badge-round.badge-default {
     color: var(--dark-gray);
