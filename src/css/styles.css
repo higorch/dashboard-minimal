@@ -354,13 +354,13 @@ html, body {
 .sidebar .menu-wrap ul li a svg {
     font-size: 1.3em;
 }
-.sidebar .menu-wrap ul li.active {
+.sidebar .menu-wrap > ul > li.active {
     position: relative;
 }
-.sidebar .menu-wrap ul li.active:first-child {
+.sidebar .menu-wrap > ul > li.active:first-child {
     padding-top: 20px;
 }
-.sidebar .menu-wrap ul li.active::after {
+.sidebar .menu-wrap > ul > li.active::after {
     position: absolute;
     content: '';
     width: 40px;
@@ -377,15 +377,15 @@ html, body {
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
 }
-.sidebar .menu-wrap ul li.active a {
+.sidebar .menu-wrap > ul > li.active > a {
     position: relative;
     background-color: var(--white);
     color: var(--blue);
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
 }
-.sidebar .menu-wrap ul li.active a::before,
-.sidebar .menu-wrap ul li.active a::after {
+.sidebar .menu-wrap > ul > li.active > a::before,
+.sidebar .menu-wrap > ul > li.active > a::after {
     position: absolute;
     content: '';
     width: 40px;
@@ -394,11 +394,11 @@ html, body {
     z-index: 3;
     right: 0;
 }
-.sidebar .menu-wrap ul li.active a::before {
+.sidebar .menu-wrap > ul > li.active > a::before {
     top: -30px;
     border-radius: 0 15px 40px 0;
 }
-.sidebar .menu-wrap ul li.active a::after {
+.sidebar .menu-wrap > ul > li.active > a::after {
     bottom: -30px;
     border-radius: 0 40px 15px 0;
 }
