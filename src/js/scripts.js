@@ -74,7 +74,7 @@
 
         var el = $(this);
 
-        if (!$(e.target).closest('.modal-main > *').length || $(e.target).closest('.modal-main .content .close').length) {
+        if (!$(e.target).closest('.modal-main > *').length || $(e.target).hasClass('dialog') || $(e.target).closest('.modal-main .dialog .content .close').length) {
             el.removeClass('active');
             $("body").css("overflow", "initial");
         }
