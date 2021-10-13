@@ -68,21 +68,14 @@
     });
 
     // close modal
-    $(document).on('click', '.modal-main, .modal-main .content a.close', function (e) {
+    $(document).on('click', '.modal-main', function (e) {
 
         e.preventDefault();
 
         var el = $(this);
 
-        // click outline modal content
-        if (!$(e.target).closest('.modal-main .content').length && el.hasClass('modal-main')) {
+        if (!$(e.target).closest('.modal-main > *').length || $(e.target).closest('.modal-main .content .close').length) {
             el.removeClass('active');
-            $("body").css("overflow", "initial");
-        }
-
-        // click of modal close
-        if (el.hasClass('close')) {
-            el.parents('.modal-main').removeClass('active');
             $("body").css("overflow", "initial");
         }
 
@@ -90,6 +83,7 @@
 
     // submenu
     $(document).on('mouseover', '.sidebar .menu-wrap ul li', function (e) {
+
         var el = $(this),
             submenu = $('> ul', el);
 
@@ -97,12 +91,17 @@
             return;
         }
 
+        // get menu item height
+        var menuItemHeight = 15 + (el.outerHeight() / 2);
+
         // grab the menu item's position relative to its positioned parent
         var menuItemPos = el.position();
 
         // place the submenu in the correct position relevant to the menu item
+        var topPosition = menuItemPos.top + menuItemHeight;
+
         submenu.css({
-            top: menuItemPos.top
+            top: topPosition
         });
 
         var bottomSpacing = submenu.position().top + submenu.outerHeight(true) >= $(window).height();
@@ -110,7 +109,7 @@
 
         if (bottomSpacing) {
             submenu.css({
-                'top': (menuItemPos.top - 30) - bottomPosition,
+                top: (topPosition - 30) - bottomPosition,
             });
         }
 
