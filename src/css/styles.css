@@ -1066,6 +1066,75 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     height: calc(100vh - 190px);
 }
 
+/* tab */
+.tab-main {
+    display: block;
+    width: 100%;
+    font-size: 0;
+}
+.tab-main ul.nav,
+.tab-main .content {
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+}
+.tab-main .content {
+    border: solid 1px var(--bor-gray);
+    padding: 0 30px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.tab-main ul.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.tab-main .content,
+.tab-main ul.nav li {
+    font-size: initial;
+}
+.tab-main ul.nav li {
+    position: relative;
+    display: inline-block;
+}
+.tab-main ul.nav li.active {
+    border-top: solid 1px var(--bor-gray);
+    border-left: solid 1px var(--bor-gray);
+    border-right: solid 1px var(--bor-gray);
+    border-bottom: solid 1px var(--white);
+    background-color: var(--white);
+    margin: 0 0 -1px 0;
+}
+.tab-main ul.nav li a {
+    color: var(--black);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .85em;
+    font-weight: bold;
+    display: block;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.tab-main ul.nav li.active a {
+    color: var(--blue);
+}
+/* vertical */
+.tab-main.vertical ul.nav {
+    width: 200px;
+}
+.tab-main.vertical .content {
+    width: calc(100% - 200px);
+}
+.tab-main.vertical ul.nav li {
+    display: block;
+}
+.tab-main.vertical ul.nav li.active {
+    border-right: solid 1px var(--white);
+    border-bottom: solid 1px var(--bor-gray);
+    margin: 0 -1px 0 0;
+}
+
 /* card */
 .card,
 .card .heading,
