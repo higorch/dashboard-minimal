@@ -81,6 +81,19 @@
 
     });
 
+    // tabs
+    $(document).on('click', '.tab-main ul.nav li a', function (e) {
+
+        e.preventDefault();
+
+        var el = $(this);
+        var id = el.attr('href');
+
+        el.parent('li').addClass('active').siblings().removeClass('active');
+        el.parents('ul.nav').next('.content').find(id).addClass('active').siblings('.body').removeClass('active');
+
+    });
+
     // submenu
     $(document).on('mouseover', '.sidebar .menu-wrap ul li', function (e) {
 

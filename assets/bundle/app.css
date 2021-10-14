@@ -6527,6 +6527,12 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .tab-main ul.nav li.active a {
     color: var(--blue);
 }
+.tab-main .content .body {
+    display: none;
+}
+.tab-main .content .body.active {
+    display: block;
+}
 /* vertical */
 .tab-main.vertical ul.nav {
     width: 200px;
