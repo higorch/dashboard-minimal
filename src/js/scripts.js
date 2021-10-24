@@ -30,8 +30,8 @@
         }
     }
 
-    $('.scrollbar-macosx').scrollbar();
     $('.box-catalog.inline >').matchHeight();
+    $(document).find('.scrollbar-macosx').scrollbar();
 
     // prevent click link #
     $(document).on('click', '[href="#"]', function (e) {
