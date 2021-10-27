@@ -6913,34 +6913,36 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     font-size: 3em;
 }
 .dash-info-icon.default {
-    color: #ffffff;
-    background: rgb(111,125,151);
-    background: linear-gradient(10deg, rgba(111,125,151,1) 0%, rgba(147,165,196,1) 50%, rgba(132,148,179,1) 100%);    
+    color: var(--dark-gray);
+    background-color: rgb(236, 233, 233);
 }
 .dash-info-icon.blue {
     color: #ffffff;
     background: rgb(26,115,232);
-    background: linear-gradient(10deg, rgba(26,115,232,1) 0%, rgba(111,168,244,1) 50%, rgba(26,115,232,1) 100%); 
 }
 .dash-info-icon.yellow {
     color: #3c4043;
     background: rgb(230,222,123);
-    background: linear-gradient(10deg, rgba(230,222,123,1) 0%, rgba(255,249,176,1) 50%, rgba(230,222,123,1) 100%);  
 }
 .dash-info-icon.green {
     color: #ffffff;
     background: rgb(83,190,138);
-    background: linear-gradient(10deg, rgba(83,190,138,1) 0%, rgba(134,237,187,1) 50%, rgba(83,190,138,1) 100%);   
 }
 .dash-info-icon.red {
     color: #ffffff;
     background: rgb(203,100,104);
-    background: linear-gradient(10deg, rgba(203,100,104,1) 0%, rgba(245,123,128,1) 50%, rgba(203,100,104,1) 100%);  
 }
 .dash-info-icon.black {
     color: #ffffff;
     background: rgb(60,64,67);
-    background: linear-gradient(10deg, rgba(60,64,67,1) 0%, rgba(96,99,102,1) 50%, rgba(60,64,67,1) 100%);   
+}
+.dash-info-icon.dark {
+    color: #ffffff;
+    background: rgb(111, 125, 151);
+}
+.dash-info-icon.ocean {
+    color: #ffffff;
+    background: rgb(57, 157, 209);
 }
 
 /* box-heading */
