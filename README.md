@@ -7,7 +7,7 @@ The dashbord template open source for your project.
 - Opened modal
 
 ```bash
-$("#modal").on('opened', function(){
+$("#modal").on('opened', function(e) {
     alert('modal open');
 });
 ```
@@ -15,7 +15,7 @@ $("#modal").on('opened', function(){
 - Closed modal
 
 ```bash
-$("#modal").on('closed', function(){
+$("#modal").on('closed', function(e) {
     alert('modal close');
 });
 ```
