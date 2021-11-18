@@ -22,11 +22,13 @@
         if (action == 'open') {
             el.addClass('active');
             $("body").css("overflow", "hidden");
+            el.trigger("opened");
         }
 
         if (action == 'close') {
             el.removeClass('active');
             $("body").css("overflow", "initial");
+            el.trigger("closed");
         }
     }
 
@@ -65,6 +67,7 @@
         var id = el.data('modal');
         $(id).addClass('active');
         $("body").css("overflow", "hidden");
+        $(id).trigger("opened");
     });
 
     // close modal
@@ -75,6 +78,7 @@
         if (!$(e.target).closest('.modal-main > *').length || $(e.target).hasClass('dialog') || $(e.target).closest('.modal-main .dialog .content .close').length) {
             el.removeClass('active');
             $("body").css("overflow", "initial");
+            el.trigger("opened");
         }
 
     });
