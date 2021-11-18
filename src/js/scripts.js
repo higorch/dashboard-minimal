@@ -70,8 +70,6 @@
     // close modal
     $(document).on('click', '.modal-main', function (e) {
 
-        e.preventDefault();
-
         var el = $(this);
 
         if (!$(e.target).closest('.modal-main > *').length || $(e.target).hasClass('dialog') || $(e.target).closest('.modal-main .dialog .content .close').length) {
