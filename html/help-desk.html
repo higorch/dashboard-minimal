@@ -8,6 +8,9 @@
     <link rel="icon" type="image/png" href="../assets/images/logo-blue.png" />
     <title>Dashboard minimal</title>
 
+    <!-- plugins -->
+    <link rel="stylesheet" href="../assets/plugins/select2/css/select2.min.css">
+
     <!-- bundle -->
     <link rel="stylesheet" href="../assets/bundle/app.css">
 
@@ -223,61 +226,97 @@
         <div class="container">
 
             <!-- page-header -->
-            <div class="page-header">
+            <div class="page-header split-col">
 
                 <div class="col">
-                    <h3 class="title">Modelo de botões</h3>
+                    <h3 class="title">Chamado (2021958567)</h3>
+                    <small class="text-dark-gray">Aberto em: quarta-feira, 20 de outubro de 2021 10:52</small>
+                </div>
+
+                <div class="col">
+                    <a href="#" class="btn btn-default ml-10" title="Status">Em aberto</a>
                 </div>
 
             </div>
 
             <div class="row">
-                <div class="col-100 mt-30">
 
-                    <a href="#" class="btn btn-green mr-15">green</a>
+                <div class="col-70 mt-30">
 
-                    <button class="btn btn-blue mr-15">blue</button>
+                    <div class="card">
 
-                    <a href="#" class="btn btn-red mr-15">red</a>
+                        <div class="heading split-col">
 
-                    <a href="#" class="btn btn-black mr-15">black</a>
+                            <div class="col">
+                                <span class="title">Elon Musk</span><br>
+                            </div>
 
-                    <a href="#" class="btn btn-dark-gray mr-15">dark gray</a>
+                            <div class="col">
+                                <span class="text-black" title="Respostas"><i class="far fa-comments"></i> 5</span>
+                            </div>
 
-                    <a href="#" class="btn btn-gray mr-15">gray</a>
+                        </div>
 
-                    <button class="btn btn-default mr-15">default</button>
+                        <div class="body">
 
-                    <div class="btn-group btn-default mr-15">
-                        <a href="#" class="btn" title="Voltar">
-                            <i class="fas fa-chevron-left"></i>
-                        </a>
-                        <a href="#" class="btn" title="Avançar">
-                            <i class="fas fa-chevron-right"></i>
-                        </a>
+                            ...
+
+                        </div>
+
                     </div>
 
-                    <a href="#" class="btn btn-blue btn-block mt-15">
-                        <i class="fas fa-external-link-alt"></i>
-                        Btn block
-                    </a>
+                </div>
+
+                <div class="col-30 mt-30">
+
+                    <div class="card">
+
+                        <div class="body">
+
+                            <div class="box-heading">
+                                <h3>Conta</h3>
+                            </div>
+
+                            <div class="mt-15">
+                                <select class="select-two">
+                                    <option></option>
+                                    <option value="1">Tulipia</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card mt-30">
+
+                        <div class="body">
+
+                            <div class="box-heading">
+                                <h3>Assuntos</h3>
+                            </div>
+
+                            <span class="badge badge-blue badge-block mt-15">Regulatório</span>
+                            <span class="badge badge-blue badge-block mt-15">Financeiro</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="card mt-30 mb-30">
+
+                        <div class="body">
+
+                            <div class="box-heading">
+                                <h3>Acompanhado por</h3>
+                            </div>
+
+                        </div>
+
+                    </div>
 
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-100 mt-30 mb-30">
-
-                    <a href="#" class="text-black mr-15">text black</a>
-                    <a href="#" class="text-blue mr-15">text blue</a>
-                    <a href="#" class="text-red mr-15">text red</a>
-                    <a href="#" class="text-green mr-15">text green</a>
-                    <a href="#" class="text-yellow mr-15">text yellow</a>
-                    <a href="#" class="text-dark-gray mr-15">text dark-gray</a>
-                    <a href="#" class="text-white mr-15">text white</a>
-                    <a href="#" class="text-gray mr-15">text gray</a>
-
-                </div>
             </div>
 
         </div>
@@ -288,11 +327,25 @@
     <!-- bundle -->
     <script src="../assets/bundle/app.js"></script>
 
+    <!-- plugins -->
+    <script src="../assets/plugins/select2/js/select2.min.js"></script>
+
     <!-- custom js -->
     <script src="../assets/js/custom.js"></script>
 
     <!-- fix error -->
     <script src="../assets/js/fix-error.js"></script>
+
+    <script>
+        (function ($) {
+
+            $('.select-two').select2({
+                placeholder: "---",
+                allowClear: true
+            });
+
+        })(jQuery);
+    </script>
 </body>
 
 </html>
