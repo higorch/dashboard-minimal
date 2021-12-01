@@ -6961,6 +6961,40 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     background: rgb(57, 157, 209);
 }
 
+/* box-profile */
+.box-profile {
+    display: block;
+    width: 100%;
+    font-size: 0;
+}
+.box-profile .avatar,
+.box-profile .info {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: initial;
+}
+.box-profile .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    overflow: hidden;
+}
+.box-profile .info {
+    width: calc(100% - 65px);
+}
+.box-profile .avatar img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.box-profile .info .name {
+    font-size: 1em;
+}
+.box-profile .info .detail {
+    font-size: .8em;
+}
+
 /* box-heading */
 .box-heading {
     display: block;
@@ -6995,6 +7029,8 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .text-justify {text-align: justify !important;}
 
 /* margins */
+.m-0{margin: 0;}
+
 .mt-0 {margin-top: 0 !important;}
 .mt-5 {margin-top: 5px !important;}
 .mt-10 {margin-top: 10px !important;}
@@ -7040,6 +7076,8 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .mr-60 {margin-right: 60px !important;}
 
 /* paddings */
+.p-0{padding: 0;}
+
 .pt-0 {padding-top: 0 !important;}
 .pt-10 {padding-top: 10px !important;}
 .pt-15 {padding-top: 15px !important;}
