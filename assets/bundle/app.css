@@ -6341,6 +6341,11 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     color: var(--dark-gray);
 }
 
+/* text align */
+.text-align-left {text-align: left;}
+.text-align-right {text-align: right;}
+.text-align-center {text-align: center;}
+
 /* font weight w*/
 .font-w-300 {font-weight: 300;}
 .font-w-400 {font-weight: 400;}
@@ -6601,6 +6606,22 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 /* card comment */
 .card.comment .body .content {
     color: var(--dark-gray);
+}
+.card.comment .body .content :last-child {
+    margin-bottom: 0;
+}
+.card.comment .body .actions {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    border-top: solid 1px var(--bor-card);
+    padding: 10px 0 0 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.card.comment .body .actions a {
+    font-size: .85em;
+    font-weight: 600;
 }
 
 /* form-wrap */
@@ -6995,6 +7016,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 }
 .box-profile .info .name {
     font-size: 1em;
+    font-weight: 600;
 }
 .box-profile .info .detail {
     font-size: .8em;
