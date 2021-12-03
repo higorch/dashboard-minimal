@@ -983,6 +983,15 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     -webkit-transform: translate(0,-25%);
     transform: translate(0,-25%);
 }
+.modal-main .dialog.centered {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-height: calc(100% - (1.85rem * 2));
+}
 .modal-main.active .dialog {
     -webkit-transform: translate(0,0);
     transform: translate(0,0);
@@ -1042,7 +1051,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     color: var(--dark-gray);
     font-size: 1.25em;
 }
-.modal-main .content a.close {
+.modal-main .content a.close:not([class*="btn"]) {
     position: absolute;
     right: -10px;
     top: -10px;
@@ -1058,7 +1067,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     z-index: 3;
 }
 .modal-main.scrollbar .content .body {
-    max-height: calc(100vh - 245px);
+    max-height: calc(100vh - 260px);
 }
 .modal-main .content .body.scrollbar {
     overflow-y: auto;
@@ -1650,6 +1659,16 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     height: 2px;
     margin-left: 15px;
     vertical-align: middle;
+}
+/* action */
+.box-heading.action h3::after {
+    display: none;
+}
+.box-heading.action .btn {
+    font-size: .85em;
+}
+.box-heading.action .btn {
+    padding: 5px 10px;
 }
 
 /* text align */

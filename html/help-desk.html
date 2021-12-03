@@ -234,17 +234,27 @@
                 </div>
 
                 <div class="col">
-                    <a href="#" class="btn btn-default ml-10" title="Status">Em aberto</a>
+                    <a href="#" class="btn btn-gray ml-10" title="Status">Em aberto</a>
                 </div>
 
             </div>
 
+            <!-- Comments and details -->
             <div class="row">
 
                 <div class="col-70 mt-30 mb-30">
 
-                    <div class="box-heading">
-                        <h3>Comentários</h3>
+                    <div class="box-heading action">
+                        <div class="row">
+                            <div class="col-60 v-align-middle">
+                                <h3>Comentários</h3>
+                            </div>
+                            <div class="col-40 v-align-middle text-align-right">
+                                <a href="#" class="btn btn-gray" title="Adicionar comentário" data-trigger="modal" data-modal="#modal-comment">
+                                    <i class="fas fa-plus"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="card comment mt-15">
@@ -501,7 +511,7 @@
 
                 <div class="col-30 mt-30">
 
-                    <div class="box-heading mb-15">
+                    <div class="box-heading mb-20">
                         <h3>Acompanhado por</h3>
                     </div>
 
@@ -533,11 +543,11 @@
 
                     </div>
 
-                    <div class="box-heading mt-30">
+                    <div class="box-heading mb-20 mt-30">
                         <h3>Assuntos</h3>
                     </div>
 
-                    <div class="card mt-15 mb-30">
+                    <div class="card mb-30">
 
                         <div class="body">
 
@@ -546,6 +556,56 @@
 
                         </div>
 
+                    </div>
+
+                </div>
+
+            </div>
+
+             <!-- modal scrollbar -->
+             <div class="modal-main scrollbar" id="modal-comment">
+
+                <div class="dialog centered">
+
+                    <div class="content">
+
+                        <a href="#" class="close">x</a>
+
+                        <div class="header">
+                            <p>Comentar</p>
+                        </div>
+
+                        <div class="body scrollbar">
+                            
+                            <div class="form-wrap row pt-30 pb-30">
+
+                                <div class="group col-100">
+                                    <label for="cpf">Mensagem</label>
+                                    <textarea name="comment" id="comment"></textarea>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="footer">
+
+                            <div class="row">
+                                <div class="col-50">
+                                    <a href="#" class="btn btn-gray btn-block close">
+                                        <i class="fas fa-times"></i>
+                                        Cancelar
+                                    </a>
+                                </div>
+                                <div class="col-50">
+                                    <a href="#" class="btn btn-blue btn-block">
+                                        <i class="far fa-paper-plane"></i>
+                                        Enviar
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
 
                 </div>
@@ -577,6 +637,18 @@
             $('.select-two').select2({
                 placeholder: "---",
                 allowClear: true
+            });
+
+            $('textarea#comment').tinymce({
+                language: 'pt_BR',
+                menubar: false,
+                toolbar: "bold italic underline numlist bullist emoticons",
+                branding: false,
+                plugins: "paste lists mentionuser emoticons",
+                paste_as_text: true,
+                orced_root_block: "",
+                force_br_newlines: true,
+                force_p_newlines: false,
             });
 
         })(jQuery);
