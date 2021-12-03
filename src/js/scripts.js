@@ -71,11 +71,11 @@
     });
 
     // close modal
-    $(document).on('click', '.modal-main', function (e) {
+    $(document).on('click', '.modal', function (e) {
 
         var el = $(this);
 
-        if (!$(e.target).closest('.modal-main > *').length || $(e.target).hasClass('dialog') || $(e.target).closest('.modal-main .dialog .content .close').length) {
+        if (!$(e.target).closest('.modal > *').length || $(e.target).hasClass('dialog') || $(e.target).closest('.modal .dialog .content .close').length) {
             el.removeClass('active');
             $("body").css("overflow", "initial");
             el.trigger("closed");
