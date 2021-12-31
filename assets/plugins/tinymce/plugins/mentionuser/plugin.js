@@ -48,10 +48,10 @@
 
         }
 
-        // format slug "@userLastname"
-        let formatAtSlug = function (slug) {
+        // format at "@userLastname"
+        let formatAt = function (at) {
 
-            let arr = slug.split('-');
+            let arr = at.split('-');
             let result;
 
             arr.forEach(function (str, index) {
@@ -61,7 +61,7 @@
                 }
 
                 if (index > 0) {
-                    result += strCapitalize(str)
+                    result += str;
                 }
             })
 
@@ -74,9 +74,9 @@
             let users = editor.getParam('mention_users');
 
             return users.filter(function (user) {
-                let slug = user.slug.toLowerCase()
+                let at = user.at.toLowerCase()
                 let search = pattern.toLowerCase()
-                return slug.includes(search)
+                return at.includes(search)
             })
         }
 
@@ -107,7 +107,7 @@
             ch: '@',
             minChars: 1,
             columns: 1,
-            highlightOn: ['mention_slug'],
+            highlightOn: ['mention_at'],
             fetch: function (pattern) {
                 return new tinymce.util.Promise(function (resolve) {
 
@@ -115,11 +115,11 @@
 
                         return {
                             type: 'cardmenuitem',
-                            value: user.id + "|" + user.slug + "|" + user.name + "|" + user.role.title,
+                            value: user.id + "|" + user.at + "|" + user.name,
                             items: [
                                 {
                                     type: 'cardimage',
-                                    src: user.avatar + '?s=200&d=mp&r=x',
+                                    src: user.avatar.path + '?s=200&d=mp&r=x',
                                     classes: ['tox-mention__avatar'],
                                 },
                                 {
@@ -128,15 +128,9 @@
                                     items: [
                                         {
                                             type: 'cardtext',
-                                            text: `@${formatAtSlug(user.slug)}`,
-                                            name: 'mention_slug',
+                                            text: `@${formatAt(user.at)}`,
+                                            name: 'mention_at',
                                             classes: ['tox-mention__name'],
-                                        },
-                                        {
-                                            type: 'cardtext',
-                                            text: strCapitalize(user.role.title),
-                                            name: 'mention_role',
-                                            classes: ['tox-mention__role'],
                                         },
                                     ]
                                 }
@@ -153,13 +147,12 @@
                 let parts = value.split('|')
 
                 let id = parts[0]
-                let slug = parts[1]
+                let at = parts[1]
                 let name = parts[2]
-                let role = parts[3]
 
                 usersIds.push(id)
 
-                let content = `<span class="mention tag at" title="${strCapitalize(name)} (${strCapitalize(role)})" contenteditable="false" data-id="${id}">@${formatAtSlug(slug)}</span>`
+                let content = `<span class="mention tag at" title="${strCapitalize(name)}" data-id="${id}" contenteditable="false">@${formatAt(at)}</span>`
 
                 editor.selection.setRng(rng)
                 editor.insertContent(content)

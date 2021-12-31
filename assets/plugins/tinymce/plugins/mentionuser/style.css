@@ -8,11 +8,6 @@
     font-size: 14px !important;
     line-height: 21px !important;
 }
-.tox-mention__role {
-    font-size: 12px !important;
-    line-height: 21px !important;
-    color: rgba(34,47,62,0.7) !important;
-}
 .mention.tag.at {
     color: rgb(27, 149, 224);
     font-weight: 600;
