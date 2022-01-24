@@ -7424,7 +7424,11 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 }
 /* box-files */
 .area-upload .box-files {
+    display: none;
+}
+.area-upload .box-files.active {
     display: block;
+    margin-top: 30px;
 }
 .area-upload .box-files ul {
     list-style: none;
