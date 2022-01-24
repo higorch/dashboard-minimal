@@ -7382,3 +7382,43 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .select2-container--default .select2-selection--multiple .select2-selection__rendered li {
     font-size: .8rem;
 }
+
+/* area-upload */
+.area-upload {
+    display: block;
+    font-size: initial;
+    text-align: center;
+}
+.area-upload .icon,
+.area-upload .desc,
+.area-upload .or,
+.area-upload .btn-choose {
+    display: block;
+    margin-top: 15px;
+}
+.area-upload .box-attach {
+    color: var(--black);
+    background: rgb(250,252,255);
+    background: linear-gradient(0deg, rgba(250,252,255,1) 0%, rgba(200,224,255,1) 100%);
+    border: dashed 3px #72a4e6;
+    border-radius: 10px;
+    padding: 30px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.area-upload .btn-choose input[type="file"] {
+    display: none;
+}
+.area-upload .icon {
+    font-size: 40px;
+    margin-top: 0;
+    color: var(--bor-blue);
+}
+.area-upload .desc,
+.area-upload .or {
+    font-size: 18px;
+    font-size: 300;
+}
+.area-upload .btn-choose {
+    display: inline-block !important;
+}
