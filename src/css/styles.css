@@ -909,28 +909,28 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 
 /*  text color */
 .text-black {
-    color: var(--black);
+    color: var(--black) !important;
 }
 .text-white {
-    color: var(--white);
+    color: var(--white) !important;
 }
 .text-blue {
-    color: var(--blue);
+    color: var(--blue) !important;
 }
 .text-green {
-    color: var(--green);
+    color: var(--green) !important;
 }
 .text-red {
-    color: var(--red);
+    color: var(--red) !important;
 }
 .text-yellow {
-    color: var(--yellow);
+    color: var(--yellow) !important;
 }
 .text-gray {
-    color: var(--gray);
+    color: var(--gray) !important;
 }
 .text-dark-gray {
-    color: var(--dark-gray);
+    color: var(--dark-gray) !important;
 }
 
 /* text align */
@@ -1231,18 +1231,12 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     background-color: #1a73e8;
     border-bottom: solid 1px #0b59c0;
 }
-.card.blue .heading span.title {
-    color: #f9f9f9;
-}
 .card.red {
     border: solid 1px #b3474a;
 }
 .card.red .heading {
     background-color: #cb6468;
     border-bottom: solid 1px #b3474a;
-}
-.card.red .heading span.title {
-    color: #f9f9f9;
 }
 .card.green {
     border: solid 1px #31855c;
@@ -1251,18 +1245,12 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     background-color: #53be8a;
     border-bottom: solid 1px #31855c;
 }
-.card.green .heading span.title {
-    color: #f9f9f9;
-}
 .card.black {
     border: solid 1px #232425;
 }
 .card.black .heading {
     background-color: #3c4043;
     border-bottom: solid 1px #232425;
-}
-.card.black .heading span.title {
-    color: #f9f9f9;
 }
 .card.dark-gray {
     border: solid 1px #5a6272;
@@ -1271,8 +1259,12 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     background-color: #6f7d97;
     border-bottom: solid 1px #5a6272;
 }
-.card.dark-gray .heading span.title {
-    color: #f9f9f9;
+.card.yellow {
+    border: solid 1px #cec65a;
+}
+.card.yellow .heading {
+    background-color: #e6de7b;
+    border-bottom: solid 1px #cec65a;
 }
 
 /* card comment */
