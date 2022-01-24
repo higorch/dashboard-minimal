@@ -2014,3 +2014,87 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .area-upload .btn-choose {
     display: inline-block !important;
 }
+/* box-files */
+.area-upload .box-files {
+    display: block;
+}
+.area-upload .box-files ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.area-upload .box-files ul li {
+    display: block;
+    font-size: 0;
+    margin-bottom: 15px;
+}
+.area-upload .box-files ul li:last-child {
+    margin-bottom: 0;
+}
+.area-upload .box-files ul li .box {
+    display: block;
+}
+.area-upload .box-files ul li .box .preview,
+.area-upload .box-files ul li .box .details,
+.area-upload .box-files ul li .box .actions {
+    display: inline-block;
+    vertical-align: middle;
+}
+.area-upload .box-files ul li .box .preview,
+.area-upload .box-files ul li .box .details {
+    font-size: initial;
+}
+.area-upload .box-files ul li .box .preview {
+    width: 80px;
+}
+.area-upload .box-files ul li .box .actions {
+    width: 100px;
+    text-align: right;
+}
+.area-upload .box-files ul li .box .details {
+    width: calc(100% - 180px);
+    text-align: left;
+    padding: 0 15px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.area-upload .box-files ul li .box .details .info {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.area-upload .box-files ul li .box .details .info .name {
+    color: var(--dark-gray);
+}
+.area-upload .box-files ul li .box .details .info .progress {
+    float: right;
+    color: var(--dark-gray);
+}
+.area-upload .box-files ul li .box .preview .icon {
+    display: block;
+    width: 100%;
+    color: var(--black);
+    font-size: 50px;
+}
+.area-upload .box-files ul li .box .preview img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+.area-upload .box-files ul li .box .actions a {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 12px;
+    margin: 0 5px;
+}
+.area-upload .box-files ul li .box .actions a:last-child {
+    margin: 0;
+}
+.area-upload .box-files ul li .box .actions a.btn {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 0;
+}
