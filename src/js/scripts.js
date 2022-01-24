@@ -33,7 +33,9 @@
     }
 
     /**
-     * Multiple files updalod preview
+     * Drag and drop files upload
+     * 
+     * @returns array
      */
     $.fn.attachFilesDragDrop = function () {
 
@@ -178,6 +180,7 @@
 
         });
 
+        return files;
     }
 
     $("#myfiles").attachFilesDragDrop();
