@@ -432,9 +432,13 @@
 
             $('.mask-money').maskMoney();
 
-            var files = $("#myfiles").attachFilesDragDrop();
+            // input upload drap drop
+            $("#myfiles").attachFilesDragDrop();
 
-            console.log(files);
+            // event get files
+            $("#myfiles").on('changeGetFiles', function (e, files) {
+                console.log(files);
+            });
 
         })(jQuery);
     </script>
