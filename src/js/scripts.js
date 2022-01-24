@@ -183,8 +183,6 @@
         return files;
     }
 
-    $("#myfiles").attachFilesDragDrop();
-
     $('.box-catalog.inline >').matchHeight();
     $('.scrollbar-macosx').scrollbar();
 
