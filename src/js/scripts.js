@@ -35,22 +35,72 @@
     /**
      * Multiple files updalod preview
      */
-    $.fn.attachFiles = function () {
+    $.fn.attachFilesDragDrop = function () {
 
         var input = $(this);
+        var dropArea = input.parents('.area-upload');
 
-        $(input).on('change', function (e) {
+        var files = [];
+
+        // quando arrastar os arquivos para area de upload
+        dropArea.on('dragover', function (e) {
+
+            e.preventDefault();
+
+            dropArea.addClass('active');
+        });
+
+        // quando arrastar os arquivos fora da area de upload
+        dropArea.on('dragleave', function (e) {
+            dropArea.removeClass('active');
+        });
+
+        // quando soltar os arquivos dentro da area de upload
+        dropArea.on('drop', function (e) {
+
+            e.preventDefault();
+
+            if (e.originalEvent.dataTransfer.files.length > 0) {
+
+                $.each(e.originalEvent.dataTransfer.files, function (index, file) {
+                    files.push(file);
+                });
+
+                input.trigger('changeAddFiles');
+
+            }
+
+        });
+
+        // quando a escolha for pelo botao
+        input.on('change', function (e) {
 
             var el = $(this);
-            var box_files = el.parents('.box-attach').next('.box-files');
 
             if (el[0].files.length > 0) {
+
+                $.each(el[0].files, function (index, file) {
+                    files.push(file);
+                });
+
+                el.trigger('changeAddFiles');
+
+            }
+
+        });
+
+        // preview dos arquivos
+        input.on('changeAddFiles', function (e) {
+
+            var box_files = input.parents('.box-attach').next('.box-files');
+
+            if (files.length > 0) {
 
                 box_files.addClass('active');
 
                 var output = '<ul>';
 
-                $.each(el[0].files, function (index, file) {
+                $.each(files, function (index, file) {
 
                     var src = URL.createObjectURL(file);
 
@@ -65,7 +115,6 @@
                         case 'image/gif':
                         case 'image/jpeg':
                         case 'image/png':
-                        case 'image/svg+xml':
                         case 'image/webp':
                         case 'image/x-icon':
                             output += '<div class="preview"><img src="' + src + '"></div>';
@@ -101,7 +150,6 @@
                         case 'image/gif':
                         case 'image/jpeg':
                         case 'image/png':
-                        case 'image/svg+xml':
                         case 'image/webp':
                         case 'image/x-icon':
                         case 'application/pdf':
@@ -127,11 +175,12 @@
             } else {
                 box_files.removeClass('active');
             }
+
         });
 
     }
 
-    $("#myfiles").attachFiles();
+    $("#myfiles").attachFilesDragDrop();
 
     $('.box-catalog.inline >').matchHeight();
     $('.scrollbar-macosx').scrollbar();
