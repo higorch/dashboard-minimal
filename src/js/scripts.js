@@ -43,56 +43,8 @@
 
         var files = [];
 
-        // quando arrastar os arquivos para area de upload
-        dropArea.on('dragover', function (e) {
+        var preview = function (files) {
 
-            e.preventDefault();
-
-            dropArea.addClass('active');
-        });
-
-        // quando arrastar os arquivos fora da area de upload
-        dropArea.on('dragleave', function (e) {
-            dropArea.removeClass('active');
-        });
-
-        // quando soltar os arquivos dentro da area de upload
-        dropArea.on('drop', function (e) {
-
-            e.preventDefault();
-
-            if (e.originalEvent.dataTransfer.files.length > 0) {
-
-                $.each(e.originalEvent.dataTransfer.files, function (index, file) {
-                    files.push(file);
-                });
-
-                input.trigger('changeAddFiles');
-
-            }
-
-        });
-
-        // quando a escolha for pelo botao
-        input.on('change', function (e) {
-
-            var el = $(this);
-
-            if (el[0].files.length > 0) {
-
-                $.each(el[0].files, function (index, file) {
-                    files.push(file);
-                });
-
-                el.trigger('changeAddFiles');
-
-            }
-
-        });
-
-        input.on('changeAddFiles', function (e) {
-
-            // preview dos arquivos
             if (files.length > 0) {
 
                 box_files.addClass('active');
@@ -103,7 +55,7 @@
 
                     var src = URL.createObjectURL(file);
 
-                    output += '<li>';
+                    output += '<li data-id="" data-key="' + index + '">';
 
                     output += '<div class="box">';
 
@@ -157,33 +109,88 @@
                     }
 
                     output += '<a href="#" class="delete btn btn-black" title="Excluir"><i class="fas fa-times"></i></a>';
+
                     output += '</div>';
 
                     output += '</div>';
 
                     output += '</li>';
-
-                    console.log();
-
                 });
 
                 output += '</ul>';
 
                 box_files.html(output);
             }
+        }
 
-            // evento para obter os arquivos
-            input.trigger('changeGetFiles', [files]);
+        // quando arrastar os arquivos para area de upload
+        dropArea.on('dragover', function (e) {
+
+            e.preventDefault();
+
+            dropArea.addClass('active');
+        });
+
+        // quando arrastar os arquivos fora da area de upload
+        dropArea.on('dragleave', function (e) {
+            dropArea.removeClass('active');
+        });
+
+        // quando soltar os arquivos dentro da area de upload
+        dropArea.on('drop', function (e) {
+
+            e.preventDefault();
+
+            if (e.originalEvent.dataTransfer.files.length > 0) {
+
+                $.each(e.originalEvent.dataTransfer.files, function (index, file) {
+                    files.push(file);
+                });
+
+                input.trigger('changeAddFiles');
+
+            }
 
         });
 
-        //
-        input.on('changeRemoveFiles', function (e) {
+        // quando a escolha for pelo botao
+        input.on('change', function (e) {
 
-            if (files.length <= 0) {
-                box_files.removeClass('active');
+            var el = $(this);
+
+            if (el[0].files.length > 0) {
+
+                $.each(el[0].files, function (index, file) {
+                    files.push(file);
+                });
+
+                el.trigger('changeAddFiles');
+
+                // limpar o input type file
+                el.val('');
             }
 
+        });
+
+        input.on('changeAddFiles', function (e) {
+
+            // preview dos arquivos
+            preview(files);
+
+            // evento para obter os arquivos
+            input.trigger('changeGetFiles', [files]);
+        });
+
+        // remove item in array "files" in DOM
+        dropArea.on('removeFileKey', function (e, key) {
+
+            files = files.filter(function (item, index) {
+                if (index !== key) {
+                    return item;
+                }
+            });
+
+            preview(files);
         });
     }
 

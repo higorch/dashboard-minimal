@@ -432,12 +432,30 @@
 
             $('.mask-money').maskMoney();
 
-            // input upload drap drop
+            // upload files drap and drop
             $("#myfiles").attachFilesDragDrop();
 
-            // event get files
+            // get files
             $("#myfiles").on('changeGetFiles', function (e, files) {
                 console.log(files);
+            });
+
+            // remove files 
+            $('.area-upload .box-files').on('click', 'a.delete', function (e) {
+
+                var el = $(this);
+                var box_files = el.parents('.box-files');
+                var item = el.parents('li');
+                var itemKey = item.data('key');
+
+                // evento para indicar que o item com chave (key), foi removido
+                box_files.parents('.area-upload').trigger('removeFileKey', [itemKey]);
+
+                item.remove();
+
+                if (box_files.find('ul li').length <= 0) {
+                    box_files.removeClass('active');
+                }
             });
 
         })(jQuery);
