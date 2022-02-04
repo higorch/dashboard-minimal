@@ -45,11 +45,11 @@
         var getFiles = settings.getFiles;
         var removeFile = settings.removeFile;
 
-        var files = [];
-
         var input = $(this);
         var dropArea = input.parents('.area-upload');
         var box_files = input.parents('.box-attach').next('.box-files');
+
+        var files = [];
 
         // preview dos arquivos
         var preview = function (files) {
