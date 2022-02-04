@@ -352,9 +352,7 @@
                                     <div class="group col-100">
 
                                         <div class="area-upload">
-
                                             <div class="box-attach">
-
                                                 <label>
                                                     <div class="icon">
                                                         <i class="fas fa-cloud-upload-alt"></i>
@@ -366,12 +364,10 @@
                                                         <input type="file" name="files" id="myfiles" multiple>
                                                     </div>
                                                 </label>
-
                                             </div>
-
                                             <div class="box-files"></div>
-
                                         </div>
+                                        <!-- area-upload -->
 
                                     </div>
 
@@ -433,11 +429,15 @@
             $('.mask-money').maskMoney();
 
             // upload files drap and drop
-            $("#myfiles").attachFilesDragDrop();
+            $("#myfiles").attachFilesDragDrop({
+                accept: '.png,.jpg,.jpeg,.pdf',
+                size: '1',
+                getFiles: function (files) {
+                    console.log(files);
+                },
+                removeFile: function () {
 
-            // get files
-            $("#myfiles").on('changeGetFiles', function (e, files) {
-                console.log(files);
+                }
             });
 
             // remove files 
@@ -445,7 +445,7 @@
 
                 var el = $(this);
                 var box_files = el.parents('.box-files');
-                var item = el.parents('li');
+                var item = el.parents('.item');
                 var itemKey = item.data('key');
 
                 // evento para indicar que o item com chave (key), foi removido
@@ -453,7 +453,7 @@
 
                 item.remove();
 
-                if (box_files.find('ul li').length <= 0) {
+                if (box_files.find('.item').length <= 0) {
                     box_files.removeClass('active');
                 }
             });

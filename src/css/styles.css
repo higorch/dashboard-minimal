@@ -2022,79 +2022,74 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     display: block;
     margin-top: 30px;
 }
-.area-upload .box-files ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.area-upload .box-files ul li {
+.area-upload .box-files .item {
     display: block;
     font-size: 0;
     margin-bottom: 15px;
 }
-.area-upload .box-files ul li:last-child {
+.area-upload .box-files .item:last-child {
     margin-bottom: 0;
 }
-.area-upload .box-files ul li .box {
+.area-upload .box-files .item .box {
     display: block;
 }
-.area-upload .box-files ul li .box .preview,
-.area-upload .box-files ul li .box .details,
-.area-upload .box-files ul li .box .actions {
+.area-upload .box-files .item .box .preview,
+.area-upload .box-files .item .box .details,
+.area-upload .box-files .item .box .actions {
     display: inline-block;
     vertical-align: middle;
 }
-.area-upload .box-files ul li .box .preview,
-.area-upload .box-files ul li .box .details {
+.area-upload .box-files .item .box .preview,
+.area-upload .box-files .item .box .details {
     font-size: initial;
 }
-.area-upload .box-files ul li .box .preview {
+.area-upload .box-files .item .box .preview {
     width: 80px;
 }
-.area-upload .box-files ul li .box .actions {
+.area-upload .box-files .item .box .actions {
     width: 100px;
     text-align: right;
 }
-.area-upload .box-files ul li .box .details {
+.area-upload .box-files .item .box .details {
     width: calc(100% - 180px);
     text-align: left;
     padding: 0 15px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
-.area-upload .box-files ul li .box .details .info {
+.area-upload .box-files .item .box .details .info {
     display: block;
     margin-bottom: 15px;
     font-weight: bold;
 }
-.area-upload .box-files ul li .box .details .info .name {
+.area-upload .box-files .item .box .details .info .name {
     color: var(--dark-gray);
 }
-.area-upload .box-files ul li .box .details .info .progress {
+.area-upload .box-files .item .box .details .info .progress {
     float: right;
     color: var(--dark-gray);
 }
-.area-upload .box-files ul li .box .preview .icon {
+.area-upload .box-files .item .box .preview .icon {
     display: block;
     width: 100%;
     color: var(--black);
     font-size: 50px;
 }
-.area-upload .box-files ul li .box .preview img {
+.area-upload .box-files .item .box .preview img {
     width: 100%;
     height: auto;
     border-radius: 5px;
 }
-.area-upload .box-files ul li .box .actions a {
+.area-upload .box-files .item .box .actions a {
     display: inline-block;
     vertical-align: middle;
     font-size: 12px;
     margin: 0 5px;
 }
-.area-upload .box-files ul li .box .actions a:last-child {
+.area-upload .box-files .item .box .actions a:last-child {
     margin: 0;
 }
-.area-upload .box-files ul li .box .actions a.btn {
+.area-upload .box-files .item .box .actions a.btn {
     width: 30px;
     height: 30px;
     line-height: 30px;

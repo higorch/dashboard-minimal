@@ -35,27 +35,36 @@
     /**
      * Drag and drop files upload
      */
-    $.fn.attachFilesDragDrop = function () {
+    $.fn.attachFilesDragDrop = function (options) {
+
+        var settings = $.extend({
+            accept: null, // '.png,.jpg,.jpeg,.pdf'
+            size: null // em MB
+        }, options);
+
+        var getFiles = settings.getFiles;
+        var removeFile = settings.removeFile;
+
+        var files = [];
 
         var input = $(this);
         var dropArea = input.parents('.area-upload');
         var box_files = input.parents('.box-attach').next('.box-files');
 
-        var files = [];
-
+        // preview dos arquivos
         var preview = function (files) {
 
             if (files.length > 0) {
 
                 box_files.addClass('active');
 
-                var output = '<ul>';
+                var output = '';
 
                 $.each(files, function (index, file) {
 
                     var src = URL.createObjectURL(file);
 
-                    output += '<li data-id="" data-key="' + index + '">';
+                    output += '<div class="item" data-id="" data-key="' + index + '">';
 
                     output += '<div class="box">';
 
@@ -114,20 +123,54 @@
 
                     output += '</div>';
 
-                    output += '</li>';
+                    output += '</div>';
                 });
 
-                output += '</ul>';
-
-                box_files.html(output);
+                box_files.prepend(output);
             }
         }
 
+        // validar extencao do arquivo
+        var isAccept = function (file) {
+
+            var accept = settings.accept;
+
+            if (accept !== '' || accept !== null) {
+
+                var accepts = accept.split(',');
+                var fileExtension = '.' + file.name.split(".").pop();
+
+                if (accepts.includes(fileExtension)) {
+                    return true;
+                }
+
+                return false;
+            }
+
+            return true;
+        }
+
+        // validar tamanho do arquivo
+        var acceptFileSize = function (file) {
+
+            if (settings.size == '' || settings.size == null) {
+                return true;
+            }
+
+            var size = parseFloat(file.size / (1024 * 1024)).toFixed(2);
+
+            if (size > settings.size) {
+                return false;
+            }
+
+            return true;
+        }
+
+        input.attr('accept', settings.accept);
+
         // quando arrastar os arquivos para area de upload
         dropArea.on('dragover', function (e) {
-
             e.preventDefault();
-
             dropArea.addClass('active');
         });
 
@@ -144,16 +187,17 @@
             if (e.originalEvent.dataTransfer.files.length > 0) {
 
                 $.each(e.originalEvent.dataTransfer.files, function (index, file) {
-                    files.push(file);
+                    if (isAccept(file) && acceptFileSize(file)) {
+                        files.push(file);
+                    }
                 });
 
                 input.trigger('changeAddFiles');
-
             }
 
         });
 
-        // quando a escolha for pelo botao
+        // quando a escolha das imagens for feita pelo input tipo file
         input.on('change', function (e) {
 
             var el = $(this);
@@ -161,7 +205,9 @@
             if (el[0].files.length > 0) {
 
                 $.each(el[0].files, function (index, file) {
-                    files.push(file);
+                    if (isAccept(file) && acceptFileSize(file)) {
+                        files.push(file);
+                    }
                 });
 
                 el.trigger('changeAddFiles');
@@ -177,8 +223,10 @@
             // preview dos arquivos
             preview(files);
 
-            // evento para obter os arquivos
-            input.trigger('changeGetFiles', [files]);
+            if (typeof getFiles === 'function') {
+                getFiles.call(this, files);
+                files = [];
+            }
         });
 
         // remove item in array "files" in DOM
