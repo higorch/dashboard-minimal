@@ -430,8 +430,8 @@
 
             // upload files drap and drop
             $("#myfiles").attachFilesDragDrop({
-                accept: '.png,.jpg,.jpeg,.pdf',
-                size: '1',
+                accept: '.png,.jpg,.jpeg,.pdf', // file extension
+                size: '1', // size in MB
                 getFiles: function (files) {
                     console.log(files);
                 },
