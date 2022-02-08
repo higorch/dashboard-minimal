@@ -8,7 +8,7 @@
         $('.page-course .sidebar .box-menu').css({
             'height': 'calc(100vh - ' + menuBoxHeight + 'px)',
         });
-    }
+    };
 
     /**
      * Actions modal
@@ -30,7 +30,7 @@
             $("body").css("overflow", "initial");
             el.trigger("closed");
         }
-    }
+    };
 
     /**
      * Drag and drop files upload
@@ -294,10 +294,7 @@
             // clear array
             files = [];
         });
-    }
-
-
-    newFilesAdded
+    };
 
     $('.box-catalog.inline >').matchHeight();
     $('.scrollbar-macosx').scrollbar();
