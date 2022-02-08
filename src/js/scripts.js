@@ -48,7 +48,7 @@
 
         var areaUpload = $(this);
         var input = areaUpload.find('input[type="file"]');
-        var boxFiles = areaUpload.next('.box-files');
+        var boxFiles = areaUpload.find('.box-files');
 
         var files = [];
 
@@ -138,9 +138,9 @@
         // validar extencao do arquivo
         var isAccept = function (file) {
 
-            const accept = settings.accept;
+            var accept = settings.accept;
 
-            if (accept !== '' || accept !== null) {
+            if (accept !== '' && accept !== null) {
 
                 var accepts = accept.split(',');
                 var fileExtension = '.' + file.name.split(".").pop();
@@ -173,9 +173,9 @@
 
         var uploadFiles = function (files) {
 
-            const url = settings.url;
+            var url = settings.url;
 
-            if (url !== '' || url !== null) {
+            if (url !== '' && url !== null) {
 
                 files.forEach(function (file, index) {
 

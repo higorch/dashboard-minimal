@@ -432,31 +432,12 @@
             $("#myfiles").attachFilesDragDrop({
                 accept: '.png,.jpg,.jpeg,.pdf,.xsls', // file extension
                 size: '1.5', // size in MB
-                showBtnDelete: false, // true or false
-                url: 'http://domain.com/upload.php',
-                getUploaded: function (item) {
-                    console.log(item);
-
-                    // item.find('.actions a.delete').addClass('active');
-                }
-            });
-
-            // remove files 
-            $('.area-upload .box-files').on('click', 'a.delete', function (e) {
-
-                var el = $(this);
-                var box_files = el.parents('.box-files');
-                var item = el.parents('.item');
-                var itemKey = item.data('key');
-
-                // evento para indicar que o item com chave (key), foi removido
-                box_files.parents('.area-upload').trigger('removeFileKey', [itemKey]);
-
-                item.remove();
-
-                if (box_files.find('.item').length <= 0) {
-                    box_files.removeClass('active');
-                }
+                showBtnDelete: true, // true or false
+                // url: 'http://domain.com/upload.php',
+                // getUploaded: function (item) {
+                //     console.log(item);
+                //     item.find('.actions a.delete').addClass('active');
+                // }
             });
 
         })(jQuery);
