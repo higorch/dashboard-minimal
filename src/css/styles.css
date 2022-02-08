@@ -2085,10 +2085,6 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     display: inline-block;
     vertical-align: middle;
     font-size: 12px;
-    margin: 0 5px;
-}
-.area-upload .box-files .item .box .actions a:last-child {
-    margin: 0;
 }
 .area-upload .box-files .item .box .actions a.btn {
     width: 30px;
@@ -2097,4 +2093,11 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     border-radius: 50%;
     text-align: center;
     padding: 0;
+}
+.area-upload .box-files .item .box .actions a.delete {
+    display: none;
+}
+.area-upload .box-files .item .box .actions a.delete.active {
+    display: block;
+    margin-left: 10px;
 }

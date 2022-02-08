@@ -432,11 +432,9 @@
             $("#myfiles").attachFilesDragDrop({
                 accept: '.png,.jpg,.jpeg,.pdf', // file extension
                 size: '1', // size in MB
+                showBtnDelete: false, // true or false
                 getFiles: function (files) {
                     console.log(files);
-                },
-                removeFile: function () {
-
                 }
             });
 

@@ -39,11 +39,11 @@
 
         var settings = $.extend({
             accept: null, // '.png,.jpg,.jpeg,.pdf'
-            size: null // em MB
+            size: null, // em MB
+            showBtnDelete: false, // true or false
         }, options);
 
         var getFiles = settings.getFiles;
-        var removeFile = settings.removeFile;
 
         var input = $(this);
         var dropArea = input.parents('.area-upload');
@@ -117,7 +117,11 @@
                             break;
                     }
 
-                    output += '<a href="#" class="delete btn btn-black" title="Excluir"><i class="fas fa-times"></i></a>';
+                    if (settings.showBtnDelete) {
+                        output += '<a href="#" class="delete btn btn-black active" title="Excluir"><i class="fas fa-times"></i></a>';
+                    } else {
+                        output += '<a href="#" class="delete btn btn-black" title="Excluir"><i class="fas fa-times"></i></a>';
+                    }
 
                     output += '</div>';
 
@@ -227,18 +231,6 @@
                 getFiles.call(this, files);
                 files = [];
             }
-        });
-
-        // remove item in array "files" in DOM
-        dropArea.on('removeFileKey', function (e, key) {
-
-            files = files.filter(function (item, index) {
-                if (index !== key) {
-                    return item;
-                }
-            });
-
-            preview(files);
         });
     }
 
