@@ -40,14 +40,15 @@
         var settings = $.extend({
             accept: null, // '.png,.jpg,.jpeg,.pdf'
             size: null, // em MB
+            url: null, // url to upload file
             showBtnDelete: false, // true or false
         }, options);
 
-        var getFiles = settings.getFiles;
+        var getUploaded = settings.getUploaded;
 
-        var input = $(this);
-        var dropArea = input.parents('.area-upload');
-        var box_files = input.parents('.box-attach').next('.box-files');
+        var areaUpload = $(this);
+        var input = areaUpload.find('input[type="file"]');
+        var boxFiles = areaUpload.next('.box-files');
 
         var files = [];
 
@@ -56,7 +57,7 @@
 
             if (files.length > 0) {
 
-                box_files.addClass('active');
+                boxFiles.addClass('active');
 
                 var output = '';
 
@@ -130,14 +131,14 @@
                     output += '</div>';
                 });
 
-                box_files.prepend(output);
+                boxFiles.prepend(output);
             }
         }
 
         // validar extencao do arquivo
         var isAccept = function (file) {
 
-            var accept = settings.accept;
+            const accept = settings.accept;
 
             if (accept !== '' || accept !== null) {
 
@@ -170,21 +171,83 @@
             return true;
         }
 
+        var uploadFiles = function (files) {
+
+            const url = settings.url;
+
+            if (url !== '' || url !== null) {
+
+                files.forEach(function (file, index) {
+
+                    var formData = new FormData();
+                    var item = areaUpload.find('.box-files .item[data-key="' + index + '"]');
+
+                    item.removeAttr('data-key');
+
+                    formData.append('attachment', file);
+
+                    $.ajax({
+                        type: 'POST',
+                        url: url,
+                        cache: false,
+                        contentType: false,
+                        processData: false,
+                        data: formData,
+                        xhr: function () {
+
+                            var xhr = new window.XMLHttpRequest();
+
+                            xhr.upload.addEventListener("progress", function (evt) {
+
+                                if (evt.lengthComputable) {
+
+                                    var percentComplete = evt.loaded / evt.total;
+
+                                    item.find('.info .progress').text(percentComplete * 100 + '%');
+                                    item.find('.progressbar span').css({
+                                        width: percentComplete * 100 + '%'
+                                    });
+                                }
+
+                            }, false);
+
+                            return xhr;
+                        },
+                        success: function (response) {
+
+                            var data = response.data;
+
+                            item.attr('data-id', data.id);
+
+                            if (typeof getUploaded === 'function') {
+                                getUploaded.call(this, item);
+                            }
+                        },
+                        error: function (response) {
+                            item.find('.progressbar span').removeClass('blue').addClass('red');
+                        }
+                    });
+
+                });
+
+            }
+        }
+
         input.attr('accept', settings.accept);
 
         // quando arrastar os arquivos para area de upload
-        dropArea.on('dragover', function (e) {
+        areaUpload.on('dragover', function (e) {
             e.preventDefault();
-            dropArea.addClass('active');
+            areaUpload.addClass('active');
         });
 
         // quando arrastar os arquivos fora da area de upload
-        dropArea.on('dragleave', function (e) {
-            dropArea.removeClass('active');
+        areaUpload.on('dragleave', function (e) {
+            areaUpload.removeClass('active');
         });
 
         // quando soltar os arquivos dentro da area de upload
-        dropArea.on('drop', function (e) {
+        areaUpload.on('drop', function (e) {
 
             e.preventDefault();
 
@@ -196,9 +259,8 @@
                     }
                 });
 
-                input.trigger('changeAddFiles');
+                input.trigger('newFilesAdded');
             }
-
         });
 
         // quando a escolha das imagens for feita pelo input tipo file
@@ -214,25 +276,28 @@
                     }
                 });
 
-                el.trigger('changeAddFiles');
+                el.trigger('newFilesAdded');
 
                 // limpar o input type file
                 el.val('');
             }
-
         });
 
-        input.on('changeAddFiles', function (e) {
+        input.on('newFilesAdded', function (e) {
 
             // preview dos arquivos
             preview(files);
 
-            if (typeof getFiles === 'function') {
-                getFiles.call(this, files);
-                files = [];
-            }
+            // upload files
+            uploadFiles(files);
+
+            // clear array
+            files = [];
         });
     }
+
+
+    newFilesAdded
 
     $('.box-catalog.inline >').matchHeight();
     $('.scrollbar-macosx').scrollbar();

@@ -351,7 +351,7 @@
 
                                     <div class="group col-100">
 
-                                        <div class="area-upload">
+                                        <div class="area-upload" id="myfiles">
                                             <div class="box-attach">
                                                 <label>
                                                     <div class="icon">
@@ -361,7 +361,7 @@
                                                     <span class="or">OU</span>
                                                     <div class="btn-choose btn btn-blue text-white">
                                                         Escolha os arquivos
-                                                        <input type="file" name="files" id="myfiles" multiple>
+                                                        <input type="file" multiple>
                                                     </div>
                                                 </label>
                                             </div>
@@ -430,11 +430,14 @@
 
             // upload files drap and drop
             $("#myfiles").attachFilesDragDrop({
-                accept: '.png,.jpg,.jpeg,.pdf', // file extension
-                size: '1', // size in MB
+                accept: '.png,.jpg,.jpeg,.pdf,.xsls', // file extension
+                size: '1.5', // size in MB
                 showBtnDelete: false, // true or false
-                getFiles: function (files) {
-                    console.log(files);
+                // url: 'http://gthclient.test/comments/upload-attachment',
+                getUploaded: function (item) {
+                    console.log(item);
+
+                    // item.find('.actions a.delete').addClass('active');
                 }
             });
 
