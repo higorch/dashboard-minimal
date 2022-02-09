@@ -40,11 +40,13 @@
         var settings = $.extend({
             accept: null, // '.png,.jpg,.jpeg,.pdf'
             size: null, // em MB
-            url: null, // url to upload file
+            url: null, // url to upload file with ajax
             showBtnDelete: false, // true or false
         }, options);
 
         var getUploaded = settings.getUploaded;
+        var getFiles = settings.getFiles;
+        var success = settings.success;
 
         var areaUpload = $(this);
         var input = areaUpload.find('input[type="file"]');
@@ -177,6 +179,9 @@
 
             if (url !== '' && url !== null) {
 
+                var countFiles = files.length;
+                var countUploaded = 0;
+
                 files.forEach(function (file, index) {
 
                     var formData = new FormData();
@@ -218,6 +223,7 @@
                             var data = response.data;
 
                             item.attr('data-id', data.id);
+                            countUploaded = countUploaded + 1;
 
                             if (typeof getUploaded === 'function') {
                                 getUploaded.call(this, item);
@@ -225,11 +231,16 @@
                         },
                         error: function (response) {
                             item.find('.progressbar span').removeClass('blue').addClass('red');
+                            countUploaded = countUploaded + 1;
                         }
                     });
 
-                });
+                    console.log(countFiles, countUploaded);
 
+                    if (typeof success === 'function' && countFiles == countUploaded) {
+                        success.call(this);
+                    }
+                });
             }
         }
 
@@ -290,6 +301,11 @@
 
             // upload files
             uploadFiles(files);
+
+            // get array files objs File
+            if (typeof getFiles === 'function') {
+                getFiles.call(this, files);
+            }
 
             // clear array
             files = [];

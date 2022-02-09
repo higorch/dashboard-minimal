@@ -433,10 +433,16 @@
                 accept: '.png,.jpg,.jpeg,.pdf,.xsls', // file extension
                 size: '1.5', // size in MB
                 showBtnDelete: true, // true or false
-                // url: 'http://domain.com/upload.php',
-                // getUploaded: function (item) {
-                //     item.find('.actions a.delete').addClass('active');
-                // }
+                getFiles: function (files) { // get all files
+                    console.log(files);
+                },
+                // url: 'http://domain.com/upload.php', // use for ajax upload
+                // getUploaded: function (item) { // use for ajax upload
+                //     item.find('.actions a.delete').addClass('active'); // show showBtnDelete
+                // },
+                // success: function () { // use for ajax upload
+
+                // },
             });
 
         })(jQuery);
