@@ -2,18 +2,18 @@
 
 :root {
     --blue: #1a73e8;
-    --gray: #f9f9f9;
+    --gray: #f1eded;
     --red: #cb6468;
     --green: #53be8a;
-    --yellow: #e6de7b;
+    --yellow: #e2d741;
     --dark-gray: #6f7d97;
     --white: #ffffff;
-    --light-gray: #f8f4f4;
+    --light-gray: #f1eeee;
+    --bg-light-gray: #fdf9f9;
     --black: #3c4043;
     --bor-blue: #4c90ea;
-    --bor-gray: #f0f0f0;
+    --bor-gray: #e7e5e5;
     --bor-form: #e6e4e4;
-    --bor-card: #f0eded;
     --blue-pastel: #72a4e6;
     --green-pastel: #7edbae;
     --red-pastel: #d87376;
@@ -53,7 +53,6 @@ html, body {
     height: var(--h-header);
     top: 0;
     font-size: 0;
-    background-color: var(--white);
     z-index: 1;
 }
 .box-general > .sidebar {
@@ -70,8 +69,10 @@ html, body {
 }
 .box-general > .container {
     width: calc(100% - var(--w-sidebar));
+    height: calc(100vh - 70px);
     margin-left: var(--w-sidebar);
     margin-top: var(--h-header);
+    background-color: var(--bg-light-gray);
     padding: 0 30px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -118,7 +119,7 @@ html, body {
     height: var(--h-header);
     margin-left: var(--w-sidebar);
     border-bottom: solid 1px var(--light-gray);
-    background-color: var(--white);
+    background-color: var(--bg-light-gray);
     padding: 0 30px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -275,7 +276,7 @@ html, body {
     display: block;
     max-height: 300px;
 }
-.box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .footer .btn-default {
+.box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .footer .btn-gray {
     background-color: var(--bor-gray);
     font-size: .85em;
     text-transform: uppercase;
@@ -367,7 +368,7 @@ html, body {
     height: calc(100% + 40px);
     right: 0;
     top: 50%;
-    background-color: var(--white);
+    background-color: var(--bg-light-gray);
     border-radius: 15px 0 0 15px;
     z-index: -1;
 
@@ -379,7 +380,7 @@ html, body {
 }
 .sidebar .menu-wrap > ul > li.active > a {
     position: relative;
-    background-color: var(--white);
+    background-color: var(--bg-light-gray);
     color: var(--blue);
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
@@ -408,7 +409,7 @@ html, body {
     position: fixed;
     width: 250px;
     left: calc(var(--w-sidebar) - 30px);
-    background-color: var(--gray);
+    background-color: var(--bg-light-gray);
     border-radius: 7px;
     box-shadow: 1px 1px 5px rgba(117, 117, 117, .4);
     z-index: 99999999;
@@ -432,7 +433,7 @@ html, body {
 .sidebar .menu-wrap ul li > ul li a {
     color: var(--dark-gray);
     text-align: left;
-    border-bottom: solid 1px var(--bor-gray);
+    border-bottom: solid 1px var(--light-gray);
     padding: 15px 0;
 }
 .sidebar .menu-wrap ul li > ul li:last-child a {
@@ -516,7 +517,7 @@ html, body {
 .dropdown .dropdown-menu {
     position: absolute;
     width: 250px;
-    background-color: var(--gray);
+    background-color: var(--bg-light-gray);
     box-shadow: 0 1px 5px rgba(117, 117, 117, .3);
     border-radius: 5px;
     z-index: 1;
@@ -718,17 +719,13 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     -o-transition: all ease .3s;
     -ms-transition: all ease .3s;
 }
-.btn.btn-default {
-    color: var(--black);
-    background-color: var(--gray);
-}
 .btn.btn-black {
     color: var(--white);
     background-color: var(--black);
 }
 .btn.btn-gray {
     color: var(--black);
-    background-color: var(--bor-gray);
+    background-color: var(--gray);
 }
 .btn.btn-dark-gray {
     color: var(--white);
@@ -745,6 +742,10 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .btn.btn-red {
     color: var(--white);
     background-color: var(--red);
+}
+.btn.btn-yellow {
+    color: var(--dark-gray);
+    background-color: var(--yellow);
 }
 .btn.btn-block {
     display: block;
@@ -772,14 +773,14 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
-/* group default */
-.btn-group.btn-default .btn {
+/* group gray */
+.btn-group.btn-gray .btn {
     border-right: solid 1px var(--black);
     color: var(--black);
     background-color: var(--gray);
 }
-.btn-group.btn-default .btn:hover, 
-.btn-group.btn-default .btn:focus {
+.btn-group.btn-gray .btn:hover, 
+.btn-group.btn-gray .btn:focus {
     background-color: var(--dark-gray);
     color: var(--white);
     border-right-color: var(--white);
@@ -838,7 +839,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .badge.badge-block {
     display: block;
 }
-.badge.badge-default {
+.badge.badge-gray {
     background-color: var(--gray);
     color: var(--dark-gray)
 }
@@ -1038,14 +1039,14 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     width: 500px;
 }
 .modal .content .header {
-    border-bottom: solid 1px var(--bor-card);
+    border-bottom: solid 1px var(--bor-gray);
 }
 .modal .content .body {
     padding-top: 0;
     padding-bottom: 0;
 }
 .modal .content .footer {
-    border-top: solid 1px var(--bor-card);
+    border-top: solid 1px var(--bor-gray);
 }
 .modal .content .header p {
     margin: 0;
@@ -1134,7 +1135,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     border-left: solid 1px var(--bor-gray);
     border-right: solid 1px var(--bor-gray);
     border-bottom: solid 1px var(--white);
-    background-color: var(--white);
+    background-color: var(--bg-light-gray);
     margin: 0 0 -1px 0;
 }
 .tab-main ul.nav li a {
@@ -1192,7 +1193,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 }
 .card {
     border-radius: 7px;
-    border: solid 1px var(--bor-card);
+    border: solid 1px var(--bor-gray);
     overflow: hidden;
 }
 .card .heading {
@@ -1213,7 +1214,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     border-radius: initial;
     transition: initial;
     transform: initial;
-    background-color: var(--white);
+    background-color: var(--bg-light-gray);
 }
 
 /* card colors */
@@ -1287,7 +1288,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     display: block;
     width: 100%;
     margin-top: 15px;
-    border-top: solid 1px var(--bor-card);
+    border-top: solid 1px var(--bor-gray);
     padding: 10px 0 0 0;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -1330,7 +1331,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     display: block;
     color: var(--dark-gray);
     text-transform: uppercase;
-    font-size: 0.75em;
+    font-size: 0.85em;
     font-weight: 600;
     margin-bottom: 5px;
 }

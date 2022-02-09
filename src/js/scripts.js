@@ -233,13 +233,11 @@
                             item.find('.progressbar span').removeClass('blue').addClass('red');
                             countUploaded += 1;
                         }
+                    }).done(function (data) {
+                        if (typeof success === 'function' && countFiles == countUploaded) {
+                            success.call(this);
+                        }
                     });
-
-                    console.log(countFiles, countUploaded);
-
-                    if (typeof success === 'function' && countFiles == countUploaded) {
-                        success.call(this);
-                    }
                 });
             }
         }
