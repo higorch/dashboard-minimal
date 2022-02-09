@@ -178,7 +178,7 @@
 
             var url = settings.url;
 
-            if (url !== '' && url !== null) {
+            if (files.length > 0 && url !== '' && url !== null) {
 
                 var countFiles = files.length;
                 var countUploaded = 0;
