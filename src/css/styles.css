@@ -1067,7 +1067,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     border-radius: 50%;
     background-color: var(--dark-gray);
     color: var(--white);
-    z-index: 3;
+    z-index: 50;
 }
 .modal.scrollbar .content .body {
     max-height: calc(100vh - 260px);
@@ -2100,4 +2100,47 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .area-upload .box-files .item .box .actions a.delete.active {
     display: inline-block;
     margin-left: 10px;
+}
+
+/* loading-placeholder */
+.modal .loading-placeholder,
+.card.loading-placeholder {
+    position: relative;
+}
+.loading-placeholder::before,
+.loading-placeholder::after {
+    position: absolute;
+}
+.modal .loading-placeholder::before,
+.modal .loading-placeholder::after {
+    z-index: 40;
+}
+.modal .loading-placeholder::before {
+    border-radius: 15px;
+}
+body.loading-placeholder::before,
+body.loading-placeholder::after {
+    position: fixed;
+    z-index: 9999;
+}
+.loading-placeholder::before {
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .75);
+}
+.loading-placeholder::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: '\f110';
+    left: calc(50% - 15px);
+    top: calc(50% - 15px);
+    font-size: 30px;
+    color: #ffffff;
+    animation: fa-spin 1s steps(8) infinite;
+
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
 }
