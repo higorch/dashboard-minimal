@@ -223,7 +223,7 @@
                             var data = response.data;
 
                             item.attr('data-id', data.id);
-                            countUploaded = countUploaded + 1;
+                            countUploaded += 1;
 
                             if (typeof getUploaded === 'function') {
                                 getUploaded.call(this, item);
@@ -231,7 +231,7 @@
                         },
                         error: function (response) {
                             item.find('.progressbar span').removeClass('blue').addClass('red');
-                            countUploaded = countUploaded + 1;
+                            countUploaded += 1;
                         }
                     });
 
