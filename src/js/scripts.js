@@ -46,7 +46,8 @@
 
         var getUploaded = settings.getUploaded;
         var getFiles = settings.getFiles;
-        var success = settings.success;
+        var processUpload = settings.processUpload;
+        var successUpload = settings.successUpload;
 
         var areaUpload = $(this);
         var input = areaUpload.find('input[type="file"]');
@@ -182,6 +183,10 @@
                 var countFiles = files.length;
                 var countUploaded = 0;
 
+                if (typeof processUpload === 'function') {
+                    processUpload.call(this);
+                }
+
                 files.forEach(function (file, index) {
 
                     var formData = new FormData();
@@ -234,8 +239,8 @@
                             countUploaded += 1;
                         }
                     }).done(function (data) {
-                        if (typeof success === 'function' && countFiles == countUploaded) {
-                            success.call(this);
+                        if (typeof successUpload === 'function' && countFiles == countUploaded) {
+                            successUpload.call(this);
                         }
                     });
                 });
