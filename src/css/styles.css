@@ -9,7 +9,7 @@
     --dark-gray: #6f7d97;
     --white: #ffffff;
     --light-gray: #f1eeee;
-    --bg-light-gray: #fdf9f9;
+    --bg-light-gray: #f7f1f1;
     --black: #3c4043;
     --bor-blue: #4c90ea;
     --bor-gray: #e7e5e5;
@@ -69,7 +69,7 @@ html, body {
 }
 .box-general > .container {
     width: calc(100% - var(--w-sidebar));
-    height: calc(100vh - 70px);
+    min-height: calc(100vh - 70px);
     margin-left: var(--w-sidebar);
     margin-top: var(--h-header);
     background-color: var(--bg-light-gray);
@@ -1214,7 +1214,6 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     border-radius: initial;
     transition: initial;
     transform: initial;
-    background-color: var(--bg-light-gray);
 }
 
 /* card colors */
