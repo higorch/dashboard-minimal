@@ -256,7 +256,7 @@
 
             if (urlDelete !== '' && urlDelete !== null) {
 
-                $(document).on('click', "#" + areaUpload.id + " .actions a.delete", function (e) {
+                $(document).on('click', "#" + areaUpload.attr('id') + " .actions a.delete", function (e) {
 
                     var el = $(this);
                     var item = el.parents('.item');
