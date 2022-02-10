@@ -32,6 +32,8 @@ html, body {
 * {
     outline: none;
     text-decoration: none;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 /* box-general */
@@ -61,7 +63,7 @@ html, body {
     position: fixed;
     width: var(--w-sidebar);
     left: 0;
-    top: var(--h-header);
+    top: calc(var(--h-header) - 1px);
     bottom: 0;
     background-color: var(--blue);
     z-index: 1;
@@ -74,8 +76,6 @@ html, body {
     min-height: 100vh;
     background-color: var(--bg-light-gray);
     padding: var(--h-header) 30px 0 calc(var(--w-sidebar) + 30px);
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .box-general.large > .container {
     width: calc(100% - var(--w-sidebar-large));
@@ -121,8 +121,6 @@ html, body {
     border-bottom: solid 1px var(--light-gray);
     background-color: var(--bg-light-gray);
     padding: 0 30px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .box-general.large > .header .topbar {
     width: calc(100% - var(--w-sidebar-large));
@@ -199,8 +197,6 @@ html, body {
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box {
     padding: 0 20px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a {
     font-size: 0;
@@ -263,8 +259,6 @@ html, body {
     width: 100%;
     text-transform: uppercase;
     padding: 15px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .heading {
     border-bottom: solid 1px var(--bor-gray);
@@ -301,8 +295,6 @@ html, body {
     display: block;
     background-color: var(--black);
     padding: 15px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .sidebar .menu-wrap {
     width: var(--w-sidebar);
@@ -318,8 +310,6 @@ html, body {
 .sidebar .menu-wrap ul li {
     position: relative;
     padding-left: 20px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .sidebar .menu-wrap > ul > li.active:first-child {
     padding-top: 20px;
@@ -329,8 +319,6 @@ html, body {
     text-decoration: none;
     text-align: center;
     padding: 15px 15px 15px 0;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .sidebar .menu-wrap ul li:not(.active) a {
     opacity: .8;
@@ -427,8 +415,6 @@ html, body {
 .sidebar .menu-wrap ul li > ul li {
     display: block;
     padding: 0 30px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .sidebar .menu-wrap ul li > ul li a {
     color: var(--dark-gray);
@@ -454,11 +440,6 @@ html, body {
 .sidebar .menu-accordion ul li > a {
     display: block;
     width: 100%;
-}
-.sidebar .menu-accordion ul li > a,
-.sidebar .menu-accordion ul li > ul {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .sidebar .menu-accordion ul li > a {
     color: var(--white);
@@ -522,8 +503,6 @@ html, body {
     border-radius: 5px;
     z-index: 1;
     padding: 0 15px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 
     opacity: 0;
     visibility: hidden;
@@ -553,8 +532,6 @@ html, body {
     color: var(--black);
     border-bottom: solid 1px var(--bor-gray);
     padding: 15px 0;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 
     transition: all ease .3s;
     -webkit-transition: all ease .3s;
@@ -577,8 +554,6 @@ html, body {
     font-size: 0;
     border-bottom: solid 1px var(--light-gray);
     padding: 30px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .page-header h3.title {
     color: var(--black);
@@ -602,8 +577,6 @@ html, body {
     display: inline-block;
     vertical-align: middle;
     padding: 15px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .pagination .col > * {
     font-size: initial;
@@ -635,8 +608,6 @@ html, body {
     color: var(--dark-gray);
     text-align: center;
     padding: 5px 13px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .pagination .col ul li.active a,
 .pagination .col ul li.active span {
@@ -709,8 +680,6 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     font-size: 1.2em;
     font-weight: 400;
     padding: 10px 15px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 
     transition: all ease .3s;
     -webkit-transition: all ease .3s;
@@ -792,8 +761,6 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     width: 100%;
     border-radius: 7px;
     padding: 15px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .alert.alert-default {
     background-color: var(--gray);
@@ -832,8 +799,6 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     text-align: center;
     font-size: .85em;
     padding: 5px 10px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .badge.badge-block {
     display: block;
@@ -1025,8 +990,6 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     display: block;
     width: 100%;
     padding: 30px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .modal .content.modal-large {
     width: 100%;
@@ -1113,8 +1076,6 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .tab-main .content {
     border: solid 1px var(--bor-gray);
     padding: 0 30px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .tab-main ul.nav {
     list-style: none;
@@ -1145,8 +1106,6 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     font-weight: bold;
     display: block;
     padding: 15px 30px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .tab-main ul.nav li.active a {
     color: var(--blue);
@@ -1180,11 +1139,6 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .card .body {
     display: block;
     width: 100%;
-}
-.card .heading,
-.card .body {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .card .heading,
 .card .body {
@@ -1288,8 +1242,6 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     margin-top: 15px;
     border-top: solid 1px var(--bor-gray);
     padding: 10px 0 0 0;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .card.comment .heading .replies,
 .card.comment .heading .dropdown > a,
@@ -1322,8 +1274,6 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     font-size: .85em;
     border-radius: 5px;
     padding: 10px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .form-wrap .group label {
     display: block;
@@ -1348,8 +1298,6 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     border-radius: 5px;
     font-size: 1.1em;
     padding: 8px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .form-wrap .group textarea {
     min-height: 120px;
@@ -1377,8 +1325,6 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .box-form-auth .form-wrap {
     display: block;
     width: 100%;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .box-form-auth .logo {
     padding: 15px;
@@ -1430,8 +1376,6 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     position: relative;
     width: calc(100% - 225px);
     padding: 15px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .box-catalog .thumb a,
 .box-catalog .thumb a img {
@@ -1580,11 +1524,6 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 }
 
 /* dash-info-icon */
-.dash-info-icon,
-.dash-info-icon .col {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-}
 .dash-info-icon {
     display: block;
     width: 100%;
@@ -1874,8 +1813,6 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     vertical-align: top;
     font-size: initial;
     padding: 0 15px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .row .col-side { width: var(--w-col-side);}
 .row .col-full { width: 100%;}
@@ -1994,8 +1931,6 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     border: dashed 3px #72a4e6;
     border-radius: 10px;
     padding: 30px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .area-upload .btn-choose input[type="file"] {
     display: none;
@@ -2053,8 +1988,6 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     width: calc(100% - 180px);
     text-align: left;
     padding: 0 15px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .area-upload .box-files .item .box .details .info {
     display: block;
