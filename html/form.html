@@ -423,7 +423,7 @@
             $('.mask-money').maskMoney();
 
             // upload files drap and drop
-            $("#myfiles").attachFilesDragDrop({
+            var myfiles = $("#myfiles").attachFilesDragDrop({
                 accept: '.png,.jpg,.jpeg,.pdf,.xsls', // file extension
                 size: '1.5', // size in MB
                 showBtnDelete: true, // true or false
@@ -432,26 +432,32 @@
                 getFiles: function (files) { // get all files
                     console.log(files);
                 },
-                getUploaded: function (item) { // use for ajax
-                    item.find('.actions a.delete').addClass('active');
-                },
-                processUpload: function () {  // use for ajax
-                    $("#attachments").parents('.content').addClass('loading-placeholder');
-                },
-                successUpload: function () {  // use for ajax
-                    $("#attachments").parents('.content').removeClass('loading-placeholder');
-                },
-                deletedUpload: function (status, response) {  // use for ajax
-                    switch (status) {
-                        case 'done':
-                            alert('Delete success: ' + response.msg);
-                            break;
-                        case 'fail':
-                            alert('Delete fail: ' + response.msg);;
-                            break;
-                    }
-                }
+                // getUploaded: function (item) { // use for ajax
+                //     item.find('.actions a.delete').addClass('active');
+                // },
+                // processUpload: function () {  // use for ajax
+                //     $("#attachments").parents('.content').addClass('loading-placeholder');
+                // },
+                // successUpload: function () {  // use for ajax
+                //     $("#attachments").parents('.content').removeClass('loading-placeholder');
+                // },
+                // deletedUpload: function (status, response) {  // use for ajax
+                //     switch (status) {
+                //         case 'done':
+                //             alert('Delete success: ' + response.msg);
+                //             break;
+                //         case 'fail':
+                //             alert('Delete fail: ' + response.msg);;
+                //             break;
+                //     }
+                // }
             });
+
+            // get all ajax uploaded files id
+            // myfiles.getUploadedFiles();
+
+            // clear preview area
+            myfiles.removeAllPreview();
 
         })(jQuery);
     </script>

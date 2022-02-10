@@ -286,6 +286,29 @@
             }
         }
 
+        var methods = {
+            // get all ajax uploaded files id
+            getUploadedFiles: function () {
+                var attachments = [];
+                var itens = areaUpload.find('.box-files .item');
+
+                if (itens.length > 0) {
+                    $.each(itens, function (index, item) {
+                        if ($(item).data('id') !== '' && $(item).data('id') !== null) {
+                            attachments.push($(item).data('id'));
+                        }
+                    });
+                }
+
+                return attachments;
+            },
+            // clear preview area
+            removeAllPreview: function () {
+                boxFiles.removeClass('active');
+                boxFiles.find('.item').remove();
+            }
+        }
+
         input.attr('accept', settings.accept);
 
         // quando arrastar os arquivos para area de upload
@@ -354,6 +377,8 @@
         });
 
         deleteUploadedFile();
+
+        return methods;
     };
 
     $('.box-catalog.inline >').matchHeight();
