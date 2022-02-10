@@ -275,6 +275,8 @@
                         if (typeof deletedUpload === 'function')
                             deletedUpload.call(this, 'done', response);
 
+                        item.remove();
+
                     }).fail(function (response) {
                         if (typeof deletedUpload === 'function')
                             deletedUpload.call(this, 'fail', response);
