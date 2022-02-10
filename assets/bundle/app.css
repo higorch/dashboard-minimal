@@ -7330,15 +7330,15 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .area-upload .or,
 .area-upload .btn-choose {
     display: block;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 .area-upload .box-attach {
     color: var(--black);
     background: rgb(248,251,255);
-    background: linear-gradient(0deg, rgba(248,251,255,1) 0%, rgba(215,232,255,1) 100%);
-    border: dashed 3px #72a4e6;
+    background: linear-gradient(0deg, rgb(255, 249, 249) 0%, rgb(215, 232, 255) 100%);
+    border: dashed 2px #b5d5ff;
     border-radius: 10px;
-    padding: 30px;
+    padding: 25px;
 }
 .area-upload .btn-choose input[type="file"] {
     display: none;
