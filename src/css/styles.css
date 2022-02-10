@@ -990,7 +990,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    min-height: calc(100% - (1.85rem * 2));
+    min-height: calc(100% - (1.9rem * 2));
 }
 .modal.active .dialog {
     -webkit-transform: translate(0,0);
