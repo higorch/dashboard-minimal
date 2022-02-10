@@ -427,19 +427,30 @@
                 accept: '.png,.jpg,.jpeg,.pdf,.xsls', // file extension
                 size: '1.5', // size in MB
                 showBtnDelete: true, // true or false
+                urlUpload: 'http://domain.com/upload-attachment.php', // use for ajax upload
+                urlDelete: 'http://domain.com/delete-attachment.php', // use for ajax delete
                 getFiles: function (files) { // get all files
                     console.log(files);
                 },
-                // url: 'http://domain.com/upload.php', // use for ajax upload
-                // getUploaded: function (item) { // use for ajax upload
-                //     item.find('.actions a.delete').addClass('active'); // show showBtnDelete
-                // },
-                // successUpload: function () { // use for ajax upload all files success
-
-                // },
-                // processUpload: function () {
-
-                // }
+                getUploaded: function (item) { // use for ajax
+                    item.find('.actions a.delete').addClass('active');
+                },
+                processUpload: function () {  // use for ajax
+                    $("#attachments").parents('.content').addClass('loading-placeholder');
+                },
+                successUpload: function () {  // use for ajax
+                    $("#attachments").parents('.content').removeClass('loading-placeholder');
+                },
+                deletedUpload: function (status, response) {  // use for ajax
+                    switch (status) {
+                        case 'done':
+                            alert('Delete success: ' + response.msg);
+                            break;
+                        case 'fail':
+                            alert('Delete fail: ' + response.msg);;
+                            break;
+                    }
+                }
             });
 
         })(jQuery);
