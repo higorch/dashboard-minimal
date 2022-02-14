@@ -6329,7 +6329,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     top: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, .5);
-    z-index: 9999;
+    z-index: 10;
 
     opacity: 0;
     visibility: hidden;
