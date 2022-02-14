@@ -442,9 +442,8 @@
 
         el.parent('li').addClass('active').siblings().removeClass('active');
         el.parents('ul.nav').next('.content').find(id).addClass('active').siblings('.body').removeClass('active');
-
     });
-
+    
     // submenu
     $(document).on('mouseover', '.sidebar .menu-wrap ul li', function (e) {
 
