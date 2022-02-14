@@ -40,14 +40,16 @@
         var settings = $.extend({
             accept: null, // '.png,.jpg,.jpeg,.pdf'
             size: null, // em MB
-            url: null, // url to upload file with ajax
+            urlUpload: null, // url to upload file with ajax
+            urlDelete: null, // url to delete uploaded file with ajax
             showBtnDelete: false, // true or false
         }, options);
 
-        var getUploaded = settings.getUploaded;
         var getFiles = settings.getFiles;
+        var getUploaded = settings.getUploaded;
         var processUpload = settings.processUpload;
         var successUpload = settings.successUpload;
+        var deletedUpload = settings.deletedUpload;
 
         var areaUpload = $(this);
         var input = areaUpload.find('input[type="file"]');
@@ -176,9 +178,9 @@
 
         var uploadFiles = function (files) {
 
-            var url = settings.url;
+            var urlUpload = settings.urlUpload;
 
-            if (files.length > 0 && url !== '' && url !== null) {
+            if (files.length > 0 && urlUpload !== '' && urlUpload !== null) {
 
                 var countFiles = files.length;
                 var countUploaded = 0;
@@ -198,7 +200,7 @@
 
                     $.ajax({
                         type: 'POST',
-                        url: url,
+                        url: urlUpload,
                         cache: false,
                         contentType: false,
                         processData: false,
@@ -244,6 +246,66 @@
                         }
                     });
                 });
+            }
+        }
+
+        // ajax delete uploaded file item
+        var deleteUploadedFile = function () {
+
+            var urlDelete = settings.urlDelete;
+
+            if (urlDelete !== '' && urlDelete !== null) {
+
+                $(document).on('click', "#" + areaUpload.attr('id') + " .actions a.delete", function (e) {
+
+                    var el = $(this);
+                    var item = el.parents('.item');
+                    var id = item.data('id');
+
+                    if (id == '' || id == null)
+                        return;
+
+                    $.post(urlDelete, {
+                        "id": id,
+                    }).done(function (response) {
+
+                        if (item.siblings().length == 0)
+                            boxFiles.removeClass('active');
+
+                        if (typeof deletedUpload === 'function')
+                            deletedUpload.call(this, 'done', response);
+
+                        item.remove();
+
+                    }).fail(function (response) {
+                        if (typeof deletedUpload === 'function')
+                            deletedUpload.call(this, 'fail', response);
+                    });
+                });
+
+            }
+        }
+
+        var methods = {
+            // get all ajax uploaded files id
+            getUploadedFiles: function () {
+                var attachments = [];
+                var itens = areaUpload.find('.box-files .item');
+
+                if (itens.length > 0) {
+                    $.each(itens, function (index, item) {
+                        if ($(item).data('id') !== '' && $(item).data('id') !== null) {
+                            attachments.push($(item).data('id'));
+                        }
+                    });
+                }
+
+                return attachments;
+            },
+            // clear preview area
+            removeAllPreview: function () {
+                boxFiles.removeClass('active');
+                boxFiles.find('.item').remove();
             }
         }
 
@@ -313,6 +375,10 @@
             // clear array
             files = [];
         });
+
+        deleteUploadedFile();
+
+        return methods;
     };
 
     $('.box-catalog.inline >').matchHeight();
