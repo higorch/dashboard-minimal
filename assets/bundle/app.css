@@ -6520,6 +6520,8 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 }
 .tab-main .content {
     border: solid 1px var(--bor-gray);
+    border-radius: unset;
+    background-color: var(--bg-light-gray);
     padding: 0 30px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
