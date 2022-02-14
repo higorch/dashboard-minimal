@@ -7246,6 +7246,9 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .row .v-align-bottom { vertical-align: bottom;}
 
 /* select2 */
+.select2-container {
+    min-width: 100%;
+}
 .select2-container .select2-selection--single {
     height: 45px;
 }
