@@ -2092,3 +2092,18 @@ body.loading-placeholder::after {
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
 }
+
+/* tinymce */
+.tox-tinymce {
+    border: solid 1px var(--bor-form);
+    border-radius: 5px;
+}
+.tox .tox-statusbar {
+    border-top: 1px solid var(--bor-form);
+}
+.tox .tox-toolbar, 
+.tox .tox-toolbar__overflow, 
+.tox .tox-toolbar__primary {
+    background: #ffffff;
+    border-bottom: solid 1px var(--bor-form);
+}
