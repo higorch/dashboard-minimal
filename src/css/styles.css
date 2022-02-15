@@ -2095,15 +2095,15 @@ body.loading-placeholder::after {
 
 /* tinymce */
 .tox-tinymce {
-    border: solid 1px var(--bor-form);
-    border-radius: 5px;
+    border: solid 1px var(--bor-form) !important;
+    border-radius: 5px !important;
 }
 .tox .tox-statusbar {
-    border-top: 1px solid var(--bor-form);
+    border-top: 1px solid var(--bor-form) !important;
 }
 .tox .tox-toolbar, 
 .tox .tox-toolbar__overflow, 
 .tox .tox-toolbar__primary {
-    background: #ffffff;
-    border-bottom: solid 1px var(--bor-form);
+    background: #ffffff !important;
+    border-bottom: solid 1px var(--bor-form) !important;
 }
