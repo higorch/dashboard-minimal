@@ -6686,7 +6686,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     left: 15px;
     right: 15px;
     bottom: 0;
-    top: 22px;
+    top: 0;
     line-height: 25px;
     background-color: var(--red);
     color: var(--white);
@@ -6694,6 +6694,9 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
     border-radius: 5px;
     padding: 10px;
     z-index: 1;
+}
+.form-wrap .group span.error.label {
+    top: 22px;
 }
 .form-wrap .group label {
     display: block;
