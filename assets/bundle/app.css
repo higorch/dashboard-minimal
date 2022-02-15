@@ -6081,21 +6081,30 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 table .preview {
     display: block;
     width: 100%;
-    text-decoration: none;
     font-size: 0;
+    color: var(--black);
 }
 table .preview .col {
     display: inline-block;
     vertical-align: middle;
     font-size: initial;
 }
-table .preview .col img {
-    display: block;
-    width: 60px;
-    height: auto;
-}
 table .preview .col:nth-child(1) {
     margin-right: 10px;
+}
+table .preview .col img {
+    display: block;
+    width: 50px;
+    height: auto;
+}
+table .preview.circle img {
+    border-radius: 50%;
+}
+table .preview .col .icon {
+    font-size: 50px;
+}
+table a.preview {
+    text-decoration: none;
 }
 
 /* btn */
