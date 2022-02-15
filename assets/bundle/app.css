@@ -6532,6 +6532,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .tab-main > .content > .body {
     display: none;
     padding: 0;
+    max-height: initial !important;
 }
 .tab-main > .content > .body.active {
     display: block;
