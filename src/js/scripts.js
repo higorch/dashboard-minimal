@@ -302,6 +302,20 @@
 
                 return attachments;
             },
+            countFiles: function () {
+                var attachments = [];
+                var itens = areaUpload.find('.box-files .item');
+
+                if (itens.length > 0) {
+                    $.each(itens, function (index, item) {
+                        if ($(item).data('id') !== '' && $(item).data('id') !== null) {
+                            attachments.push($(item).data('id'));
+                        }
+                    });
+                }
+
+                return attachments.length;
+            },
             // clear preview area
             removeAllPreview: function () {
                 boxFiles.removeClass('active');
@@ -443,7 +457,7 @@
         el.parent('li').addClass('active').siblings().removeClass('active');
         el.parents('ul.nav').next('.content').find(id).addClass('active').siblings('.body').removeClass('active');
     });
-    
+
     // submenu
     $(document).on('mouseover', '.sidebar .menu-wrap ul li', function (e) {
 
