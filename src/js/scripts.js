@@ -396,7 +396,6 @@
     };
 
     $('.box-catalog.inline >').matchHeight();
-    $('.scrollbar-macosx').scrollbar();
 
     // prevent click link #
     $(document).on('click', '[href="#"]', function (e) {
