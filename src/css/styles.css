@@ -1089,8 +1089,7 @@ table a.preview {
     display: none;
 }
 .modal.sidebar .content .body {
-    height: calc(100vh - 190px) !important;
-    max-height: initial !important;
+    height: calc(100vh - 190px);
 }
 
 /* tab */
