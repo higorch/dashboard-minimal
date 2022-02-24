@@ -66,6 +66,7 @@ html, body {
     top: calc(var(--h-header) - 1px);
     bottom: 0;
     background-color: var(--blue);
+    overflow-x: hidden;
     z-index: 4;
 }
 .box-general.large > .sidebar {
@@ -78,8 +79,9 @@ html, body {
     padding: var(--h-header) 30px 0 calc(var(--w-sidebar) + 30px);
 }
 .box-general.large > .container {
-    width: calc(100% - var(--w-sidebar-large));
-    margin-left: var(--w-sidebar-large);
+    width: 100%;
+    padding: var(--h-header) 30px 0 calc(var(--w-sidebar-large) + 30px);
+    
 }
 
 /* toggle template */
@@ -194,6 +196,7 @@ html, body {
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu {
     width: 320px;
     padding: 0;
+    overflow-x: hidden;
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box {
     padding: 0 20px;
@@ -268,7 +271,9 @@ html, body {
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .body {
     display: block;
+    width: calc(100% + 17px);
     max-height: 300px;
+    overflow-y: auto;
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .footer .btn-gray {
     background-color: var(--bor-gray);
@@ -297,7 +302,8 @@ html, body {
     padding: 15px;
 }
 .sidebar .menu-wrap {
-    width: var(--w-sidebar);
+    width: calc(var(--w-sidebar) + 17px);
+    overflow-y: auto;
 }
 .box-general.large .sidebar .menu-wrap {
     width: var(--w-sidebar-large);
