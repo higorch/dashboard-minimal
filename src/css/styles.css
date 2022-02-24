@@ -1050,7 +1050,8 @@ table a.preview {
     margin: 0;
     padding: 0;
     color: var(--dark-gray);
-    font-size: 1.25em;
+    font-size: 1.2em;
+    font-weight: 600;
 }
 .modal .content a.close:not([class*="btn"]) {
     position: absolute;
