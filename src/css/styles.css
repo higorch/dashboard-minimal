@@ -1349,9 +1349,6 @@ table a.preview {
     min-height: 120px;
     max-width: 100%;
 }
-.form-wrap .box-heading h3 {
-    font-size: .9rem;
-}
 
 /* form auth */
 .box-form-auth {
@@ -1691,7 +1688,7 @@ table a.preview {
     margin: 0;
     padding: 0;
     color: var(--dark-gray);
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1rem;
     overflow: hidden;
     white-space: nowrap;
