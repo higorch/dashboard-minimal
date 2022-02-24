@@ -6470,8 +6470,7 @@ table a.preview {
     z-index: 50;
 }
 .modal.scrollbar .content .body {
-    max-height: calc(100vh - 260px) !important;
-    height: auto !important;
+    max-height: calc(100vh - 260px);
 }
 .modal .content .body.scrollbar {
     overflow-y: auto;
