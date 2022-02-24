@@ -1826,6 +1826,13 @@ table a.preview {
 .pr-50 {padding-right: 50px !important;}
 .pr-60 {padding-right: 60px !important;}
 
+/* non-border-radius */
+.non-bor-radius {border-radius: initial !important;}
+.non-bor-radius-tl {border-top-left-radius: initial !important;}
+.non-bor-radius-tr {border-top-right-radius: initial !important;}
+.non-bor-radius-bl {border-bottom-left-radius: initial !important;}
+.non-bor-radius-br {border-bottom-right-radius: initial !important;}
+
 /* col */
 .split-col .col {
     display: inline-block;
