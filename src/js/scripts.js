@@ -395,7 +395,47 @@
         return methods;
     };
 
+    // detect element has scrollbar
+    $.fn.hasScrollBar = function (direction) {
+        if (direction == 'vertical') {
+            return this.get(0).scrollHeight > this.innerHeight();
+        }
+        else if (direction == 'horizontal') {
+            return this.get(0).scrollWidth > this.innerWidth();
+        }
+        return false;
+    }
+
+    // menu sidebar scrollbar
+    $.fn.manuSidebarScrollbar = function () {
+
+        var el = $(this);
+        var elWidth = el.width();
+
+        // change width element has scrollbar
+        var changeWidth = function () {
+
+            if ($(window).width() <= 768) {
+                el.width('100%');
+                return;
+            }
+
+            if (el.hasScrollBar('vertical')) {
+                el.width(elWidth);
+            } else {
+                el.width('100%');
+            }
+        }
+
+        changeWidth();
+
+        $(window).on('resize', function () {
+            changeWidth();
+        });
+    };
+
     $('.box-catalog.inline >').matchHeight();
+    $('.sidebar .menu-wrap').manuSidebarScrollbar();
 
     // prevent click link #
     $(document).on('click', '[href="#"]', function (e) {
@@ -408,7 +448,7 @@
         var el = $(this);
         var icon = el.find('i')
 
-        el.toggleClass('closed')
+        el.toggleClass('closed');
 
         $('.box-general > .header .logo').toggleClass('closed');
         $('.box-general > .sidebar').toggleClass('closed');
