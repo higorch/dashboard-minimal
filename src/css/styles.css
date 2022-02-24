@@ -752,7 +752,7 @@ table a.preview {
     background-color: var(--yellow);
 }
 .btn.btn-block {
-    display: block;
+    display: block !important;
     width: 100%;
 }
 .btn:hover,
