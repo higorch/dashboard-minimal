@@ -1067,6 +1067,7 @@ table a.preview {
 .modal .content .body.scrollbar {
     overflow-y: auto;
 }
+/* modal sidebar */
 .modal.sidebar .content {
     position: fixed;
     right: calc(var(--w-col-side) - var(--w-col-side) * 2);
@@ -1088,7 +1089,8 @@ table a.preview {
     display: none;
 }
 .modal.sidebar .content .body {
-    height: calc(100vh - 190px);
+    height: calc(100vh - 190px) !important;
+    max-height: initial !important;
 }
 
 /* tab */
