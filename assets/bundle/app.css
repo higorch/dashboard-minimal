@@ -6462,11 +6462,11 @@ table a.preview {
 }
 .modal .content a.close:not([class*="btn"]) {
     position: absolute;
-    right: -10px;
-    top: -10px;
+    right: 5px;
+    top: 5px;
     width: 35px;
     height: 35px;
-    line-height: 35px;
+    line-height: 30px;
     text-align: center;
     font-weight: 500;
     font-size: 1.2em;
@@ -6475,10 +6475,12 @@ table a.preview {
     color: var(--white);
     z-index: 50;
 }
-.modal.scrollbar .content .body {
-    max-height: calc(100vh - 260px);
+.modal.scrollbar .content {
+    overflow-x: hidden;
 }
-.modal .content .body.scrollbar {
+.modal.scrollbar .content .body {
+    width: calc(100% + 17px);
+    max-height: calc(100vh - 260px);
     overflow-y: auto;
 }
 /* modal sidebar */
@@ -6504,6 +6506,7 @@ table a.preview {
 }
 .modal.sidebar .content .body {
     height: calc(100vh - 190px);
+    max-height: initial;
 }
 
 /* tab */
