@@ -6729,6 +6729,9 @@ table a.preview {
 .modal .loading-placeholder::before {
     border-radius: 15px;
 }
+.modal .loading-placeholder.non-bor-radius::before {
+    border-radius: initial;
+}
 body.loading-placeholder::before,
 body.loading-placeholder::after {
     position: fixed;
