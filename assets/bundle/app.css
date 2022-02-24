@@ -5782,6 +5782,7 @@ table a.preview {
     display: none;
     padding: 0;
     max-height: initial !important;
+    width: initial !important;
 }
 .tab-main > .content > .body.active {
     display: block;
@@ -5807,7 +5808,7 @@ table a.preview {
 .card .heading,
 .card .body {
     display: block;
-    width: 100%;
+    width: 100% !important
 }
 .card .heading,
 .card .body {
