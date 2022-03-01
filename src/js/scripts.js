@@ -397,33 +397,39 @@
 
     // detect element has scrollbar
     $.fn.hasScrollBar = function (direction) {
-        if (direction == 'vertical') {
-            return this.get(0).scrollHeight > this.innerHeight();
-        }
-        else if (direction == 'horizontal') {
-            return this.get(0).scrollWidth > this.innerWidth();
-        }
-        return false;
-    }
-
-    // menu sidebar scrollbar
-    $.fn.manuSidebarScrollbar = function () {
 
         var el = $(this);
-        var elWidth = el.width();
+
+        if (el.length == 0) {
+            return false;
+        }
+
+        if (direction == 'vertical') {
+            return el.get(0).scrollHeight > el.innerHeight();
+        }
+
+        else if (direction == 'horizontal') {
+            return el.get(0).scrollWidth > el.innerWidth();
+        }
+    }
+
+    // active scrollbar
+    $.fn.scrollbarActive = function () {
+
+        var el = $(this);
 
         // change width element has scrollbar
         var changeWidth = function () {
 
             if ($(window).width() <= 768) {
-                el.width('100%');
+                el.removeClass('scrollbar-v-active');
                 return;
             }
 
             if (el.hasScrollBar('vertical')) {
-                el.width(elWidth);
+                el.addClass('scrollbar-v-active');
             } else {
-                el.width('100%');
+                el.removeClass('scrollbar-v-active');
             }
         }
 
@@ -435,7 +441,9 @@
     };
 
     $('.box-catalog.inline >').matchHeight();
-    $('.sidebar .menu-wrap').manuSidebarScrollbar();
+
+    $('.sidebar .menu-wrap').scrollbarActive();
+    $('.header .notification .dropdown-menu .body').scrollbarActive();
 
     // prevent click link #
     $(document).on('click', '[href="#"]', function (e) {
@@ -470,6 +478,8 @@
         $(id).addClass('active');
         $("body").css("overflow", "hidden");
         $(id).trigger("opened");
+
+        $(id + '.modal.scrollbar ').find('> .content > .body').scrollbarActive();
     });
 
     // close modal

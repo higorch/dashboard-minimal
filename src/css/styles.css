@@ -302,6 +302,10 @@ html, body {
     padding: 15px;
 }
 .sidebar .menu-wrap {
+    width: var(--w-sidebar);
+    overflow-y: hidden;
+}
+.sidebar .menu-wrap.scrollbar-v-active {
     width: calc(var(--w-sidebar) + 17px);
     overflow-y: auto;
 }
@@ -1072,8 +1076,12 @@ table a.preview {
     overflow-x: hidden;
 }
 .modal.scrollbar .content .body {
-    width: calc(100% + 17px);
+    width: 100%;
     max-height: calc(100vh - 260px);
+    overflow-y: hidden;
+}
+.modal.scrollbar .content .body.scrollbar-v-active {
+    width: calc(100% + 17px);
     overflow-y: auto;
 }
 /* modal sidebar */
