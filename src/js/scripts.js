@@ -440,11 +440,7 @@
         });
 
         resizeObserver.observe(document.body);
-
-        if (typeof el === 'object') {
-            resizeObserver.observe(el.get(0));
-        }
-
+        resizeObserver.observe(el.get(0));
     };
 
     $('.box-catalog.inline >').matchHeight();
@@ -486,7 +482,9 @@
         $("body").css("overflow", "hidden");
         $(id).trigger("opened");
 
-        $(id + '.modal.scrollbar').find('.content:first .body:first').scrollbarActive();
+        if ($(id).hasClass('scrollbar')) {
+            $(id).find('.content:first .body:first').scrollbarActive();
+        }
     });
 
     // close modal
