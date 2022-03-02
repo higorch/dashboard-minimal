@@ -440,7 +440,11 @@
         });
 
         resizeObserver.observe(document.body);
-        resizeObserver.observe(el.get(0));
+
+        if (typeof el === 'object') {
+            resizeObserver.observe(el.get(0));
+        }
+
     };
 
     $('.box-catalog.inline >').matchHeight();
