@@ -479,7 +479,7 @@
         $("body").css("overflow", "hidden");
         $(id).trigger("opened");
 
-        $(id + '.modal.scrollbar ').find('> .content > .body').scrollbarActive();
+        $(id + '.modal.scrollbar').find('.content > .body').scrollbarActive();
     });
 
     // close modal

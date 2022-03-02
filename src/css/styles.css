@@ -271,8 +271,12 @@ html, body {
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .body {
     display: block;
-    width: calc(100% + 17px);
+    width: 100%;
     max-height: 300px;
+    overflow-y: hidden;
+}
+.box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .body.scrollbar-v-active {
+    width: calc(100% + 17px);
     overflow-y: auto;
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .footer .btn-gray {
