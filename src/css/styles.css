@@ -1079,7 +1079,7 @@ table a.preview {
 .modal.scrollbar .content {
     overflow-x: hidden;
 }
-.modal.scrollbar .content .body {
+.modal.scrollbar .content > .body {
     width: 100%;
     max-height: calc(100vh - 260px);
     overflow-y: hidden;
