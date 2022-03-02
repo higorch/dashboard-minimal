@@ -435,13 +435,12 @@
 
         changeWidth();
 
-        $(window).on('resize', function () {
+        var resizeObserver = new ResizeObserver(() => {
             changeWidth();
         });
 
-        $(el).on('resize', function () {
-            changeWidth();
-        });
+        resizeObserver.observe(document.body);
+        resizeObserver.observe(el.get(0));
     };
 
     $('.box-catalog.inline >').matchHeight();
