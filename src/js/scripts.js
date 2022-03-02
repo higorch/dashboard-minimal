@@ -438,6 +438,10 @@
         $(window).on('resize', function () {
             changeWidth();
         });
+
+        $(el).on('resize', function () {
+            changeWidth();
+        });
     };
 
     $('.box-catalog.inline >').matchHeight();
