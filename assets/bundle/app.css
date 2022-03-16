@@ -4768,7 +4768,8 @@ html, body {
 .box-general > .header .logo a img {
     display: inline-block;
     width: auto;
-    height: auto;
+    height: 50px;
+    margin-top: 10px;
 }
 
 /* toggle-menu */
