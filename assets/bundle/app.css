@@ -4768,8 +4768,8 @@ html, body {
 .box-general > .header .logo a img {
     display: inline-block;
     width: auto;
-    height: 50px;
-    margin-top: 10px;
+    height: 60px;
+    margin-top: 5px;
 }
 
 /* toggle-menu */
@@ -4953,7 +4953,7 @@ html, body {
     padding: 15px 15px 15px 0;
 }
 .sidebar .menu-wrap ul li:not(.active) a {
-    opacity: .8;
+    opacity: .65;
     transition: all ease .3s;
     -webkit-transition: all ease .3s;
     -moz-transition: all ease .3s;
