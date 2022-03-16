@@ -1083,11 +1083,11 @@ table a.preview {
     width: 100%;
     max-height: calc(100vh - 260px);
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 .modal.scrollbar .content .body.scrollbar-v-active {
     width: calc(100% + 17px);
     overflow-y: auto;
-    overflow-x: hidden;
 }
 /* modal sidebar */
 .modal.sidebar .content {
