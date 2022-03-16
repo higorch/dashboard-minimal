@@ -6302,6 +6302,7 @@ table a.preview {
     font-size: initial;
 }
 .box-profile .avatar {
+    position: relative;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -6322,6 +6323,36 @@ table a.preview {
 }
 .box-profile .info .detail {
     font-size: .8em;
+}
+.box-profile.big .avatar {
+    width: 85px;
+    height: 85px;
+}
+.box-profile.big .info {
+    width: calc(100% - 100px);
+}
+.box-profile.big .avatar .upload {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    line-height: 85px;
+    text-align: center;
+    background-color: rgba(36, 37, 38, .35);
+    color: var(--white);
+    font-size: 25px;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+
+    transition: all ease .3s;
+    -webkit-transition: all ease .3s;
+}
+.box-profile.big .avatar:hover .upload,
+.box-profile.big .avatar:focus .upload {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* box-heading */
@@ -6762,6 +6793,7 @@ body.loading-placeholder::after {
     top: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, .75);
+    z-index: 9;
 }
 .loading-placeholder::after {
     font-family: "Font Awesome 5 Free";
@@ -6775,6 +6807,7 @@ body.loading-placeholder::after {
 
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
+    z-index: 9;
 }
 
 /* tinymce */
