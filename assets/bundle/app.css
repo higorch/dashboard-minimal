@@ -6024,6 +6024,11 @@ table a.preview {
     border-top-left-radius: 7px;
     border-top-right-radius: 7px
 } 
+.box-form-auth .logo img {
+    width: auto;
+    height: 75px;
+    display: inline-block;
+}
 .box-form-auth .form-wrap {
     padding: 15px 15px 30px 15px;
     margin: 0;
