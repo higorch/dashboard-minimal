@@ -1087,6 +1087,7 @@ table a.preview {
 .modal.scrollbar .content .body.scrollbar-v-active {
     width: calc(100% + 17px);
     overflow-y: auto;
+    overflow-x: hidden;
 }
 /* modal sidebar */
 .modal.sidebar .content {
