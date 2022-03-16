@@ -5850,6 +5850,21 @@ table a.preview {
     transition: initial;
     transform: initial;
 }
+.card > .body > .content :last-child {
+    margin-bottom: 0;
+}
+.card .heading {
+    padding: 15px 30px;
+}
+.card .heading .dropdown {
+    display: inline-block;
+}
+.card > .body > .content {
+    color: var(--dark-gray);
+}
+.card > .body > .content :first-child {
+    margin-top: 0;
+}
 
 /* card colors */
 .card.gray {
@@ -5903,21 +5918,6 @@ table a.preview {
 }
 
 /* card comment */
-.card.comment .heading {
-    padding: 15px 30px;
-}
-.card.comment .heading .dropdown {
-    display: inline-block;
-}
-.card.comment > .body > .content {
-    color: var(--dark-gray);
-}
-.card.comment > .body > .content :first-child {
-    margin-top: 0;
-}
-.card.comment > .body > .content :last-child {
-    margin-bottom: 0;
-}
 .card.comment .body .actions {
     display: block;
     width: 100%;
