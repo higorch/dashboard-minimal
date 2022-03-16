@@ -2032,6 +2032,10 @@ table a.preview {
     width: 100%;
     text-align: center;
 }
+.simple-upload .btn-choose {
+    display: block;
+    width: 100%;
+}
 .simple-upload .btn-choose input[type="file"] {
     display: none;
 }
