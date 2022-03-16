@@ -1237,6 +1237,7 @@ table a.preview {
 .card > .body > .content :last-child {
     margin-bottom: 0;
 }
+/* heading */
 .card .heading {
     padding: 15px 30px;
 }
@@ -1248,6 +1249,10 @@ table a.preview {
 }
 .card > .body > .content :first-child {
     margin-top: 0;
+}
+.card .heading .btn {
+    padding: 5px 10px;
+    font-size: .85em;
 }
 
 /* card colors */
