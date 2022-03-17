@@ -113,7 +113,7 @@
 
                     let results = getUsers(pattern).map(function (user) {
 
-                        var avatar = user.avatar ? user.avatar.path : url + '/profile-default.png';
+                        var avatar = user.avatar ? window.location.origin + '/' + user.avatar.path : url + '/profile-default.png';
 
                         return {
                             type: 'cardmenuitem',
