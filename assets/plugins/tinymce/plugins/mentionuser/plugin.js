@@ -121,7 +121,6 @@
                             items: [
                                 {
                                     type: 'cardimage',
-                                    // src: user.avatar.path + '?s=200&d=mp&r=x',
                                     src: avatar,
                                     classes: ['tox-mention__avatar'],
                                 },
