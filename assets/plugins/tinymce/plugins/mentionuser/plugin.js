@@ -113,7 +113,7 @@
 
                     let results = getUsers(pattern).map(function (user) {
 
-                        var avatar = user.avatar ? user.avatar.path : 'assets/plugins/tinymce/mentionuser/profile-default.png';
+                        var avatar = user.avatar ? user.avatar.path : url + '/profile-default.png';
 
                         return {
                             type: 'cardmenuitem',
@@ -122,7 +122,7 @@
                                 {
                                     type: 'cardimage',
                                     // src: user.avatar.path + '?s=200&d=mp&r=x',
-                                    src: url + avatar,
+                                    src: avatar,
                                     classes: ['tox-mention__avatar'],
                                 },
                                 {
