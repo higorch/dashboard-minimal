@@ -4644,6 +4644,9 @@ html, body {
     margin: 0;
     padding: 0;
 }
+body {
+    overflow-x: hidden;
+}
 
 * {
     outline: none;
@@ -5980,6 +5983,7 @@ table a.preview {
 .form-wrap .group input[type="text"],
 .form-wrap .group input[type="email"],
 .form-wrap .group input[type="password"],
+.form-wrap .group input[type="number"],
 .form-wrap .group select,
 .form-wrap .group textarea {
     font-family: 'Source Sans Pro', sans-serif;
