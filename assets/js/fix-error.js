@@ -1,7 +1,8 @@
 (function ($) {
 
-    // important, fix error "_attachPositioningHandler" select2 in modal
     if ($.fn.select2) {
+
+        // important, fix error "_attachPositioningHandler" select2 in modal
         $.fn.select2.amd.require(["select2/dropdown/attachBody", "select2/utils"], (AttachBody, Utils) => {
             AttachBody.prototype._attachPositioningHandler = function (decorated, container) {
                 var self = this;
@@ -26,6 +27,11 @@
                     }
                 );
             };
+        });
+
+        // select2 focus to search field
+        $(document).on('select2:open', () => {
+            document.querySelector('.select2-search__field').focus();
         });
     }
 
