@@ -30,9 +30,9 @@
         });
 
         // select2 focus to search field
-        $(document).on('select2:open', () => {
-            document.querySelector('.select2-search__field').focus();
-        });
+        // $(document).on('select2:open', () => {
+        //     document.querySelector('.select2-search__field').focus();
+        // });
     }
 
 })(jQuery);
