@@ -29,10 +29,14 @@
             };
         });
 
-        // select2 focus to search field
-        // $(document).on('select2:open', () => {
-        //     document.querySelector('.select2-search__field').focus();
-        // });
+        $(document).on('select2:open', () => {
+            let allFound = document.querySelectorAll('.select2-container--open .select2-search__field');
+            $(this).one('mouseup', () => {
+                setTimeout(() => {
+                    allFound[allFound.length - 1].focus();
+                }, 0);
+            });
+        });
     }
 
 })(jQuery);
