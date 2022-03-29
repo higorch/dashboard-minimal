@@ -4621,7 +4621,7 @@ readers do not read off random characters that represent icons */
     --gray: #f1eded;
     --red: #cb6468;
     --green: #53be8a;
-    --yellow: #cac147;
+    --yellow: #e0cd5d;
     --dark-gray: #6f7d97;
     --white: #ffffff;
     --light-gray: #f1eeee;
@@ -5378,7 +5378,7 @@ table a.preview {
     background-color: var(--red);
 }
 .btn.btn-yellow {
-    color: var(--dark-gray);
+    color: var(--black);
     background-color: var(--yellow);
 }
 .btn.btn-block {
@@ -5487,7 +5487,15 @@ table a.preview {
 }
 .badge.badge-yellow {
     background-color: var(--yellow);
-    color: var(--dark-gray);
+    color: var(--black);
+}
+.badge.badge-black {
+    background-color: var(--black);
+    color: var(--white);
+}
+.badge.badge-dark-gray {
+    background-color: var(--dark-gray);
+    color: var(--white);
 }
 /* badge-round  */
 .badge.badge-round {
@@ -5507,11 +5515,11 @@ table a.preview {
     margin-right: 5px;
     border-radius: 50%;
 }
-.badge.badge-round.badge-default {
-    color: var(--dark-gray);
+.badge.badge-round.badge-gray {
+    color: var(--gray);
 }
-.badge.badge-round.badge-default::before {
-    background-color: var(--dark-gray);
+.badge.badge-round.badge-gray::before {
+    background-color: var(--gray);
 }
 .badge.badge-round.badge-blue {
     color: var(--blue-pastel);
@@ -5536,6 +5544,18 @@ table a.preview {
 }
 .badge.badge-round.badge-yellow::before {
     background-color: var(--yellow);
+}
+.badge.badge-round.badge-black {
+    color: var(--black);
+}
+.badge.badge-round.badge-black::before {
+    background-color: var(--black);
+}
+.badge.badge-round.badge-dark-gray {
+    color: var(--dark-gray);
+}
+.badge.badge-round.badge-dark-gray::before {
+    background-color: var(--dark-gray);
 }
 
 /*  text color */
