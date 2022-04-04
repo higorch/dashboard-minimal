@@ -6267,14 +6267,13 @@ table a.preview {
     display: inline-block;
     vertical-align: middle;
     font-size: initial;
-    padding: 5px;
 }
-.dash-info-icon .col:first-child {
-    width: 70%;
+.dash-info-icon .col:nth-child(1) {
+    width: calc(100% - 50px);
 }
-.dash-info-icon .col:last-child {
-    width: 30%;
-    text-align: center;
+.dash-info-icon .col:nth-child(2) {
+    width: 50px;
+    text-align: right;
 }
 .dash-info-icon .col span.big-text,
 .dash-info-icon .col span.small-text {
@@ -6290,6 +6289,12 @@ table a.preview {
 .dash-info-icon .col .icon {
     font-size: 2em;
 }
+.dash-info-icon.big .col:nth-child(1) {
+    width: calc(100% - 60px);
+}
+.dash-info-icon.big .col:nth-child(2) {
+    width: 60px;
+}
 .dash-info-icon.big .col span.big-text {
     font-size: 1.8em;
 }
@@ -6298,6 +6303,9 @@ table a.preview {
 }
 .dash-info-icon.big .col .icon {
     font-size: 3em;
+}
+.dash-info-icon.big a.read-more {
+    font-size: 14px;
 }
 .dash-info-icon.gray {
     color: var(--dark-gray);
