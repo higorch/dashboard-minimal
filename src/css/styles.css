@@ -1636,6 +1636,17 @@ table a.preview {
     border-radius: 5px;
     padding: 15px;
 }
+.dash-info-icon a.read-more {
+    display: block;
+    font-size: 12px;
+    text-align: center;
+    border-top: dotted 1px var(--bor-gray);
+    color: var(--white);
+    padding-top: 10px;
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 .dash-info-icon .col {
     display: inline-block;
     vertical-align: middle;
@@ -1672,9 +1683,13 @@ table a.preview {
 .dash-info-icon.big .col .icon {
     font-size: 3em;
 }
-.dash-info-icon.default {
+.dash-info-icon.gray {
     color: var(--dark-gray);
     background-color: rgb(236, 233, 233);
+}
+.dash-info-icon.gray a.read-more {
+    color: var(--dark-gray);
+    border-top-color: var(--dark-gray);
 }
 .dash-info-icon.blue {
     color: #ffffff;
@@ -1683,6 +1698,10 @@ table a.preview {
 .dash-info-icon.yellow {
     color: #3c4043;
     background: rgb(230,222,123);
+}
+.dash-info-icon.yellow a.read-more {
+    color: #3c4043;
+    border-top-color: #3c4043;
 }
 .dash-info-icon.green {
     color: #ffffff;
