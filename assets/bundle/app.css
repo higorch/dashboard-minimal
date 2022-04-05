@@ -6001,6 +6001,26 @@ table a.preview {
     font-weight: 600;
     margin-bottom: 5px;
 }
+.form-wrap .group .label-add {
+    font-size: 0;
+    display: block;
+    margin-bottom: 5px;
+}
+.form-wrap .group .label-add span.text,
+.form-wrap .group .label-add a.btn {
+    display: inline-block;
+    font-size: 13px;
+}
+.form-wrap .group .label-add span.text {
+    width: calc(100% - 30px);
+    color: var(--dark-gray);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.form-wrap .group .label-add a.btn {
+    width: 30px;
+    padding: 5px;
+}
 .form-wrap .group input[type="text"],
 .form-wrap .group input[type="email"],
 .form-wrap .group input[type="password"],
