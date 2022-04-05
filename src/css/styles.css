@@ -1377,6 +1377,10 @@ table a.preview {
 .form-wrap .group span.error.label {
     top: 22px;
 }
+.form-wrap .group span.error.label-add {
+    top: 32px;
+    margin: 0;
+}
 .form-wrap .group label {
     display: block;
     color: var(--dark-gray);
