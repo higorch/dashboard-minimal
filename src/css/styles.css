@@ -207,6 +207,7 @@ body {
     padding: 0 20px;
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a {
+    position: relative;
     font-size: 0;
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a .col {
@@ -260,6 +261,21 @@ body {
     margin-top: 5px;
     color: var(--dark-gray);
     font-size: .7em;
+}
+.box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a span.read {
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 8px;
+    right: -5px;
+    top: 15px;
+    border-radius: 50%;
+}
+.box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a span.read.yes {
+    background-color: var(--dark-gray);
+}
+.box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a span.read.not {
+    background-color: var(--black);
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .heading,
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .footer {
