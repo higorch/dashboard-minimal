@@ -5369,6 +5369,22 @@ table a.preview {
     -o-transition: all ease .3s;
     -ms-transition: all ease .3s;
 }
+.btn.count {
+    position: relative;
+}
+.btn.count .number {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--red);
+    color: var(--white);
+    font-size: 12px;
+    line-height: 15px;
+    top: 0;
+    font-weight: bold;
+    left: -5px;
+}
 .btn.btn-black {
     color: var(--white);
     background-color: var(--black);
