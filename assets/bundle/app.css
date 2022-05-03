@@ -6078,6 +6078,26 @@ table a.preview {
     min-height: 120px;
     max-width: 100%;
 }
+.form-wrap .group input[type="text"]:disabled,
+.form-wrap .group input[type="text"]:read-only,
+
+.form-wrap .group input[type="email"]:disabled,
+.form-wrap .group input[type="email"]:read-only,
+
+.form-wrap .group input[type="password"]:disabled,
+.form-wrap .group input[type="password"]:read-only,
+
+.form-wrap .group input[type="number"]:disabled,
+.form-wrap .group input[type="number"]:read-only,
+
+.form-wrap .group select:disabled,
+.form-wrap .group select:read-only,
+
+.form-wrap .group textarea:disabled,
+.form-wrap .group textarea:read-only {
+    background-color: var(--light-gray);
+    pointer-events: none;
+}
 
 /* form auth */
 .box-form-auth {
