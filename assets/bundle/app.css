@@ -6357,11 +6357,11 @@ table a.preview {
     display: block;
 }
 .dash-info-icon .col span.big-text {
-    font-size: 1.3em;
+    font-size: 1.15em;
     font-weight: bold;
 }
 .dash-info-icon .col span.small-text {
-    font-size: .8em;
+    font-size: .75em;
 }
 .dash-info-icon .col .icon {
     font-size: 2em;
