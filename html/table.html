@@ -244,7 +244,11 @@
 
             </div>
 
-            <div class="table-wrap details mt-30">
+            <div class="box-heading mt-30">
+                <h3>Table details</h3>
+            </div>
+
+            <div class="table-wrap details mt-15">
 
                 <table>
                     <tr>
@@ -267,14 +271,17 @@
 
             </div>
 
+            <div class="box-heading mt-30">
+                <h3>Table Sortable</h3>
+            </div>
+
             <!-- table -->
-            <div class="table-wrap mt-30">
+            <div class="table-wrap mt-15">
 
                 <table id="table-sortable" class="table-sortable">
 
                     <thead>
                         <tr>
-                            <th class="text-center" style="width: 30px;"></th>
                             <th>ID</th>
                             <th>Nome</th>
                             <th>E-mail</th>
@@ -286,11 +293,6 @@
                     <tbody>
 
                         <tr>
-                            <td class="text-center">
-                                <span class="text-dark-gray btn-dragdrop">
-                                    <i class="fas fa-grip-vertical"></i>
-                                </span>
-                            </td>
                             <td>#1</td>
                             <td>
                                 <a href="https://www.gravatar.com/avatar/259905cb56f41eff8dcf9d9c0a4cf682?s=200&d=mp&r=x"
@@ -312,11 +314,6 @@
                         </tr>
 
                         <tr>
-                            <td class="text-center">
-                                <span class="text-dark-gray btn-dragdrop">
-                                    <i class="fas fa-grip-vertical"></i>
-                                </span>
-                            </td>
                             <td>#2</td>
                             <td>
                                 <a href="https://www.gravatar.com/avatar/259905cb56f41eff8dcf9d9c0a4cf682?s=200&d=mp&r=x"
@@ -338,11 +335,6 @@
                         </tr>
 
                         <tr>
-                            <td class="text-center">
-                                <span class="text-dark-gray btn-dragdrop">
-                                    <i class="fas fa-grip-vertical"></i>
-                                </span>
-                            </td>
                             <td>#3</td>
                             <td>
                                 <a href="https://www.gravatar.com/avatar/259905cb56f41eff8dcf9d9c0a4cf682?s=200&d=mp&r=x"
@@ -370,8 +362,12 @@
             </div>
             <!-- table-wrap -->
 
+            <div class="box-heading mt-30">
+                <h3>Table pagination</h3>
+            </div>
+
             <!-- table -->
-            <div class="table-wrap mt-30">
+            <div class="table-wrap mt-15">
 
                 <table>
 
@@ -685,7 +681,11 @@
     <script>
         $(function () {
 
-            $("#table-sortable tbody").sortable();
+            $("#table-sortable tbody").sortable({
+                start: function (e, ui) {
+                    ui.placeholder.height(ui.item.height());
+                }
+            });
 
         });
 

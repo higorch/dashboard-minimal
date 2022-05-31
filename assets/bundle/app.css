@@ -5280,13 +5280,14 @@ body {
 table {
     font-family: 'Source Sans Pro', sans-serif;
     border-collapse: separate;
-    border-spacing: 0 5px;
+    border-spacing: 0;
     width: 100%;
     color: var(--black);
 }
 table tr {
     width: 100%;
     display: inline-table;
+    border-spacing: 0 5px;
 }
 table th,
 table td {
@@ -5302,6 +5303,10 @@ table thead tr th {background-color: var(--light-gray);}
 table tbody tr td {
     border-bottom: solid 2px var(--bor-gray);
     border-top: solid 2px var(--bor-gray);
+}
+table tbody tr th,
+table tbody tr td {
+    position: relative;
 }
 table tbody tr:hover td {background-color: var(--gray);}
 table tbody tr td:first-child {border-left: solid 2px var(--bor-gray);}
@@ -5356,6 +5361,17 @@ table a.preview {
 }
 
 /* table-sortable */
+table.table-sortable tbody tr td:first-child::before,
+table.table-sortable tbody tr th:first-child::before {
+    position: absolute;
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: '\f58e';
+    left: 5px;
+    top: 5px;
+    font-size: 10px;
+    color: #dfdbdb;
+}
 table.table-sortable tbody tr.ui-sortable-placeholder {
     visibility: visible !important;
 }
@@ -5363,9 +5379,9 @@ table.table-sortable tbody tr.ui-sortable-helper td,
 table.table-sortable tbody tr.ui-sortable-helper td a {
     cursor: grab;
 }
-table.table-sortable tbody tr.ui-sortable-placeholder td {
-    border: none;
-    background: var(--dark-gray);
+table.table-sortable tbody tr.ui-sortable-placeholder td:first-child::before,
+table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
+    visibility: hidden;
 }
 
 /* btn */
