@@ -759,6 +759,10 @@ table.table-sortable tbody tr.ui-sortable-helper {
     display: table;
 }
 table.table-sortable tbody tr.ui-sortable-helper td,
+table.table-sortable tbody tr.ui-sortable-helper th {
+    background-color: var(--white);
+}
+table.table-sortable tbody tr.ui-sortable-helper td,
 table.table-sortable tbody tr.ui-sortable-helper td a,
 table.table-sortable tbody tr.ui-sortable-helper th,
 table.table-sortable tbody tr.ui-sortable-helper th a {
