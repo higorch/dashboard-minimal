@@ -4888,7 +4888,7 @@ body {
     border-radius: 50%;
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a span.read.yes {
-    background-color: var(--dark-gray);
+    background-color: var(--bor-gray);
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a span.read.not {
     background-color: var(--black);
