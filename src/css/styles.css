@@ -664,18 +664,13 @@ body {
 table {
     font-family: 'Source Sans Pro', sans-serif;
     border-collapse: separate;
-    border-spacing: 0;
+    border-spacing: 0 10px;
     width: 100%;
     color: var(--black);
 }
-table tr {
-    width: 100%;
-    display: inline-table;
-    border-spacing: 0 5px;
-}
 table th,
 table td {
-    font-size: 1em;
+    font-size: 14px;
 }
 table th {
     border: none !important;
@@ -731,8 +726,9 @@ table .preview .col:nth-child(1) {
 }
 table .preview .col img {
     display: block;
-    width: 50px;
-    height: auto;
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
 }
 table .preview.circle img {
     border-radius: 50%;
@@ -759,8 +755,13 @@ table.table-sortable tbody tr th:first-child::before {
 table.table-sortable tbody tr.ui-sortable-placeholder {
     visibility: visible !important;
 }
+table.table-sortable tbody tr.ui-sortable-helper {
+    display: table;
+}
 table.table-sortable tbody tr.ui-sortable-helper td,
-table.table-sortable tbody tr.ui-sortable-helper td a {
+table.table-sortable tbody tr.ui-sortable-helper td a,
+table.table-sortable tbody tr.ui-sortable-helper th,
+table.table-sortable tbody tr.ui-sortable-helper th a {
     cursor: grab;
 }
 table.table-sortable tbody tr.ui-sortable-placeholder td:first-child::before,

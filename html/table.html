@@ -329,7 +329,7 @@
                                     </div>
                                 </a>
                             </td>
-                            <td>cosmefar@mail.com</td>
+                            <td>foo@mail.com</td>
                             <td>(62) 96935-74545</td>
                             <td class="text-center">75640-000</td>
                         </tr>
@@ -350,7 +350,7 @@
                                     </div>
                                 </a>
                             </td>
-                            <td>cosmefar@mail.com</td>
+                            <td>br@mail.com</td>
                             <td>(62) 96935-74545</td>
                             <td class="text-center">75640-000</td>
                         </tr>
@@ -603,7 +603,7 @@
             </div>
             <!-- table-wrap -->
 
-            <div class="pagination mt-15">
+            <div class="pagination">
 
                 <div class="col">
                     <p>Mostrando de 1 até 12 de 1306 registros</p>
@@ -680,7 +680,7 @@
     <script src="../assets/js/fix-error.js"></script>
 
     <script>
-        $(function () {
+        (function ($) {
 
             $("#table-sortable tbody").sortable({
                 start: function (e, ui) {
@@ -688,7 +688,7 @@
                 }
             });
 
-        });
+        })(jQuery);
 
     </script>
 </body>
