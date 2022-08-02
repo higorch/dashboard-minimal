@@ -74,16 +74,14 @@
 
                     output += '<div class="box">';
 
-                    // preview thumb
+                    // preview image
                     switch (file.type) {
-                        case 'image/apng':
-                        case 'image/avif':
-                        case 'image/gif':
-                        case 'image/jpeg':
-                        case 'image/png':
-                        case 'image/webp':
-                        case 'image/x-icon':
+                        case 'image/*':
                             output += '<div class="preview"><img src="' + src + '"></div>';
+                            break;
+
+                        case 'video/*':
+                            output += '<div class="preview"><div class="icon"><i class="fal fa-file-video"></i></div></div>';
                             break;
 
                         case 'text/csv':
@@ -110,18 +108,7 @@
                     output += '<div class="actions">';
 
                     // preview btn
-                    switch (file.type) {
-                        case 'image/apng':
-                        case 'image/avif':
-                        case 'image/gif':
-                        case 'image/jpeg':
-                        case 'image/png':
-                        case 'image/webp':
-                        case 'image/x-icon':
-                        case 'application/pdf':
-                            output += '<a href="' + src + '" class="external-link btn btn-dark-gray" title="Visualizar" target="_blank"><i class="fas fa-external-link-alt"></i></a>';
-                            break;
-                    }
+                    output += '<a href="' + src + '" class="external-link btn btn-dark-gray" title="Visualizar" target="_blank"><i class="fas fa-external-link-alt"></i></a>';
 
                     if (settings.showBtnDelete) {
                         output += '<a href="#" class="delete btn btn-black active" title="Excluir"><i class="fas fa-times"></i></a>';
