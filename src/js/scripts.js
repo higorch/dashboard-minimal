@@ -100,7 +100,7 @@
                         case 'video/x-ms-asf':
                         case 'video/asf':
                         case 'video/asx':
-                            output += '<div class="preview"><div class="icon"><i class="far fa-play-circle"></i></div></div>';
+                            output += '<div class="preview"><div class="icon"><i class="far fa-file-video"></i></div></div>';
                             break;
 
                         case 'audio/3gpp':
@@ -112,7 +112,7 @@
                         case 'audio/ogg':
                         case 'audio/webm':
                         case 'audio/vnd.dlna.adts':
-                            output += '<div class="preview"><div class="icon"><i class="fas fa-headphones"></i></div></div>';
+                            output += '<div class="preview"><div class="icon"><i class="far fa-file-audio"></i></div></div>';
                             break;
 
                         case 'text/csv':
@@ -138,8 +138,41 @@
 
                     output += '<div class="actions">';
 
-                    // preview btn
-                    output += '<a href="' + src + '" class="external-link btn btn-dark-gray" title="Visualizar" target="_blank"><i class="fas fa-external-link-alt"></i></a>';
+                    // view btn
+                    switch (file.type) {
+                        //video
+                        case 'video/3gp':
+                        case 'video/avi':
+                        case 'video/mp4':
+                        case 'video/mpeg':
+                        case 'video/m1v':
+                        case 'video/mpa':
+                        case 'video/mpg':
+                        case 'video/mpe':
+                        case 'video/quicktime':
+                        case 'video/mov':
+                        case 'video/qt':
+                        case 'video/x-flv':
+                        case 'video/flv':
+                        case 'video/x-ms-asf':
+                        case 'video/asf':
+                        case 'video/asx':
+                        // audio
+                        case 'audio/3gpp':
+                        case 'audio/aac':
+                        case 'audio/aiff':
+                        case 'audio/amr':
+                        case 'audio/mp4':
+                        case 'audio/mpeg':
+                        case 'audio/ogg':
+                        case 'audio/webm':
+                        case 'audio/vnd.dlna.adts':
+                            output += '<a href="' + src + '" class="external-link btn btn-dark-gray" title="Visualizar" target="_blank"><i class="fas fa-play"></i></a>';
+                            break;
+                        default:
+                            output += '<a href="' + src + '" class="external-link btn btn-dark-gray" title="Visualizar" target="_blank"><i class="fas fa-external-link-alt"></i></a>';
+                            break;
+                    }
 
                     if (settings.showBtnDelete) {
                         output += '<a href="#" class="delete btn btn-black active" title="Excluir"><i class="fas fa-times"></i></a>';
