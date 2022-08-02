@@ -74,14 +74,45 @@
 
                     output += '<div class="box">';
 
-                    // preview image
+                    // preview icon
                     switch (file.type) {
-                        case 'image/*':
+                        case 'image/gif':
+                        case 'image/jpeg':
+                        case 'image/jpe':
+                        case 'image/jpg':
+                        case 'image/png':
                             output += '<div class="preview"><img src="' + src + '"></div>';
                             break;
 
-                        case 'video/*':
-                            output += '<div class="preview"><div class="icon"><i class="fal fa-file-video"></i></div></div>';
+                        case 'video/3gp':
+                        case 'video/avi':
+                        case 'video/mp4':
+                        case 'video/mpeg':
+                        case 'video/m1v':
+                        case 'video/mpa':
+                        case 'video/mpg':
+                        case 'video/mpe':
+                        case 'video/quicktime':
+                        case 'video/mov':
+                        case 'video/qt':
+                        case 'video/x-flv':
+                        case 'video/flv':
+                        case 'video/x-ms-asf':
+                        case 'video/asf':
+                        case 'video/asx':
+                            output += '<div class="preview"><div class="icon"><i class="far fa-play-circle"></i></div></div>';
+                            break;
+
+                        case 'audio/3gpp':
+                        case 'audio/aac':
+                        case 'audio/aiff':
+                        case 'audio/amr':
+                        case 'audio/mp4':
+                        case 'audio/mpeg':
+                        case 'audio/ogg':
+                        case 'audio/webm':
+                        case 'audio/vnd.dlna.adts':
+                            output += '<div class="preview"><div class="icon"><i class="fas fa-headphones"></i></div></div>';
                             break;
 
                         case 'text/csv':

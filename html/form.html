@@ -389,7 +389,7 @@
 
                                         <label class="btn-choose btn btn-blue text-white">
                                             Escolha o arquivo
-                                            <input type="file" accept=".png,.jpg,.jpeg">
+                                            <input type="file" accept=".png,.jpg,.jpeg,.mp4,.mp3,.aac,.ogg,.pdf,.xsls">
                                         </label>
 
                                     </div>
@@ -476,8 +476,8 @@
 
             // upload files drap and drop
             var myfiles = $("#myfiles").attachFilesDragDrop({
-                accept: '.png,.jpg,.jpeg,.pdf,.xsls', // file extension
-                size: '1.5', // size in MB
+                accept: '.png,.jpg,.jpeg,.mp4,.mp3,.aac,.ogg,.pdf,.xsls', // file extension
+                size: '5', // size in MB
                 showBtnDelete: true, // true or false
                 urlUpload: 'http://domain.com/upload-attachment.php', // use for ajax upload
                 urlDelete: 'http://domain.com/delete-attachment.php', // use for ajax delete
