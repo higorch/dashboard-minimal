@@ -219,12 +219,9 @@
             }
 
             var size = parseFloat(file.size / (1024 * 1024)).toFixed(2);
+            var settings_size = parseFloat(settings.size).toFixed(2);
 
-            if (size > settings.size) {
-                return false;
-            }
-
-            return true;
+            return parseFloat(settings_size) >= parseFloat(size);
         }
 
         var uploadFiles = function (files) {
@@ -264,7 +261,7 @@
 
                                 if (evt.lengthComputable) {
 
-                                    var percentComplete = evt.loaded / evt.total;
+                                    var percentComplete = (evt.loaded / evt.total).toFixed(2);
 
                                     item.find('.info .progress').text(percentComplete * 100 + '%');
                                     item.find('.progressbar span').css({
