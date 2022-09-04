@@ -4660,7 +4660,6 @@ body {
     display: block;
     width: 100%;
     min-height: 100vh;
-    overflow: hidden;
 }
 .box-general.page-auth {
     position: fixed;
@@ -5205,6 +5204,13 @@ body {
     font-size: 0;
     border-bottom: solid 1px var(--light-gray);
     padding: 30px;
+}
+.page-header.sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    top: var(--h-header);
+    background-color: var(--bg-light-gray);
+    z-index: 2;
 }
 .page-header h3.title {
     color: var(--black);
