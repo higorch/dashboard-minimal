@@ -78,7 +78,7 @@ body {
     width: 100%;
     min-height: 100vh;
     background-color: var(--bg-light-gray);
-    padding: var(--h-header) 30px 1px calc(var(--w-sidebar) + 30px);
+    padding: var(--h-header) 30px 0 calc(var(--w-sidebar) + 30px);
 }
 .box-general.large > .container {
     width: 100%;
