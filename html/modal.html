@@ -249,6 +249,7 @@
             </div>
 
             <div class="row">
+                
                 <div class="col-100 mt-30 mb-30">
 
                     <a href="#" class="btn btn-blue btn-block mt-15" data-trigger="modal" data-modal="#modal-default">
@@ -276,7 +277,13 @@
                         Modal loading placeholder
                     </a>
 
+                    <a href="#" class="btn btn-blue btn-block mt-15" data-trigger="modal" data-modal="#modal-trigger-sidebar">
+                        <i class="fas fa-external-link-alt"></i>
+                        Modal trigger sidebar
+                    </a>
+
                 </div>
+
             </div>
 
             <!-- modal default -->
@@ -567,14 +574,14 @@
 
                             <div class="row">
                                 <div class="col-50">
-                                    <a href="#" class="btn btn-blue btn-block">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        Voltar
+                                    <a href="#" class="btn btn-gray btn-block close">
+                                        <i class="fas fa-times"></i>
+                                        Fechar
                                     </a>
                                 </div>
                                 <div class="col-50">
                                     <a href="#" class="btn btn-green btn-block">
-                                        <i class="fas fa-external-link-alt"></i>
+                                        <i class="far fa-paper-plane"></i>
                                         Salvar
                                     </a>
                                 </div>
@@ -743,14 +750,14 @@
 
                             <div class="row">
                                 <div class="col-50">
-                                    <a href="#" class="btn btn-blue btn-block">
-                                        <i class="fas fa-external-link-alt"></i>
-                                        Voltar
+                                    <a href="#" class="btn btn-gray btn-block close">
+                                        <i class="fas fa-times"></i>
+                                        Fechar
                                     </a>
                                 </div>
                                 <div class="col-50">
                                     <a href="#" class="btn btn-green btn-block">
-                                        <i class="fas fa-external-link-alt"></i>
+                                        <i class="far fa-paper-plane"></i>
                                         Salvar
                                     </a>
                                 </div>
@@ -947,6 +954,59 @@
                         </div>
 
                         <div class="footer">...</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- modal trigger sidebar -->
+            <div class="modal scrollbar" id="modal-trigger-sidebar" tabindex="-1" role="dialog">
+
+                <div class="dialog centered" role="document">
+
+                    <div class="content">
+
+                        <a href="#" class="close">x</a>
+
+                        <div class="header">
+                            <p>Modal trigger sidebar</p>
+                        </div>
+
+                        <div class="body">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has
+                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                                took a
+                                galley of type and scrambled it to make a type specimen book. It has survived not only
+                                five
+                                centuries, but also the leap into electronic typesetting, remaining essentially
+                                unchanged.
+                                It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+                                Ipsum
+                                passages, and more recently with desktop publishing software like Aldus PageMaker
+                                including
+                                versions of Lorem Ipsum.</p>
+                        </div>
+
+                        <div class="footer">
+
+                            <div class="row">
+                                <div class="col-50">
+                                    <a href="#" class="btn btn-gray btn-block close">
+                                        <i class="fas fa-times"></i>
+                                        Fechar
+                                    </a>
+                                </div>
+                                <div class="col-50">
+                                    <a href="#" class="btn btn-blue btn-block" data-trigger="modal" data-modal="#modal-sidebar">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Abrir sidebar
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
 
                 </div>
