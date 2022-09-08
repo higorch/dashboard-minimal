@@ -545,7 +545,13 @@
 
         if (!$(e.target).closest('.modal > *').length || $(e.target).hasClass('dialog') || $(e.target).closest('.modal .dialog .content .close').length || $(e.target).closest('.modal .content .close').length) {
             el.removeClass('active');
-            $("body").css("overflow", "initial");
+
+            var hasModalActive = $('.modal.active').length;
+
+            if (hasModalActive == 0) {
+                $("body").css("overflow", "initial");
+            }
+
             el.trigger("modal-close");
         }
 
