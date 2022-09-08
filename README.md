@@ -65,7 +65,7 @@ myfiles.removeAllPreview();
 - Opened modal
 
 ```bash
-$("#modal").on('opened', function(e) {
+$("#modal").on('modal-open', function(e) {
     alert('modal open');
 });
 ```
@@ -73,7 +73,7 @@ $("#modal").on('opened', function(e) {
 - Closed modal
 
 ```bash
-$("#modal").on('closed', function(e) {
+$("#modal").on('modal-close', function(e) {
     alert('modal close');
 });
 ```

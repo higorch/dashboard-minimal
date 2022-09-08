@@ -531,7 +531,7 @@
         var id = el.data('modal');
         $(id).addClass('active');
         $("body").css("overflow", "hidden");
-        $(id).trigger("opened");
+        $(id).trigger("modal-open");
 
         if ($(id).hasClass('scrollbar')) {
             $(id).find('.content:first .body:first').scrollbarActive();
@@ -543,12 +543,18 @@
 
         var el = $(this);
 
-        if (!$(e.target).closest('.modal > *').length || $(e.target).hasClass('dialog') || $(e.target).closest('.modal .dialog .content .close').length) {
+        if (!$(e.target).closest('.modal > *').length || $(e.target).hasClass('dialog') || $(e.target).closest('.modal .dialog .content .close').length || $(e.target).closest('.modal .content .close').length) {
             el.removeClass('active');
             $("body").css("overflow", "initial");
-            el.trigger("closed");
+            el.trigger("modal-close");
         }
 
+    });
+
+    // modal z-index open multiple
+    $(document).on('modal-open', '.modal', function (e) {
+        var zIndex = 10 + 10 * $('.modal.active').length;
+        $(this).css('z-index', zIndex);
     });
 
     // tabs

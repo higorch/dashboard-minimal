@@ -4694,7 +4694,7 @@ body {
     width: 100%;
     min-height: 100vh;
     background-color: var(--bg-light-gray);
-    padding: var(--h-header) 30px 0 calc(var(--w-sidebar) + 30px);
+    padding: var(--h-header) 30px 1px calc(var(--w-sidebar) + 30px);
 }
 .box-general.large > .container {
     width: 100%;
@@ -5815,17 +5815,22 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
 /* modal sidebar */
 .modal.sidebar .content {
     position: fixed;
-    right: calc(var(--w-col-side) - var(--w-col-side) * 2);
+    right: -380px;
     left: initial;
     top: 0;
     bottom: 0;
-    width: var(--w-col-side);
+    width: 380px;
     border-radius: initial;
     transform: initial;
     -webkit-transform: initial;
-    -moz-transform: initial;
-    -o-transform: initial;
-    -ms-transform: initial;
+}
+.modal.sidebar.medium .content {
+    right: -768px;
+    width: 768px;
+}
+.modal.sidebar.big .content {
+    right: -992px;
+    width: 992px;
 }
 .modal.active.sidebar .content {
     right: 0;
