@@ -483,6 +483,10 @@
 
         changeWidth();
 
+        el.on('DOMSubtreeModified', function () {
+            changeWidth();
+        });
+
         var resizeObserver = new ResizeObserver(() => {
             changeWidth();
         });
