@@ -5951,6 +5951,9 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
 .card .heading.split-col {
     font-size: 0;
 }
+.card .body {
+    height: auto !important;
+}
 .card .body .content {
     position: initial;
     left: initial;
