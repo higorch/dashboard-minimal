@@ -5317,6 +5317,14 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .table-wrap.details table tbody tr th:last-child {
     border-right: solid 2px var(--bor-gray);
 }
+.table-wrap.text-small table tr th,
+.table-wrap.text-small table tr td,
+.table-wrap.text-small table a.preview .name {
+    font-size: 12px;
+}
+.table-wrap.text-small table td {
+    padding: 8px;
+}
 
 /* table preview */
 table .preview {
@@ -5345,8 +5353,9 @@ table .preview.circle img {
 table .preview .col .icon {
     font-size: 50px;
 }
-table a.preview {
+table a.preview .name {
     text-decoration: none;
+    font-size: 14px;
 }
 
 /* table-sortable */
