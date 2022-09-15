@@ -5280,7 +5280,7 @@ table {
 table th,
 table td,
 table input {
-    font-size: 14px;
+    font-size: 14px !important;
 }
 table th {
     border: none !important;
@@ -5322,7 +5322,7 @@ table tbody tr td:last-child {border-radius: 0 7px 7px 0;}
 .table-wrap.text-small table tr td,
 .table-wrap.text-small table a.preview .name,
 .table-wrap.text-small table input {
-    font-size: 12px;
+    font-size: 12px !important;
 }
 .table-wrap.text-small table td {
     padding: 8px;
