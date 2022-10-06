@@ -1334,6 +1334,9 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     font-size: 1.3rem;
     color: var(--dark-gray);
 }
+.card .heading span.title.normal {
+    font-size: 1.1rem;
+}
 .card .heading.split-col {
     font-size: 0;
 }
@@ -2076,7 +2079,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
 /* col */
 .split-col .col {
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
     font-size: initial;
     width: 100%;
 }
