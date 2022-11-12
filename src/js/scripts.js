@@ -22,13 +22,17 @@
         if (action == 'open') {
             el.addClass('active');
             $("body").css("overflow", "hidden");
-            el.trigger("opened");
+            el.trigger("modal-open");
+
+            if (el.hasClass('scrollbar')) {
+                el.find('.content:first .body:first').scrollbarActive();
+            }
         }
 
         if (action == 'close') {
             el.removeClass('active');
             $("body").css("overflow", "initial");
-            el.trigger("closed");
+            el.trigger("modal-close");
         }
     };
 
