@@ -1191,7 +1191,6 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     -ms-overflow-style: none;
     scrollbar-width: none;
     overflow-y: auto;
-    padding: 0;
 }
 .modal.scrollbar .content .body.scrollbar-v-active::-webkit-scrollbar {
     display: none;
