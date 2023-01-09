@@ -5779,7 +5779,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     top: 5px;
     width: 35px;
     height: 35px;
-    line-height: 35px;
+    line-height: 30px;
     text-align: center;
     font-size: 22px;
     border-radius: 50%;

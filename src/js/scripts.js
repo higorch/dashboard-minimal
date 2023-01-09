@@ -449,40 +449,27 @@
 
     // detect element has scrollbar
     $.fn.hasScrollBar = function (direction) {
-
         var el = $(this);
 
-        if (el.length == 0) {
+        if (el.length == 0)
             return false;
-        }
 
-        if (direction == 'vertical') {
+        if (direction == 'vertical')
             return el.get(0).scrollHeight > el.innerHeight();
-        }
-
-        else if (direction == 'horizontal') {
+        else if (direction == 'horizontal')
             return el.get(0).scrollWidth > el.innerWidth();
-        }
     }
 
     // active scrollbar
     $.fn.scrollbarActive = function () {
-
         var el = $(this);
 
         // change width element has scrollbar
         var changeWidth = function () {
-
-            if ($(window).width() <= 768) {
-                el.removeClass('scrollbar-v-active');
-                return;
-            }
-
-            if (el.hasScrollBar('vertical')) {
+            if (el.hasScrollBar('vertical'))
                 el.addClass('scrollbar-v-active');
-            } else {
+            else
                 el.removeClass('scrollbar-v-active');
-            }
         }
 
         changeWidth();
@@ -497,9 +484,8 @@
 
         resizeObserver.observe(document.body);
 
-        if (typeof el.get(0) === 'object') {
+        if (typeof el.get(0) === 'object')
             resizeObserver.observe(el.get(0));
-        }
     };
 
     $('.box-catalog.inline >').matchHeight();
@@ -533,7 +519,7 @@
     })
 
     // open modal
-    $(document).on('click', '[data-trigger="modal"]', function (e) {
+    $(document).on('click', '[data-modal]', function (e) {
         e.preventDefault();
         var el = $(this);
         var id = el.data('modal');
@@ -562,7 +548,6 @@
 
             el.trigger("modal-close");
         }
-
     });
 
     // modal z-index open multiple
