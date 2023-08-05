@@ -4617,27 +4617,35 @@ readers do not read off random characters that represent icons */
   font-weight: 900; }
 
 :root {
-    --blue: #0078d4;
+    /* Cores */
+    --blue: #00539f; /* Azul principal com um toque mais escuro */
+    --bor-blue: #02407a; /* Tom mais escuro de azul para bordas */
+    --blue-pastel: #b1cfea; /* Azul pastel suave para destaques */
+
+    --light-gray: #eeeded; /* Cinza claro mais suave */
+    --bg-light-gray: #f2f2f2; /* Fundo ligeiramente mais escuro que o cinza claro */
+    --dark-gray: #333333; /* Cinza escuro */
+    --bor-gray: #e7e5e5; /* Tom suave de cinza para bordas */
+    
     --green: #4caf50;
     --orange: #ff6c00;
     --purple: #9c64a6;
     --yellow: #ffc72c;
-    --dark-gray: #333333;
+    --red: #ff2c2c;
+    
     --white: #ffffff;
-    --light-gray: #e5e5e5;
-    --bg-light-gray: #f2f2f2;
     --black: #000000;
-    --bor-blue: #3e8add;
-    --bor-gray: #dbd8db;
     --bor-form: #eaeaea;
-    --blue-pastel: #b0d2ff;
     --green-pastel: #98e9d7;
     --red-pastel: #ffc2c2;
-    --w-sidebar: 175px;
-    --w-sidebar-large: 285px;
-    --h-header: 70px;
-    --w-col-side: 380px;
+
+    /* Tamanhos */
+    --w-sidebar: 200px;
+    --w-sidebar-large: 320px;
+    --h-header: 100px;
+    --w-col-side: 420px;
 }
+
 
 html, body {
     font-family: 'Source Sans Pro', sans-serif;
@@ -5225,8 +5233,8 @@ table {
     width: 100%;
     color: var(--black);
     background-color: #f5f5f5; /* Cor de fundo da tabela */
-    border-radius: 10px;
-    box-shadow: 0 0 7px rgba(117, 117, 117, .3);
+    border-radius: 7px;
+    box-shadow: 0 0 7px rgba(117, 117, 117, .2);
     overflow: hidden;
 }
 /* Define tamanho da fonte para todas as células da tabela */
@@ -5263,46 +5271,12 @@ table th:hover {
 table tbody tr:hover td {
     background-color: var(--gray); /* Cor de fundo das células do corpo no hover */
 }
-/* Bordas da tabela */
-table th,
-table td {
-    border-left: solid 1px var(--bor-gray); /* Borda esquerda */
-    border-right: solid 1px var(--bor-gray); /* Borda direita */
-    border-bottom: solid 1px var(--bor-gray); /* Borda inferior */
-}
 /* Bordas do cabeçalho */
-table th {
-    border-top: solid 1px var(--bor-gray); /* Borda superior */
+table tr {
+    border-bottom: solid 1px var(--bor-gray); /* Borda superior */
 }
-/* Borda esquerda da primeira célula do corpo da tabela */
-table tbody tr td:first-child {
-    border-left: solid 1px var(--bor-gray);
-}
-/* Borda direita da última célula do corpo da tabela */
-table tbody tr td:last-child {
-    border-right: solid 1px var(--bor-gray);
-}
-
-/* table-wrap */
-.table-wrap.details table th {
-    border-radius: 7px 0 0 7px;
-    border-bottom: solid 1px var(--bor-gray) !important;
-    border-top: solid 1px var(--bor-gray) !important;
-}
-.table-wrap.details table tbody tr:hover th {
-    background-color: var(--gray);
-}
-.table-wrap.details table tbody tr th:last-child {
-    border-right: solid 1px var(--bor-gray);
-}
-.table-wrap.text-small table tr th,
-.table-wrap.text-small table tr td,
-.table-wrap.text-small table a.preview .name,
-.table-wrap.text-small table input {
-    font-size: 12px !important;
-}
-.table-wrap.text-small table td {
-    padding: 8px;
+table tr:last-child {
+    border-bottom: none;
 }
 
 /* table preview */
@@ -5410,7 +5384,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
 }
 .btn.btn-gray {
     color: var(--black);
-    background-color: var(--gray);
+    background-color: var(--light-gray);
 }
 .btn.btn-dark-gray {
     color: var(--white);
@@ -5462,7 +5436,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
 .btn-group.btn-gray .btn {
     border-right: solid 1px var(--black);
     color: var(--black);
-    background-color: var(--gray);
+    background-color: var(--light-gray);
 }
 .btn-group.btn-gray .btn:hover, 
 .btn-group.btn-gray .btn:focus {
