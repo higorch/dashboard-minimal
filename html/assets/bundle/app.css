@@ -4620,24 +4620,25 @@ readers do not read off random characters that represent icons */
     /* Cores */
     --blue: #00539f;
     --bor-blue: #02407a;
-    --blue-pastel: #b1cfea;
 
     --light-gray: #f2f2f2;
     --bg-light-gray: #f7f7f7;
     --dark-gray: #424242;
     --bor-gray: #dcdcdc;
-    
+
     --green: #2ecc71;
     --orange: #ff7f00;
     --purple: #8e44ad;
     --yellow: #f1c40f;
     --red: #e74c3c;
-    
+
     --white: #ffffff;
     --black: #000000;
-    --bor-form: #e0e0e0;
-    --green-pastel: #98e9d7;
-    --red-pastel: #ffccd2;
+    --bor-form: #e7e6e6;
+
+    --blue-alert: #1a8cff;   /* Um tom mais escuro de azul para combinar com a cor blue */
+    --green-alert: #1db954;  /* Um verde mais intenso */
+    --red-alert: #ff5733;    /* Um vermelho mais vibrante */
 
     /* Tamanhos */
     --w-sidebar: 200px;
@@ -5282,11 +5283,11 @@ table td {
 }
 /* Estilo de hover para cabeçalhos */
 table th:hover {
-    background-color: var(--gray); /* Cor de fundo dos cabeçalhos no hover */
+    background-color: var(--light-gray); /* Cor de fundo dos cabeçalhos no hover */
 }
 /* Estilo de hover para células do corpo da tabela */
 table tbody tr:hover td {
-    background-color: var(--gray); /* Cor de fundo das células do corpo no hover */
+    background-color: var(--light-gray); /* Cor de fundo das células do corpo no hover */
 }
 /* Bordas do cabeçalho */
 table tr {
@@ -5475,19 +5476,19 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     padding: 15px;
 }
 .alert.alert-default {
-    background-color: var(--gray);
+    background-color: var(--light-gray);
     color: var(--dark-gray);
 }
 .alert.alert-blue {
-    background-color: var(--blue-pastel);
+    background-color: var(--blue-alert);
     color: var(--white);
 }
 .alert.alert-green {
-    background-color: var(--green-pastel);
+    background-color: var(--green-alert);
     color: var(--white);
 }
 .alert.alert-red {
-    background-color: var(--red-pastel);
+    background-color: var(--red-alert);
     color: var(--white);
 }
 .alert.alert-yellow {
@@ -5517,19 +5518,19 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     display: block;
 }
 .badge.badge-gray {
-    background-color: var(--gray);
+    background-color: var(--light-gray);
     color: var(--dark-gray)
 }
 .badge.badge-blue {
-    background-color: var(--blue-pastel);
+    background-color: var(--blue-alert);
     color: var(--white);
 }
 .badge.badge-green {
-    background-color: var(--green-pastel);
+    background-color: var(--green-alert);
     color: var(--white);
 }
 .badge.badge-red {
-    background-color: var(--red-pastel);
+    background-color: var(--red-alert);
     color: var(--white);
 }
 .badge.badge-yellow {
@@ -5563,28 +5564,28 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     border-radius: 50%;
 }
 .badge.badge-round.badge-gray {
-    color: var(--gray);
+    color: var(--light-gray);
 }
 .badge.badge-round.badge-gray::before {
-    background-color: var(--gray);
+    background-color: var(--light-gray);
 }
 .badge.badge-round.badge-blue {
-    color: var(--blue-pastel);
+    color: var(--blue-alert);
 }
 .badge.badge-round.badge-blue::before {
-    background-color: var(--blue-pastel);
+    background-color: var(--blue-alert);
 }
 .badge.badge-round.badge-green {
-    color: var(--green-pastel);
+    color: var(--green-alert);
 }
 .badge.badge-round.badge-green::before {
-    background-color: var(--green-pastel);
+    background-color: var(--green-alert);
 }
 .badge.badge-round.badge-red {
-    color: var(--red-pastel);
+    color: var(--red-alert);
 }
 .badge.badge-round.badge-red::before {
-    background-color: var(--red-pastel);
+    background-color: var(--red-alert);
 }
 .badge.badge-round.badge-yellow {
     color: var(--yellow);
@@ -5625,7 +5626,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     color: var(--yellow) !important;
 }
 .text-gray {
-    color: var(--gray) !important;
+    color: var(--light-gray) !important;
 }
 .text-dark-gray {
     color: var(--dark-gray) !important;
@@ -5827,78 +5828,66 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     }
 }
 
-/* tab */
+
+
+/* Estilização das tabs */
 .tab-main {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     font-size: 0;
 }
-.tab-main ul.nav,
 .tab-main .content {
-    display: inline-block;
-    width: 100%;
-    vertical-align: top;
-}
-.tab-main .content {
-    border: solid 1px var(--bor-gray);
-    border-radius: unset;
-    background-color: var(--bg-light-gray);
-    padding: 0 30px;
+    background-color: var(--white);
+    overflow: hidden;
+    border-radius: 8px !important;
 }
 .tab-main ul.nav {
     list-style: none;
     padding: 0;
-    margin: 0;
-}
-.tab-main .content,
-.tab-main ul.nav li {
-    font-size: initial;
+    margin: 0 0 5px 0;
+    overflow: hidden;
+    background-color: #f9f9f9;
 }
 .tab-main ul.nav li {
-    position: relative;
     display: inline-block;
-    z-index: 3;
-}
-.tab-main ul.nav li.active {
-    border-top: solid 1px var(--bor-gray);
-    border-left: solid 1px var(--bor-gray);
-    border-right: solid 1px var(--bor-gray);
-    border-bottom: solid 1px var(--bg-light-gray);
-    background-color: var(--bg-light-gray);
-    margin: 0 0 -1px 0;
-}
-.tab-main:not(.vertical) ul.nav li.active {
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
-}
-.tab-main.vertical ul.nav li.active {
-    border-top-left-radius: 7px;
-    border-bottom-left-radius: 7px;
+    overflow: hidden;
 }
 .tab-main ul.nav li a {
-    color: var(--black);
+    color: #555555;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: .85em;
+    font-size: 14px;
     font-weight: bold;
     display: block;
+    border-radius: 8px !important;
     padding: 15px 30px;
+    transition: background-color 0.3s, color 0.3s;
 }
 .tab-main ul.nav li.active a {
+    border-top: solid 5px var(--blue);
+    background-color: var(--white);
     color: var(--blue);
 }
 .tab-main > .content > .body {
     display: none;
-    padding: 0;
+    padding: 20px;
     max-height: initial !important;
     width: initial !important;
+    font-size: initial;
 }
 .tab-main > .content > .body.active {
     display: block;
 }
-/* vertical */
+/* Estilização para tabs verticais */
+.tab-main.vertical {
+    flex-direction: row;
+}
 .tab-main.vertical ul.nav {
     width: 200px;
+    margin: 0 5px 0 0;
+    padding: 0;
+    background-color: #f9f9f9;
 }
 .tab-main.vertical .content {
     width: calc(100% - 200px);
@@ -5906,11 +5895,17 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
 .tab-main.vertical ul.nav li {
     display: block;
 }
-.tab-main.vertical ul.nav li.active {
-    border-right: solid 1px var(--bg-light-gray);
-    border-bottom: solid 1px var(--bor-gray);
-    margin: 0 -1px 0 0;
+.tab-main.vertical ul.nav li.active a {
+    border-top: none;
+    border-left: solid 5px var(--blue);
+    background-color: var(--white);
 }
+.tab-main ul.nav li,
+.tab-main ul.nav li.active {
+    transition: background-color 0.3s;
+}
+
+
 
 /* card */
 .card,
@@ -5929,7 +5924,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     overflow: hidden;
 }
 .card .heading {
-    background-color: var(--gray);
+    background-color: var(--light-gray);
     border-bottom: solid 1px var(--bor-gray);
 }
 .card .heading span.title {
@@ -6114,6 +6109,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     border: solid 1px var(--bor-form);
     color: var(--black);
     background-color: var(--white);
+    box-shadow: 0 0 5px rgba(22, 22, 22, 0.05);
     border-radius: 5px;
     font-size: 1.1em;
     padding: 8px;
@@ -6133,9 +6129,6 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
 
 .form-wrap .group input[type="number"]:disabled,
 .form-wrap .group input[type="number"]:read-only,
-
-.form-wrap .group select:disabled,
-.form-wrap .group select:read-only,
 
 .form-wrap .group textarea:disabled,
 .form-wrap .group textarea:read-only {
@@ -6195,7 +6188,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     display: block;
     width: 100%;
     font-size: 0;
-    background-color: var(--gray);
+    background-color: var(--light-gray);
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 2px 2px 7px rgba(196, 196, 196, 0.4);
@@ -6554,7 +6547,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
 .box-heading h3::after {
     position: relative;
     content: '';
-    background-color: var(--gray);
+    background-color: var(--light-gray);
     width: 100%;
     display: inline-block;
     height: 2px;
@@ -6808,7 +6801,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     margin-left: 5px;
     margin-bottom: 5px;
     margin-right: 5px;
-    background-color: var(--gray);
+    background-color: var(--light-gray);
     border: solid 1px var(--bor-gray);
 }
 .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
