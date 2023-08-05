@@ -4785,6 +4785,7 @@ body {
 
 /* toggle-menu */
 .box-general > .header .topbar .toggle-menu {
+    font-size: 20px;
     position: absolute;
     top: 50%;
     left: 30px;
@@ -4826,74 +4827,83 @@ body {
     width: 320px;
     padding: 0;
     overflow-x: hidden;
+    background-color: var(--white); /* Fundo branco */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box {
-    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;
+    padding: 0;
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a {
     position: relative;
-    font-size: 0;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+.box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a:last-child {
+    border-bottom: none;
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a .col {
-    font-size: initial;
-    display: inline-block;
-    vertical-align: middle;
-}
-.box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a .col:first-child {
-    width: 50px;
-    text-align: center;
-    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a .col:last-child {
-    width: calc(100% - 55px);
+    margin-left: 15px;
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a .col .icon {
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px; 
     border-radius: 50%;
     opacity: .85;
 }
+/* Utilizando cores sólidas para os ícones */
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a .col .icon.blue {
-    border: solid 1px var(--blue);
-    color: var(--blue);
+    background-color: var(--blue);
+    color: var(--white);
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a .col .icon.yellow {
-    border: solid 1px var(--yellow);
-    color: var(--yellow);
+    background-color: var(--yellow);
+    color: var(--white);
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a .col .icon.red {
-    border: solid 1px var(--red);
-    color: var(--red);
+    background-color: var(--red);
+    color: var(--white);
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a .col .icon.dark-gray {
-    border: solid 1px var(--dark-gray);
-    color: var(--dark-gray);
+    background-color: var(--dark-gray);
+    color: var(--white);
 }
-.box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a .col .icon i,
-.box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a .col .icon svg {
-    font-size: 1.15em;
-}
-.box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a span.info,
-.box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a small.time {
-    display: block;
+/* Removendo sublinhado dos links */
+.box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a:hover {
+    text-decoration: none;
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a span.info {
-    font-size: .95em;
+    display: block;
+    font-size: 14px;
+    color: var(--dark-gray)
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a small.time {
     margin-top: 5px;
-    color: var(--dark-gray);
-    font-size: .7em;
+    font-size: 12px;
+    color: var(--dark-gray)
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a span.read {
     position: absolute;
-    content: '';
-    width: 8px;
-    height: 8px;
-    right: -5px;
-    top: 15px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
+    top: 15px;
+    right: 0;
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a span.read.yes {
     background-color: var(--bor-gray);
@@ -4907,27 +4917,45 @@ body {
     width: 100%;
     text-transform: uppercase;
     padding: 15px;
+    font-weight: 500;
+    color: var(--dark-gray);
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .heading {
-    border-bottom: solid 1px var(--bor-gray);
+    border-bottom: 1px solid var(--light-gray)
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .footer {
-    border-top: solid 1px var(--bor-gray);
+    border-top: 1px solid var(--light-gray)
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .body {
     display: block;
     width: 100%;
     max-height: 300px;
-    overflow-y: hidden;
+    overflow-y: auto;
+    padding: 10px 0;
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .body.scrollbar-v-active {
-    width: calc(100% + 17px);
+    width: 100%;
     overflow-y: auto;
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .footer .btn-gray {
-    background-color: var(--bor-gray);
-    font-size: .85em;
+    font-size: 14px;
     text-transform: uppercase;
+    padding: 5px 10px;
+}
+.box-general > .header .topbar .right-box .notification .notify {
+    position: relative;
+    font-size: 20px;
+    color: var(--dark-gray)
+}
+.box-general > .header .topbar .right-box .notification .notify .ball {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--red);
+    top: 2px;
+    font-weight: bold;
+    right: -2px;
 }
 
 /* menu */
@@ -5252,7 +5280,7 @@ table {
     color: var(--black);
     background-color: #f5f5f5; /* Cor de fundo da tabela */
     border-radius: 7px;
-    box-shadow: 0 0 7px rgba(117, 117, 117, .2);
+    box-shadow: 0 0 7px rgba(138, 138, 138, 0.2);
     overflow: hidden;
 }
 /* Define tamanho da fonte para todas as células da tabela */
@@ -5379,22 +5407,6 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     -moz-transition: all ease .3s;
     -o-transition: all ease .3s;
     -ms-transition: all ease .3s;
-}
-.btn.count {
-    position: relative;
-}
-.btn.count .number {
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background-color: var(--red);
-    color: var(--white);
-    font-size: 12px;
-    line-height: 15px;
-    top: 0;
-    font-weight: bold;
-    left: -5px;
 }
 .btn.btn-black {
     color: var(--white);
@@ -5773,12 +5785,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     height: 100vh;
 }
 .modal.scrollbar .content .body.scrollbar-v-active {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
     overflow-y: auto;
-}
-.modal.scrollbar .content .body.scrollbar-v-active::-webkit-scrollbar {
-    display: none;
 }
 /* modal sidebar */
 .modal.sidebar .content {
@@ -5973,7 +5980,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
 .card.gray {
     border: solid 1px #e6e5e5;
 }
-.card.gray .heading {
+.card.gray > .heading {
     background-color: #f0f0f0;
     border-bottom: solid 1px #e6e5e5;
 }
@@ -6060,6 +6067,10 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     border-radius: 5px;
     padding: 10px;
     z-index: 1;
+}
+.form-wrap .group span.error.full {
+    left: 0;
+    right: 0;
 }
 .form-wrap .group span.error.label {
     top: 22px;
@@ -6975,7 +6986,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     z-index: 40;
 }
 .modal .loading-placeholder::before {
-    border-radius: 15px;
+    border-radius: 5px;
 }
 .modal .loading-placeholder.non-bor-radius::before {
     border-radius: initial;
