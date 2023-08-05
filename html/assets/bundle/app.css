@@ -4622,7 +4622,6 @@ readers do not read off random characters that represent icons */
     --bor-blue: #02407a;
 
     --light-gray: #f2f2f2;
-    --bg-light-gray: #f7f7f7;
     --dark-gray: #424242;
     --bor-gray: #dcdcdc;
 
@@ -4633,8 +4632,11 @@ readers do not read off random characters that represent icons */
     --red: #e74c3c;
 
     --white: #ffffff;
-    --black: #000000;
+    --black-1: #000000;
+    --black-2: #3c4043;
     --bor-form: #e7e6e6;
+
+    --bg-light-gray: #f7f7f7;
 
     --blue-alert: #1a8cff;   /* Um tom mais escuro de azul para combinar com a cor blue */
     --green-alert: #1db954;  /* Um verde mais intenso */
@@ -4677,7 +4679,7 @@ body {
     right: 0;
     bottom: 0;
     top: 0;
-    background-color: var(--black);
+    background-color: var(--black-2);
 }
 .box-general > .header {
     position: fixed;
@@ -4901,7 +4903,7 @@ body {
     background-color: var(--bor-gray);
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a span.read.not {
-    background-color: var(--black);
+    background-color: var(--black-1);
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .heading,
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .footer {
@@ -5190,14 +5192,7 @@ body {
     z-index: 1;
     padding: 0 15px;
 }
-.dropdown .dropdown-menu.right {
-    right: 0;
-}
-.dropdown .dropdown-menu.left {
-    left: 0;
-}
-.dropdown:hover > .dropdown-menu,
-.dropdown:focus > .dropdown-menu {
+.dropdown.active .dropdown-menu {
     display: block;
 }
 .dropdown .dropdown-menu a.dropdown-item {
@@ -5205,7 +5200,7 @@ body {
     width: 100%;
     text-decoration: none;
     font-size: .9em;
-    color: var(--black);
+    color: var(--black-1);
     border-bottom: solid 1px var(--bor-gray);
     padding: 15px 0;
     transition: all ease .3s;
@@ -5235,7 +5230,7 @@ body {
     z-index: 2;
 }
 .page-header h3.title {
-    color: var(--black);
+    color: var(--black-1);
     font-weight: 500;
     font-size: 1.5em;
     margin: 0;
@@ -5301,7 +5296,7 @@ body {
     color: var(--dark-gray);
 }
 .pagination .col ul li a:hover {
-    color: var(--black);
+    color: var(--black-1);
 }
 
 /* Estilo disruptivo para a tabela com cores enviadas inicialmente */
@@ -5310,11 +5305,10 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
-    color: var(--black);
+    color: var(--black-1);
     background-color: #f5f5f5; /* Cor de fundo da tabela */
     border-radius: 7px;
     box-shadow: 0 0 7px rgba(138, 138, 138, 0.2);
-    overflow: hidden;
 }
 /* Define tamanho da fonte para todas as células da tabela */
 table th,
@@ -5326,7 +5320,7 @@ table input {
 /* Estilo disruptivo para cabeçalhos */
 table th {
     background-color: var(--bg-light-gray); /* Cor de fundo dos cabeçalhos */
-    color: var(--black); /* Cor do texto dos cabeçalhos */
+    color: var(--black-1); /* Cor do texto dos cabeçalhos */
     padding: 15px 8px;
     text-align: left;
     text-transform: uppercase;
@@ -5363,7 +5357,7 @@ table .preview {
     display: block;
     width: 100%;
     font-size: 0;
-    color: var(--black);
+    color: var(--black-1);
 }
 table .preview .col {
     display: inline-block;
@@ -5450,10 +5444,10 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
 }
 .btn.btn-black {
     color: var(--white);
-    background-color: var(--black);
+    background-color: var(--black-1);
 }
 .btn.btn-gray {
-    color: var(--black);
+    color: var(--black-1);
     background-color: var(--light-gray);
 }
 .btn.btn-dark-gray {
@@ -5473,7 +5467,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     background-color: var(--red);
 }
 .btn.btn-yellow {
-    color: var(--black);
+    color: var(--black-1);
     background-color: var(--yellow);
 }
 .btn.btn-block {
@@ -5504,8 +5498,8 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
 }
 /* group gray */
 .btn-group.btn-gray .btn {
-    border-right: solid 1px var(--black);
-    color: var(--black);
+    border-right: solid 1px var(--black-1);
+    color: var(--black-1);
     background-color: var(--light-gray);
 }
 .btn-group.btn-gray .btn:hover, 
@@ -5587,10 +5581,10 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
 }
 .badge.badge-yellow {
     background-color: var(--yellow);
-    color: var(--black);
+    color: var(--black-1);
 }
 .badge.badge-black {
-    background-color: var(--black);
+    background-color: var(--black-1);
     color: var(--white);
 }
 .badge.badge-dark-gray {
@@ -5646,10 +5640,10 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     background-color: var(--yellow);
 }
 .badge.badge-round.badge-black {
-    color: var(--black);
+    color: var(--black-1);
 }
 .badge.badge-round.badge-black::before {
-    background-color: var(--black);
+    background-color: var(--black-1);
 }
 .badge.badge-round.badge-dark-gray {
     color: var(--dark-gray);
@@ -5660,7 +5654,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
 
 /*  text color */
 .text-black {
-    color: var(--black) !important;
+    color: var(--black-1) !important;
 }
 .text-white {
     color: var(--white) !important;
@@ -6158,7 +6152,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     width: 100%;
     height: 45px;
     border: solid 1px var(--bor-form);
-    color: var(--black);
+    color: var(--black-1);
     background-color: var(--white);
     box-shadow: 0 0 5px rgba(22, 22, 22, 0.05);
     border-radius: 5px;
@@ -6327,7 +6321,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     width: 100%;
 }
 .page-course > .header .logo {
-    border-bottom: solid 1px var(--black);
+    border-bottom: solid 1px var(--black-1);
 }
 .page-course .sidebar .box-menu {
     position: relative;
@@ -6402,7 +6396,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     background-color: var(--yellow);
 }
 .progressbar span.black {
-    background-color: var(--black);
+    background-color: var(--black-1);
 }
 .progressbar span.white {
     background-color: var(--white);
@@ -6905,7 +6899,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     margin-top: 10px;
 }
 .area-upload .box-attach {
-    color: var(--black);
+    color: var(--black-1);
     border: dashed 2px var(--blue);
     border-radius: 10px;
     padding: 25px;
@@ -6983,7 +6977,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
 .area-upload .box-files .item .box .preview .icon {
     display: block;
     width: 100%;
-    color: var(--black);
+    color: var(--black-1);
     font-size: 50px;
 }
 .area-upload .box-files .item .box .preview img {

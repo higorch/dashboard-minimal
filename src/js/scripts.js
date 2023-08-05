@@ -10,6 +10,64 @@
         });
     };
 
+    // floating ui: https://floating-ui.com
+    $.fn.dropdownFloatingUi = function (placement) {
+        let timeoutId;
+
+        function closeAllDropdowns() {
+            $('.dropdown').removeClass('active');
+        }
+
+        function toggleDropdown(dropdown) {
+            if (dropdown.hasClass('active')) {
+                closeAllDropdowns();
+            } else {
+                closeAllDropdowns();
+                dropdown.addClass('active');
+            }
+        }
+
+        $(this).on('click', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            var dropdown = $(this).parent('.dropdown');
+            toggleDropdown(dropdown);
+            var referenceEl = dropdown.find('a')[0];
+            var floatingEl = dropdown.find('.dropdown-menu')[0];
+            autoUpdate(referenceEl, floatingEl, () => {
+                computePosition(referenceEl, floatingEl, { placement, middleware: [flip()] })
+                    .then(({ x, y }) => {
+                        Object.assign(floatingEl.style, {
+                            top: `${y}px`,
+                            left: `${x}px`,
+                        });
+                    });
+            });
+        });
+
+        function closeDropdownAfterDelay(dropdown) {
+            timeoutId = setTimeout(() => {
+                dropdown.removeClass('active');
+            }, 2000);
+        }
+
+        function cancelCloseDropdown() {
+            clearTimeout(timeoutId);
+        }
+
+        $(document).on('click', function (event) {
+            var dropdown = $(event.target).closest('.dropdown');
+            !dropdown.length ? closeAllDropdowns() : cancelCloseDropdown();
+        });
+
+        $('.dropdown').on('mouseleave', function () {
+            var dropdown = $(this);
+            dropdown.hasClass('active') && closeDropdownAfterDelay(dropdown);
+        });
+
+        $('.dropdown').on('mouseenter', cancelCloseDropdown);
+    };
+
     /**
      * Actions modal
      * 
@@ -488,8 +546,9 @@
             resizeObserver.observe(el.get(0));
     };
 
+    $('.notification .dropdown > a').dropdownFloatingUi('bottom-start');
+    $('table .dropdown > a').dropdownFloatingUi('right-start');
     $('.box-catalog.inline >').matchHeight();
-
     $('.sidebar .menu-wrap').scrollbarActive();
     $('.header .notification .dropdown-menu .body').scrollbarActive();
 
