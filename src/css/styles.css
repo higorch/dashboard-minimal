@@ -27,8 +27,9 @@
     /* Tamanhos */
     --w-sidebar: 200px;
     --w-sidebar-large: 320px;
-    --h-header: 80px;
     --w-col-side: 420px;
+    --h-header: 80px;
+    --h-sidebar-profile: 120px;
 }
 
 
@@ -155,7 +156,9 @@ body {
     width: var(--w-sidebar-large);
 }
 .box-general > .header .logo a {
-   display: block;
+   display: flex;
+   align-items: center;
+   justify-content: center;
    width: 100%;
    text-align: center;
    height: var(--h-header);
@@ -164,7 +167,6 @@ body {
     display: inline-block;
     width: auto;
     height: 60px;
-    margin-top: 5px;
 }
 
 /* toggle-menu */
@@ -191,19 +193,9 @@ body {
     -o-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
 }
-.box-general > .header .topbar .right-box .notification,
-.box-general > .header .topbar .right-box .profile {
+.box-general > .header .topbar .right-box .notification {
     display: inline-block;
     vertical-align: middle;
-}
-.box-general > .header .topbar .right-box .profile {
-    margin-left: 15px;
-}
-.box-general > .header .topbar .right-box .profile a img {
-    width: 40px;
-    height: 40px;
-    border-radius: 7px;
-    object-fit: cover;
 }
 
 /* notifications */
@@ -350,12 +342,11 @@ body {
     display: block;
     width: 100%;
 }
-.sidebar .menu-wrap,
-.box-general.large .sidebar .menu-accordion {
+.sidebar .menu-wrap {
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 0;
+    bottom: var(--h-sidebar-profile);
 }
 .sidebar > .header {
     display: block;
@@ -455,14 +446,56 @@ body {
     background-color: var(--blue);
     color: var(--white);
 }
-
 /* Estilos para quando a barra de rolagem vertical estiver ativa */
 .sidebar .menu-wrap.scrollbar-v-active {
     width: calc(var(--w-sidebar) + 17px);
     overflow-y: auto;
 }
 
+/* sidebar profile */
+.sidebar .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: var(--h-sidebar-profile);
+    box-sizing: border-box;
+    box-shadow: 0 0 5px rgba(63, 62, 62, 0.5);
+}
+.sidebar .profile a.avatar {
+    width: 60px;
+    height: 60px;
+    padding: 3px;
+}
+.sidebar .profile a.avatar img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    padding: 2px;
+    background-color: var(--bor-blue);
+    box-sizing: border-box;
+    object-fit: cover;
+}
+.sidebar .profile .actions {
+    display: flex;
+    margin-top: 5px;
+}
+.sidebar .profile .actions a {
+    color: var(--white);
+    margin: 7px;
+}
+
 /* menu-accordion */
+.box-general.large .sidebar .menu-accordion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
 .sidebar .menu-accordion {
     display: block;
     width: 100%;
