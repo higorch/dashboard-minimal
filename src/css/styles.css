@@ -741,6 +741,13 @@ table a.preview .name {
     font-size: 14px;
 }
 
+.table-wrap.text-small table tr th, 
+.table-wrap.text-small table tr td, 
+.table-wrap.text-small table a.preview .name, 
+.table-wrap.text-small table input {
+    font-size: 12px !important;
+}
+
 /* table-sortable */
 table.table-sortable tbody tr td:first-child::before,
 table.table-sortable tbody tr th:first-child::before {
