@@ -562,6 +562,8 @@ body {
 /* dropdown */
 .dropdown {
     position: relative;
+    width: auto;
+    display: inline-block;
 }
 .dropdown > a {
     display: block;
@@ -1124,7 +1126,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     width: 100%;
     max-width: 768px;
     border-radius: 5px;
-    background-color: var(--white);
+    background-color: var(--bg-light-gray);
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     transition: all ease .5s;
@@ -1253,8 +1255,6 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     }
 }
 
-
-
 /* Estilização das tabs */
 .tab-main {
     display: flex;
@@ -1272,7 +1272,6 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     padding: 0;
     margin: 0 0 5px 0;
     overflow: hidden;
-    background-color: #f9f9f9;
 }
 .tab-main ul.nav li {
     display: inline-block;
@@ -1312,7 +1311,6 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     width: 200px;
     margin: 0 5px 0 0;
     padding: 0;
-    background-color: #f9f9f9;
 }
 .tab-main.vertical .content {
     width: calc(100% - 200px);
@@ -1859,11 +1857,11 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
 }
 .dash-info-icon.blue {
     color: #ffffff;
-    background: rgb(26,115,232);
+    background: var(--blue);
 }
 .dash-info-icon.yellow {
     color: #3c4043;
-    background: rgb(230,222,123);
+    background: var(--yellow);
 }
 .dash-info-icon.yellow a.read-more {
     color: #3c4043;
@@ -1871,23 +1869,23 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
 }
 .dash-info-icon.green {
     color: #ffffff;
-    background: rgb(83,190,138);
+    background: var(--green);
 }
 .dash-info-icon.red {
     color: #ffffff;
-    background: rgb(203,100,104);
+    background: var(--red);
 }
 .dash-info-icon.black {
     color: #ffffff;
-    background: rgb(60,64,67);
+    background: var(--black-1);
 }
 .dash-info-icon.dark {
     color: #ffffff;
-    background: rgb(111, 125, 151);
+    background: var(--black-2);
 }
 .dash-info-icon.ocean {
     color: #ffffff;
-    background: rgb(57, 157, 209);
+    background: var(--blue-alert);
 }
 
 /* box-profile */

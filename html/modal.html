@@ -266,9 +266,9 @@
                         Modal loading placeholder
                     </a>
 
-                    <a href="#" class="btn btn-blue btn-block mt-15" data-trigger="modal" data-modal="#modal-trigger-sidebar">
+                    <a href="#" class="btn btn-blue btn-block mt-15" data-trigger="modal" data-modal="#modal-trigger-tabs">
                         <i class="fas fa-external-link-alt"></i>
-                        Modal trigger sidebar
+                        Modal trigger tabs
                     </a>
 
                 </div>
@@ -1070,8 +1070,8 @@
 
             </div>
 
-            <!-- modal trigger sidebar -->
-            <div class="modal" id="modal-trigger-sidebar" tabindex="-1" role="dialog">
+            <!-- modal trigger tabs -->
+            <div class="modal" id="modal-trigger-tabs" tabindex="-1" role="dialog">
 
                 <div class="dialog centered" role="document">
 
@@ -1080,62 +1080,124 @@
                         <a href="#" class="close active">x</a>
 
                         <div class="header">
-                            <p>Modal trigger sidebar</p>
+                            <p>Modal trigger tabs</p>
                         </div>
 
-                        <div class="body">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has
-                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                took a
-                                galley of type and scrambled it to make a type specimen book. It has survived not only
-                                five
-                                centuries, but also the leap into electronic typesetting, remaining essentially
-                                unchanged.
-                                It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-                                Ipsum
-                                passages, and more recently with desktop publishing software like Aldus PageMaker
-                                including
-                                versions of Lorem Ipsum.</p>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has
-                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                took a
-                                galley of type and scrambled it to make a type specimen book. It has survived not only
-                                five
-                                centuries, but also the leap into electronic typesetting, remaining essentially
-                                unchanged.
-                                It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-                                Ipsum
-                                passages, and more recently with desktop publishing software like Aldus PageMaker
-                                including
-                                versions of Lorem Ipsum.</p>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has
-                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                took a
-                                galley of type and scrambled it to make a type specimen book. It has survived not only
-                                five
-                                centuries, but also the leap into electronic typesetting, remaining essentially
-                                unchanged.
-                                It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-                                Ipsum
-                                passages, and more recently with desktop publishing software like Aldus PageMaker
-                                including
-                                versions of Lorem Ipsum.</p>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has
-                                been the industry's standard dummy text ever since the 1500s, when an unknown printer
-                                took a
-                                galley of type and scrambled it to make a type specimen book. It has survived not only
-                                five
-                                centuries, but also the leap into electronic typesetting, remaining essentially
-                                unchanged.
-                                It was popularised in the 1960s with the release of Letraset sheets containing Lorem
-                                Ipsum
-                                passages, and more recently with desktop publishing software like Aldus PageMaker
-                                including
-                                versions of Lorem Ipsum.</p>
+                        <div class="body pt-30 pb-30">
+
+                            <div class="tab-main">
+
+                                <ul class="nav">
+                                    <li class="active"><a href="#foo">Foo</a></li>
+                                    <li><a href="#bar">Bar</a></li>
+                                </ul>
+
+                                <div class="content">
+
+                                    <div id="foo" class="body active">
+                                        
+                                        <div class="form-wrap row">
+    
+                                            <div class="group mb-15 col-50">
+                                                <label for="name">Name (obrigatório)</label>
+                                                <input type="text" name="name" id="name">
+                                                <span class="error label">Nome obrigatório</span>
+                                            </div>
+
+                                            <div class="group mb-15 col-50">
+                                                <label for="email">E-mail (obrigatório)</label>
+                                                <input type="email" name="email" id="email">
+                                                <span class="error label">E-mail obrigatório</span>
+                                            </div>
+
+                                            <div class="group mb-15 col-30">
+                                                <label for="phone">Telefone</label>
+                                                <input type="text" telefone="phone" id="phone" class="mask-phone">
+                                            </div>
+
+                                            <div class="group mb-15 col-30">
+                                                <label for="select-default">Select default</label>
+                                                <select name="select-default" id="select-default">
+                                                    <option>---</option>
+                                                    <option value="1">opt 1</option>
+                                                    <option value="2">opt 2</option>
+                                                    <option value="3">opt 3</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="group mb-15 col-20">
+                                                <label for="date">Date</label>
+                                                <input type="text" name="date" id="date" class="mask-date" placeholder="__/__/____">
+                                            </div>
+
+                                            <div class="group mb-15 col-20">
+                                                <label for="time">Time</label>
+                                                <input type="text" name="time" id="time" class="mask-time" placeholder="__:__:__">
+                                            </div>
+
+                                            <div class="group mb-15 col-50">
+                                                <label for="select2">Select2</label>
+                                                <select name="select2" id="select2" class="select-two">
+                                                    <option></option>
+                                                    <option value="1">opt 1</option>
+                                                    <option value="2">opt 2</option>
+                                                    <option value="3">opt 3</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="group mb-15 col-50">
+                                                <label for="select2-multiple">Select2 multiple</label>
+                                                <select name="select2-multiple" id="select2-multiple"
+                                                    class="select-two" multiple>
+                                                    <option value="1">opt 1</option>
+                                                    <option value="2">opt 2</option>
+                                                    <option value="3">opt 3</option>
+                                                    <option value="4">opt 4</option>
+                                                    <option value="5">opt 5</option>
+                                                    <option value="6">opt 6</option>
+                                                    <option value="7">opt 7</option>
+                                                    <option value="8">opt 8</option>
+                                                    <option value="9">opt 9</option>
+                                                    <option value="10">opt 10</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="group mb-15 col-20">
+                                                <label for="cep">CEP</label>
+                                                <input type="text" name="cep" id="cep" class="mask-zipcode">
+                                            </div>
+
+                                            <div class="group mb-15 col-30">
+                                                <label for="cnpj">CNPJ</label>
+                                                <input type="text" name="cnpj" id="cnpj" class="mask-cnpj">
+                                            </div>
+
+                                            <div class="group mb-15 col-30">
+                                                <label for="cpf">CPF</label>
+                                                <input type="text" name="cpf" id="cpf" class="mask-cpf">
+                                            </div>
+
+                                            <div class="group mb-15 col-20">
+                                                <label for="cpf">Money</label>
+                                                <input type="text" name="money" id="money"
+                                                    class="mask-money">
+                                            </div>
+
+                                            <div class="group col-100">
+                                                <label for="cpf">Menssagem</label>
+                                                <textarea name="menssagem" id="menssagem"></textarea>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div id="bar" class="body">bar</div>
+
+                                </div>
+
+                            </div>
+
                         </div>
 
                         <div class="footer">
