@@ -11,7 +11,7 @@
     };
 
     // floating ui: https://floating-ui.com
-    $.fn.dropdownFloatingUi = function (placement) {
+    $.dropdownFloatingUi = function (el, placement) {
         let timeoutId;
 
         function closeAllDropdowns() {
@@ -37,13 +37,11 @@
             clearTimeout(timeoutId);
         }
 
-        $(this).on('click', function (event) {
-            event.preventDefault();
-            event.stopPropagation();
+        $(document).on('click', el, function () {
             var dropdown = $(this).parent('.dropdown');
             toggleDropdown(dropdown);
-            var referenceEl = dropdown.find('a')[0];
-            var floatingEl = dropdown.find('.dropdown-menu')[0];
+            var referenceEl = dropdown.find('a').get(0);
+            var floatingEl = dropdown.find('.dropdown-menu').get(0);
             autoUpdate(referenceEl, floatingEl, () => {
                 computePosition(referenceEl, floatingEl, { placement, middleware: [flip()] })
                     .then(({ x, y }) => {
@@ -546,12 +544,18 @@
             resizeObserver.observe(el.get(0));
     };
 
-    $(document).find('table .dropdown > a').dropdownFloatingUi('right-start');
-    $(document).find('.notification .dropdown > a').dropdownFloatingUi('bottom-start');
-
     $('.box-catalog.inline >').matchHeight();
     $('.sidebar .menu-wrap').scrollbarActive();
     $('.header .notification .dropdown-menu .body').scrollbarActive();
+
+    $.dropdownFloatingUi('table .dropdown > a', 'right-start');
+    $.dropdownFloatingUi('.card .heading .dropdown > a', 'right-start');
+    $.dropdownFloatingUi('.notification .dropdown > a', 'bottom-start');
+
+    // box menu resize
+    $(window).on('resize', function () {
+        $.heightMenuBox();
+    }).trigger('resize');
 
     // prevent click link #
     $(document).on('click', '[href="#"]', function (e) {
@@ -669,11 +673,6 @@
         el.next('ul').slideToggle();
         el.parent('li').toggleClass('open');
     });
-
-    // box menu resize
-    $(window).on('resize', function () {
-        $.heightMenuBox();
-    }).trigger('resize');
 
     // close error validation
     $(document).on('mouseover', '.form-wrap .group span.error', function (e) {
