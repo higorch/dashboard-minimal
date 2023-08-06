@@ -1,30 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
 
 :root {
-    /* Cores */
-    --blue: #00539f;
-    --bor-blue: #02407a;
-
+    --bor-blue: #00508b;
     --light-gray: #f2f2f2;
     --dark-gray: #424242;
     --bor-gray: #dcdcdc;
-
-    --green: #2ecc71;
-    --orange: #ff7f00;
-    --purple: #8e44ad;
-    --yellow: #f1c40f;
-    --red: #e74c3c;
-
     --white: #ffffff;
     --black-1: #000000;
     --black-2: #3c4043;
     --bor-form: #e7e6e6;
-
     --bg-light-gray: #f7f7f7;
+    --blue-alert: #3498db;
+    --green-alert: #1abc9c;
+    --red-alert: #e74c3c;
 
-    --blue-alert: #1a8cff;   /* Um tom mais escuro de azul para combinar com a cor blue */
-    --green-alert: #1db954;  /* Um verde mais intenso */
-    --red-alert: #ff5733;    /* Um vermelho mais vibrante */
+    --blue: #005ea0;
+    --green: #3ca67a;
+    --orange: #f08a43;
+    --purple: #af78bd;
+    --yellow: #f6c54f;
+    --red: #c0564d;
 
     /* Tamanhos */
     --w-sidebar: 200px;
