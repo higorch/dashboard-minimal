@@ -79,10 +79,6 @@
             el.addClass('active');
             $("body").css("overflow", "hidden");
             el.trigger("modal-open");
-
-            if (el.hasClass('scrollbar')) {
-                el.find('.content:first .body:first').scrollbarActive();
-            }
         }
 
         if (action == 'close') {
@@ -516,37 +512,7 @@
             return el.get(0).scrollWidth > el.innerWidth();
     }
 
-    // active scrollbar
-    $.fn.scrollbarActive = function () {
-        var el = $(this);
-
-        // change width element has scrollbar
-        var changeWidth = function () {
-            if (el.hasScrollBar('vertical'))
-                el.addClass('scrollbar-v-active');
-            else
-                el.removeClass('scrollbar-v-active');
-        }
-
-        changeWidth();
-
-        el.on('DOMSubtreeModified', function () {
-            changeWidth();
-        });
-
-        var resizeObserver = new ResizeObserver(() => {
-            changeWidth();
-        });
-
-        resizeObserver.observe(document.body);
-
-        if (typeof el.get(0) === 'object')
-            resizeObserver.observe(el.get(0));
-    };
-
     $('.box-catalog.inline >').matchHeight();
-    $('.sidebar .menu-wrap').scrollbarActive();
-    $('.header .notification .dropdown-menu .body').scrollbarActive();
 
     $.dropdownFloatingUi('table .dropdown > a', 'right-start');
     $.dropdownFloatingUi('.card .heading .dropdown > a', 'right-start');
@@ -590,10 +556,6 @@
         $(id).addClass('active');
         $("body").css("overflow", "hidden");
         $(id).trigger("modal-open");
-
-        if ($(id).hasClass('scrollbar')) {
-            $(id).find('.content:first .body:first').scrollbarActive();
-        }
     });
 
     // close modal

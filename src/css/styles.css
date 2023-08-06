@@ -211,7 +211,7 @@ body {
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a {
     position: relative;
-    font-size: 16px;
+    font-size: 16px !important;
     color: #333;
     text-decoration: none;
     display: flex;
@@ -328,11 +328,10 @@ body {
     background-color: var(--red);
     top: 2px;
     font-weight: bold;
-    right: -2px;
+    right: 2px;
 }
 
 /* menu */
-.sidebar .menu-wrap,
 .sidebar .menu-wrap ul,
 .sidebar .menu-wrap ul li,
 .sidebar .menu-wrap ul li a {
@@ -341,9 +340,10 @@ body {
 }
 .sidebar .menu-wrap {
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: var(--h-sidebar-profile);
+    width: 100%;
+    height: calc(100% - var(--h-sidebar-profile));
+    overflow-y: auto;
+    z-index: 1;
 }
 .sidebar > .header {
     display: block;
@@ -351,7 +351,6 @@ body {
 }
 .sidebar .menu-wrap {
     width: var(--w-sidebar);
-    overflow-y: hidden;
 }
 .box-general.large .sidebar .menu-wrap {
     width: var(--w-sidebar-large);
@@ -385,21 +384,20 @@ body {
     font-weight: 600;
 }
 /* Estilo para o item ativo no menu */
-.sidebar .menu-wrap ul li.active a {
+.sidebar .menu-wrap ul > li.active > a {
     opacity: 1;
     background-color: var(--bor-blue);
     border-left-color: var(--light-gray);
     border-left-style: solid;
 }
-/* Adicionando um efeito de transição suave quando o mouse está sobre o item do menu */
 .sidebar .menu-wrap ul li:not(.active) a:hover {
     opacity: 0.9;
 }
 /* submenu */
 .sidebar .menu-wrap ul li > ul {
     position: fixed;
-    max-width: 250px;
-    left: calc(var(--w-sidebar) - 10px);
+    max-width: 200px;
+    left: var(--w-sidebar);
     top: 0;
     background-color: var(--white);
     border-radius: 7px;
@@ -443,11 +441,6 @@ body {
     background-color: var(--blue);
     color: var(--white);
 }
-/* Estilos para quando a barra de rolagem vertical estiver ativa */
-.sidebar .menu-wrap.scrollbar-v-active {
-    width: calc(var(--w-sidebar) + 17px);
-    overflow-y: auto;
-}
 
 /* sidebar profile */
 .sidebar .profile {
@@ -460,7 +453,8 @@ body {
     bottom: 0;
     height: var(--h-sidebar-profile);
     box-sizing: border-box;
-    box-shadow: 0 0 5px rgba(63, 62, 62, 0.5);
+    border-top: solid 1px var(--bor-blue);
+    z-index: 1;
 }
 .sidebar .profile a.avatar {
     width: 60px;
@@ -562,16 +556,16 @@ body {
 }
 .dropdown > a {
     display: block;
+    padding: 0 5px;
 }
 .dropdown .dropdown-menu {
     display: none;
     position: absolute;
-    width: 250px;
-    background-color: #fff;
+    min-width: 150px;
+    background-color: var(--white);
     box-shadow: 0 1px 5px rgba(117, 117, 117, .3);
     border-radius: 5px;
     z-index: 1;
-    padding: 0 15px;
 }
 .dropdown.active .dropdown-menu {
     display: block;
@@ -580,10 +574,10 @@ body {
     display: block;
     width: 100%;
     text-decoration: none;
-    font-size: .9em;
+    font-size: 14px !important;
     color: var(--black-1);
     border-bottom: solid 1px var(--bor-gray);
-    padding: 15px 0;
+    padding: 15px;
     transition: all ease .3s;
     -webkit-transition: all ease .3s;
 }
@@ -770,6 +764,11 @@ table a.preview .name {
 .table-wrap.text-small table a.preview .name, 
 .table-wrap.text-small table input {
     font-size: 12px !important;
+}
+
+.table-wrap.details td,
+.table-wrap.details th {
+    padding: 8px;
 }
 
 /* table-sortable */
@@ -1193,8 +1192,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
 .modal.scrollbar .content > .body {
     width: 100%;
     max-height: calc(100vh - 260px);
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow-y: auto;
 }
 .modal.scrollbar .content > .body.full {
     height: 100vh;
@@ -1690,56 +1688,6 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     position: absolute;
     content: '';
     left: 0;
-}
-
-/* page-course */
-.page-course {
-    display: block;
-    width: 100%;
-}
-.page-course > .header .logo {
-    border-bottom: solid 1px var(--black-1);
-}
-.page-course .sidebar .box-menu {
-    position: relative;
-    display: block;
-    height: 100%;
-}
-.page-course .menu-accordion ul li a {
-    position: relative;
-}
-.page-course .menu-accordion ul li a span.title,
-.page-course .menu-accordion ul li a span.details {
-    display: block;
-}
-.page-course .menu-accordion ul li a span.title {
-    margin-right: 15px;
-}
-.page-course .menu-accordion ul li a span.details {
-    margin-top: 10px;
-    font-size: 0;
-}
-.page-course .menu-accordion ul li a span.details small {
-    display: inline-block;
-    width: 50%;
-    font-size: .75rem;
-}
-.page-course .menu-accordion ul li a span.details small:last-child {
-    text-align: right;
-}
-.page-course .menu-accordion ul li a span.status {
-    position: absolute;
-    top: 15px;
-    right: 0;
-    font-size: .75rem;
-}
-.page-course .sidebar .details-course span.title {
-    display: block;
-    width: 100%;
-    color: var(--white);
-    margin-bottom: 15px;
-    line-height: 18px;
-    font-weight: 600;
 }
 
 /* progressbar */
@@ -2444,4 +2392,9 @@ body.loading-placeholder::after {
 .tox .tox-toolbar__primary {
     background: #ffffff !important;
     border-bottom: solid 1px var(--bor-form) !important;
+}
+
+/* simplebar */
+.simplebar-scrollbar::before {
+    background-color: var(--blue-alert);
 }

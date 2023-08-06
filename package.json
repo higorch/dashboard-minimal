@@ -26,6 +26,7 @@
   "dependencies": {
     "@floating-ui/dom": "^1.5.1",
     "@fortawesome/fontawesome-free": "^5.15.4",
-    "jquery": "^3.6.0"
+    "jquery": "^3.6.0",
+    "simplebar": "^6.2.5"
   }
 }
