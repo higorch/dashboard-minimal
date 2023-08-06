@@ -218,6 +218,7 @@ body {
     align-items: center;
     padding: 10px 0;
     border-bottom: 1px solid var(--light-gray);
+    white-space: normal;
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a:last-child {
     border-bottom: none;
@@ -276,7 +277,7 @@ body {
     height: 7px;
     border-radius: 50%;
     top: 15px;
-    right: 0;
+    right: -10px;
 }
 .box-general > .header .topbar .right-box .notification .dropdown .dropdown-menu .box a span.read.yes {
     background-color: var(--bor-gray);
@@ -435,11 +436,14 @@ body {
     font-size: 14px;
     line-height: 1.4;
     display: block;
+    border: none;
     transition: background-color 0.2s, color 0.2s;
 }
-.sidebar .menu-wrap ul li > ul li a:hover {
+.sidebar .menu-wrap ul li > ul li a:hover,
+.sidebar .menu-wrap ul li.active > ul li.active a {
     background-color: var(--blue);
     color: var(--white);
+    border: none;
 }
 
 /* sidebar profile */
@@ -578,6 +582,7 @@ body {
     color: var(--black-1);
     border-bottom: solid 1px var(--bor-gray);
     padding: 15px;
+    white-space: nowrap;
     transition: all ease .3s;
     -webkit-transition: all ease .3s;
 }
