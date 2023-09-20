@@ -5401,7 +5401,6 @@ body {
 
 /* dropdown */
 .dropdown {
-    position: relative;
     width: auto;
     display: inline-block;
 }
@@ -6045,6 +6044,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     width: 100%;
     max-height: calc(100vh - 260px);
     overflow-y: auto;
+    overflow-x: hidden;
 }
 .modal.scrollbar .content > .body.full {
     height: 100vh;
