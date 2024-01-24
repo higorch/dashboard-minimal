@@ -595,37 +595,23 @@
     });
 
     // submenu
-    $(document).on('mouseover', '.sidebar .menu-wrap ul li', function (e) {
+    $(document).on('mouseover', '.sidebar .menu-wrap ul li a', function (e) {
+        if ($(this).next('ul').length > 0) {
+            var referenceEl = $(this).get(0);
+            var floatingEl = $(this).next('ul').get(0);
 
-        var el = $(this),
-            submenu = $('> ul', el);
-
-        if (!submenu.length) {
-            return;
-        }
-
-        // get menu item height
-        var menuItemHeight = 15 + (el.outerHeight() / 2);
-
-        // grab the menu item's position relative to its positioned parent
-        var menuItemPos = el.position();
-
-        // place the submenu in the correct position relevant to the menu item
-        var topPosition = menuItemPos.top + menuItemHeight;
-
-        submenu.css({
-            top: topPosition
-        });
-
-        var bottomSpacing = submenu.position().top + submenu.outerHeight(true) >= $(window).height();
-        var bottomPosition = submenu.position().top + submenu.outerHeight(true) - $(window).height();
-
-        if (bottomSpacing) {
-            submenu.css({
-                top: (topPosition - 30) - bottomPosition,
+            autoUpdate(referenceEl, floatingEl, () => {
+                computePosition(referenceEl, floatingEl, {
+                    placement: "right",
+                    middleware: [shift()]
+                }).then(({ x, y }) => {
+                    Object.assign(floatingEl.style, {
+                        top: `${y}px`,
+                        left: `${x}px`,
+                    });
+                });
             });
         }
-
     });
 
     // menu accordion
