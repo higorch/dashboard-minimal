@@ -602,6 +602,7 @@
 
             autoUpdate(referenceEl, floatingEl, () => {
                 computePosition(referenceEl, floatingEl, {
+                    strategy: 'fixed',
                     placement: "right",
                     middleware: [shift()]
                 }).then(({ x, y }) => {
