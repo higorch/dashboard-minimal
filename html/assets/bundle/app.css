@@ -5715,7 +5715,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
 }
 .btn.btn-black-3 {
     color: var(--white);
-    background-color: var(--black-3);
+    background-color: var(--black-1);
 }
 .btn.btn-green {
     color: var(--white);
@@ -5767,7 +5767,7 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
 }
 .btn-group.btn-gray .btn:hover, 
 .btn-group.btn-gray .btn:focus {
-    background-color: var(--black-3);
+    background-color: var(--black-1);
     color: var(--white);
     border-right-color: var(--white);
 }
@@ -6143,6 +6143,8 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
     background-color: var(--white);
     overflow: hidden;
     border-radius: 8px !important;
+    width: 100%;
+    max-width: none;
 }
 .tab-main ul.nav {
     list-style: none;
@@ -6183,14 +6185,12 @@ table.table-sortable tbody tr.ui-sortable-placeholder th:first-child::before {
 /* Estilização para tabs verticais */
 .tab-main.vertical {
     flex-direction: row;
+    gap: 5px;
 }
 .tab-main.vertical ul.nav {
-    width: 200px;
-    margin: 0 5px 0 0;
+    flex-grow: 1;
+    width: 280px;
     padding: 0;
-}
-.tab-main.vertical .content {
-    width: calc(100% - 200px);
 }
 .tab-main.vertical ul.nav li {
     display: block;
